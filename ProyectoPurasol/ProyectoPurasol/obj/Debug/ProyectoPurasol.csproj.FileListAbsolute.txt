@@ -364,8 +364,6 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\WebHelpers.Mvc5.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\WebMatrix.Data.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\WebMatrix.WebData.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\BLL.pdb
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.pdb
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.dll.config
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ExcelDataReader.pdb
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ExcelDataReader.xml
@@ -393,3 +391,17 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\cs\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\de\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\es\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\fr\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\it\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ja\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ko\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pl\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pt-BR\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ru\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\tr\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-Hans\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-Hant\Microsoft.CodeAnalysis.LiveUnitTesting.Runtime.resources.dll

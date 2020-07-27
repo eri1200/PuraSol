@@ -1,5 +1,0 @@
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\.vs\ProyectoPurasol\v16\lut\0\b\BLL\bin\Debug\BLL.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\.vs\ProyectoPurasol\v16\lut\0\i\BLL\Debug\BLL.csprojAssemblyReference.cache
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\.vs\ProyectoPurasol\v16\lut\0\i\BLL\Debug\BLL.csproj.CoreCompileInputs.cache
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\.vs\ProyectoPurasol\v16\lut\0\i\BLL\Debug\BLL.csproj.CopyComplete
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\.vs\ProyectoPurasol\v16\lut\0\i\BLL\Debug\BLL.dll
