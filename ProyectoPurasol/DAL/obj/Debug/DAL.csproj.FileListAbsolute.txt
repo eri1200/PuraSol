@@ -33,3 +33,12 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.pdb
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\bin\Debug\DAL.dll.config
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\bin\Debug\DAL.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\bin\Debug\DAL.pdb
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\bin\Debug\reCAPTCHA.MVC.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\obj\Debug\DAL.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\DAL\obj\Debug\DAL.pdb
