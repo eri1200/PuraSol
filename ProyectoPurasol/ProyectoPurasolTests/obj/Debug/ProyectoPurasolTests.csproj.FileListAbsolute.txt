@@ -1,4 +1,3 @@
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.csproj.CoreCompileInputs.cache
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
@@ -21,8 +20,10 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\System.Web.WebPages.Razor.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\NLog.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\System.Web.Optimization.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\reCAPTCHA.MVC.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\WebHelpers.Mvc5.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.DataSet.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\WebGrease.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Newtonsoft.Json.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Antlr3.Runtime.dll
@@ -39,11 +40,16 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\System.Web.WebPages.Razor.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\NLog.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\System.Web.Optimization.xml
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.pdb
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\WebHelpers.Mvc5.xml
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.DataSet.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Newtonsoft.Json.pdb
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Newtonsoft.Json.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Antlr3.Runtime.pdb
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.csprojAssemblyReference.cache
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.csproj.CoreCompileInputs.cache
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.pdb
