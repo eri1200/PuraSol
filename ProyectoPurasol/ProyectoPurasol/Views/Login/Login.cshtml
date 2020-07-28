@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Log in</title>
+    <title>Inicio Sesión</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -18,7 +18,7 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="~/Scripts/adminlte/components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="~/Content/adminlte/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="~/Content/adminlte/css/AdminLTE2.css">
     <!-- iCheck -->
     <link rel="stylesheet" href="~/Scripts/adminlte/plugins/iCheck/square/blue.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -28,32 +28,72 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
-    <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 <style>
     .form-signin {
         margin: 0 auto;
-        max-width: 330px;
-        padding: 15px;
+        max-width: 650px;
+        padding: 10px;
+        background-color: #00210D;
+    }
+
+    .hold-transition {
+        background-color: #00210D;
+        max-height: 90%;
+    }
+
+    .login {
+        padding: 20px;
+        border-top: 0;
+        max-height: 250%;
+    }
+
+    #LoginButton {
+        background-color: #E1E65F;
+        color: #FFFFFF;
+    }
+
+    .form-signin-heading {
+        color: #FFFFFF;
+        font-size: medium;
+        text-align: center;
+    }
+
+    .Purasol {
+        color: #FFFFFF;
+    }
+
+    .container-fluid {
+        color: #FFFFFF;
+    }
+
+    #pura {
+        height: 9%;
     }
 </style>
+
 <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
 <link href="~/Content/css/AdminLTE.css" rel="stylesheet" />
 <link href="~/Content/Site.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="~/Content/img/puraS.png" />
 <script src="~/Content/js/plugins/jquery/jquery-3.3.1.min.js"></script>
 <script src="~/Content/js/plugins/bootstrap/bootstrap.min.js"></script>
 <script src="~/Scripts/jquery-3.3.1.js"></script>
 <script src="~/Scripts/jquery.validate.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
-<body class="hold-transition login-page">
+
+
+<body class="hold-transition">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html"><b>Reportes </b>Purasol</a>
+            <div class="Purasol">
+                <p>Reportes Purasol <p />
+                <img src="~/Content/img/puraS.png" id="pura" />
+            </div>
         </div>
         <!-- /.login-logo -->
-        <div class="login-box-body">
-            <p class="login-box-msg">Ingrese las Credenciales</p>
+        <div class="login">
             <div class="container-fluid">
                 @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-signin", role = "form" }))
                 {

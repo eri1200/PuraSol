@@ -43,3 +43,14 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\bin\Debug\BLL.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\bin\Debug\BLL.pdb
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\bin\Debug\DAL.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\bin\Debug\reCAPTCHA.MVC.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\bin\Debug\DAL.pdb
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\bin\Debug\DAL.dll.config
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.dll
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
