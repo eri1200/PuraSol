@@ -1,8 +1,6 @@
 ﻿
 <header class="main-header">
 
-     
-
     @* BEGIN Logo *@
     <a href="@Url.Action("Index", "Home")" class="logo">
         @* Mini logo for sidebar 50x50 pixels *@
@@ -10,13 +8,13 @@
     </a>
     @* END Logo *@
     @* BEGIN Header *@
-<nav class="navbar navbar-static-top" role="navigation">
-    <a href="@Url.Action("Index", "Reporte")" class="logo" img="">
+    <nav class="navbar navbar-static-top" role="navigation">
+       <a href="@Url.Action("Index", "Reporte")" class="logo" img="">
         Crear Reporte
-    </a>
-    <a href="@Url.Action("Index", "Cliente")" class="logo" img="">
-        Crear Usuario
-    </a>
+       </a>
+       <a href="@Url.Action("Index", "Cliente")" class="logo" img="">
+        Crear Cliente
+       </a>
     <div class="navbar-custom-menu">
         @* Usuario *@
         <a href="@Url.Action("Index", "Usuario")" class="btn btn-success btn-sm" img="~/Content/Iconos/USER.png">
