@@ -496,3 +496,5 @@ C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\
 C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
 C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
 C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.cache
+C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.compiled

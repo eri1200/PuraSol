@@ -1,26 +1,70 @@
-﻿
-<header class="main-header">
+﻿        <style>
+            .navbar-static-top {
+                background-color: #00210D;
+                color: white;
+                text-align: center;
+            }
 
-    @* BEGIN Logo *@
-    <a href="@Url.Action("Index", "Home")" class="logo">
-        @* Mini logo for sidebar 50x50 pixels *@
-        <span class="logo-mini"><b>Inicio</b></span>
-    </a>
-    @* END Logo *@
-    @* BEGIN Header *@
-    <nav class="navbar navbar-static-top" role="navigation">
-       <a href="@Url.Action("Index", "Reporte")" class="logo" img="">
-        Crear Reporte
-       </a>
-       <a href="@Url.Action("Index", "Cliente")" class="logo" img="">
-        Crear Cliente
-       </a>
-    <div class="navbar-custom-menu">
-        @* Usuario *@
-        <a href="@Url.Action("Index", "Usuario")" class="btn btn-success btn-sm" img="~/Content/Iconos/USER.png">
-            @*<span class="logo-lg"><b>Crear Usuario</b></span>*@
-            <img class="resize_fit_center" src="~/Content/Iconos/USER.png" width="20px" /> <p>@Session["ROLES"] </p>
-        </a>
-    </div>
-</nav>
-</header>
+            .main-header .navbar {
+                background-color: #00210D;
+                padding-left: 150px;
+                min-height: 50px;
+                margin-left: 0px;
+                text-align: end;
+            }
+
+            .logo {
+                color: white;
+                box-sizing: content-box;
+            }
+
+            .main-header .logo {
+                -webkit-transition: width 0.3s ease-in-out;
+                -o-transition: width 0.3s ease-in-out;
+                transition: width 0.3s ease-in-out;
+                display: block;
+                float: left;
+                height: 50px;
+                font-size: 20px;
+                line-height: 50px;
+                text-align: center;
+                width: 220px;
+                font-family: Calibri;
+                padding: 0 25px;
+                font-weight: 200;
+                overflow: hidden;
+            }
+
+            #usuario {
+                background-color: #00210D;
+                background-size: 20px;
+                border-color: #00210D;
+                padding-top: 12px;
+            }
+        </style>
+
+        <header class="main-header">
+
+            <nav class="navbar navbar-static-top" role="navigation">
+
+                <a href="@Url.Action("Index", "Home")" class="logo">
+                    Inicio
+                </a>
+                <a href="@Url.Action("Index", "Reporte")" class="logo" img="">
+                    Crear Reporte
+                </a>
+                <a href="@Url.Action("Index", "Cliente")" class="logo" img="">
+                    Crear Cliente
+                </a>
+                <a href="@Url.Action("Index", "Usuario")" id="usuario" class="btn btn-success btn-sm" img="~/Content/Iconos/USER.png">
+                    <img class="resize_fit_center" src="~/Content/Iconos/USER.png" width="20px" id="people" /> <p>@Session["ROLES"] </p>
+                </a>
+
+            </nav>
+
+        </header>
+
+
+
+
+
