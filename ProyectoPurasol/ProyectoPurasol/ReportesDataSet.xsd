@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportesDataSet" targetNamespace="http://tempuri.org/ReportesDataSet.xsd" xmlns:mstns="http://tempuri.org/ReportesDataSet.xsd" xmlns="http://tempuri.org/ReportesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ReportesConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ReportesConnectionString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ReportesConnectionString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HistoricoFacturaTableAdapter" GeneratorDataComponentClassName="HistoricoFacturaTableAdapter" Name="HistoricoFactura" UserDataComponentName="HistoricoFacturaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ReportesConnectionString (Web.config)" DbObjectName="Reportes.dbo.HistoricoFactura" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT kWh_tarifa_regular, Cargo, Impuestos FROM dbo.HistoricoFactura</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="kWh_tarifa_regular" DataSetColumn="kWh_tarifa_regular" />
+              <Mapping SourceColumn="Cargo" DataSetColumn="Cargo" />
+              <Mapping SourceColumn="Impuestos" DataSetColumn="Impuestos" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ReportesDataSet" msprop:Generator_UserDSName="ReportesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HistoricoFactura" msprop:Generator_TableClassName="HistoricoFacturaDataTable" msprop:Generator_TableVarName="tableHistoricoFactura" msprop:Generator_TablePropName="HistoricoFactura" msprop:Generator_RowDeletingName="HistoricoFacturaRowDeleting" msprop:Generator_RowChangingName="HistoricoFacturaRowChanging" msprop:Generator_RowEvHandlerName="HistoricoFacturaRowChangeEventHandler" msprop:Generator_RowDeletedName="HistoricoFacturaRowDeleted" msprop:Generator_UserTableName="HistoricoFactura" msprop:Generator_RowChangedName="HistoricoFacturaRowChanged" msprop:Generator_RowEvArgName="HistoricoFacturaRowChangeEvent" msprop:Generator_RowClassName="HistoricoFacturaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kWh_tarifa_regular" msprop:Generator_ColumnVarNameInTable="columnkWh_tarifa_regular" msprop:Generator_ColumnPropNameInRow="kWh_tarifa_regular" msprop:Generator_ColumnPropNameInTable="kWh_tarifa_regularColumn" msprop:Generator_UserColumnName="kWh_tarifa_regular" type="xs:double" />
+              <xs:element name="Cargo" msprop:Generator_ColumnVarNameInTable="columnCargo" msprop:Generator_ColumnPropNameInRow="Cargo" msprop:Generator_ColumnPropNameInTable="CargoColumn" msprop:Generator_UserColumnName="Cargo" type="xs:double" />
+              <xs:element name="Impuestos" msprop:Generator_ColumnVarNameInTable="columnImpuestos" msprop:Generator_ColumnPropNameInRow="Impuestos" msprop:Generator_ColumnPropNameInTable="ImpuestosColumn" msprop:Generator_UserColumnName="Impuestos" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -135,14 +135,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Iconos\USER.png" />
+    <Content Include="Content\img\imagen1.jpg" />
+    <Content Include="Content\img\imagen2.jpg" />
+    <Content Include="Content\img\imagen3.jpg" />
     <Content Include="Content\img\puraS.png" />
+    <Content Include="Content\img\remplazo.jpg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\alertify\alertify.js" />
-    <Content Include="Scripts\alertify\alertify.min.js" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <Content Include="Scripts\Sitio.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Usuario\Create.cshtml" />
@@ -154,9 +152,17 @@
     <Content Include="Views\Reporte\Create.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Reporte\Upload.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Reporte\ReportePrueba.cshtml" />
-    <Content Include="Views\Reporte\ConsumoDias.cshtml" />
+    <Content Include="ReportesDataSet.xsc">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="ReportesDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportesDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ReportesDataSet.xss">
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,9 +176,6 @@
     <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\ConsumoMeses.cs" />
-    <Compile Include="Models\Electrodomestico.cs" />
-    <Compile Include="Models\JsonReporte.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Reporte.cs" />
     <Compile Include="Models\Usuario.cs" />
@@ -180,6 +183,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ReportesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportesDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Tools\Security.cs" />
   </ItemGroup>
