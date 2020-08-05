@@ -272,6 +272,29 @@ namespace ProyectoPurasol.Controllers
             return Json(distritos, JsonRequestBehavior.AllowGet);
         }
         
+        public JsonResult ConsultarCliente(string id)
+        {
+
+            try
+            {
+                clsCliente cliente = new clsCliente();
+                int identificacion = Convert.ToInt32(id);
+                List<SeleccionarClienteResult> resultado = cliente.ConsultaCliente(identificacion);
+                if(resultado.Count > 0)
+                {
+                    return Json(new { success = true,  resul=resultado }, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    return Json(new { success = false, responseText = "Hubo un error" });
+                }
+    }
+            catch (Exception ex)
+            {
+
+                return Json(new { success = false, responseText = ex.Message });
+            }
+        }
        
         
 

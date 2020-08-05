@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="clsCliente.cs" />
     <Compile Include="clsInformacion.cs" />
+    <Compile Include="clsReporte.cs" />
     <Compile Include="clsRol.cs" />
     <Compile Include="clsUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

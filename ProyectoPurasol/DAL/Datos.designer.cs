@@ -180,6 +180,20 @@ namespace DAL
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario, clave, activo, rol);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ObtenerCompanias")]
+		public ISingleResult<ObtenerCompaniasResult> ObtenerCompanias()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ObtenerCompaniasResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ObtenerTarifas")]
+		public ISingleResult<ObtenerTarifasResult> ObtenerTarifas()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ObtenerTarifasResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class ConsultaListaUsuarioResult
@@ -967,6 +981,94 @@ namespace DAL
 				if ((this._Column1 != value))
 				{
 					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ObtenerCompaniasResult
+	{
+		
+		private int _IdCompania;
+		
+		private string _Nombre;
+		
+		public ObtenerCompaniasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCompania", DbType="Int NOT NULL")]
+		public int IdCompania
+		{
+			get
+			{
+				return this._IdCompania;
+			}
+			set
+			{
+				if ((this._IdCompania != value))
+				{
+					this._IdCompania = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ObtenerTarifasResult
+	{
+		
+		private int _IdTarifa;
+		
+		private string _Nombre;
+		
+		public ObtenerTarifasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdTarifa", DbType="Int NOT NULL")]
+		public int IdTarifa
+		{
+			get
+			{
+				return this._IdTarifa;
+			}
+			set
+			{
+				if ((this._IdTarifa != value))
+				{
+					this._IdTarifa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
 				}
 			}
 		}

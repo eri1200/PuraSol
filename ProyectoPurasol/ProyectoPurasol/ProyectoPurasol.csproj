@@ -137,6 +137,12 @@
     <Content Include="Content\Iconos\USER.png" />
     <Content Include="Content\img\puraS.png" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\alertify\alertify.js" />
+    <Content Include="Scripts\alertify\alertify.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\Sitio.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Usuario\Create.cshtml" />
@@ -148,6 +154,9 @@
     <Content Include="Views\Reporte\Create.cshtml" />
     <Content Include="Views\Usuario\Index.cshtml" />
     <Content Include="Views\Reporte\Upload.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Reporte\ReportePrueba.cshtml" />
+    <Content Include="Views\Reporte\ConsumoDias.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -161,6 +170,9 @@
     <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ConsumoMeses.cs" />
+    <Compile Include="Models\Electrodomestico.cs" />
+    <Compile Include="Models\JsonReporte.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Reporte.cs" />
     <Compile Include="Models\Usuario.cs" />
