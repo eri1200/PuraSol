@@ -390,6 +390,9 @@ C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\
 C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
 C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
 C:\Users\erick\Source\Repos\eri1200\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csprojAssemblyReference.cache
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.cache
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.compiled
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll.config
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.pdb
@@ -465,9 +468,6 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.Web.Mvc.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.Web.Optimization.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\WebHelpers.Mvc5.xml
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csprojAssemblyReference.cache
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.cache
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.compiled
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CoreCompileInputs.cache
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll

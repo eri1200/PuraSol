@@ -15,10 +15,10 @@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.electrodomestico, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Electro, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.electrodomestico, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.electrodomestico, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.Electro, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Electro, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -31,11 +31,11 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.uso, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Uso, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 <div class="checkbox">
-                    @Html.EditorFor(model => model.uso)
-                    @Html.ValidationMessageFor(model => model.uso, "", new { @class = "text-danger" })
+                    @Html.EditorFor(model => model.Uso)
+                    @Html.ValidationMessageFor(model => model.Uso, "", new { @class = "text-danger" })
                 </div>
             </div>
         </div>
