@@ -175,7 +175,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.TamanoFijo, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.EditorFor(model => model.TamanoFijo, new { htmlAttributes = new { @class = "form-control", @id = "TamañoFijo" } })
+                                @Html.EditorFor(model => model.TamanoFijo, new { htmlAttributes = new { @class = "form-control", @id = "TamanoFijo" } })
                                 @Html.ValidationMessageFor(model => model.TamanoFijo, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -330,7 +330,7 @@
         </div>
     </div>
     <div class="modal-footer justify-content-start">
-        <input class="btn btn btn-primary btn-block" type="button" value="Guardar" id="Guardar" name="Guardar"/>
+        <input class="btn btn btn-primary btn-block" type="button" value="Guardar" id="Guardar" name="Guardar" />
     </div>
 
 }
@@ -338,9 +338,9 @@
 
     var electro = [];
     var jsonObject = [];
-    
+
        // Electrodomestico:[]
-    
+
 
 
     $("#Agregar").click(function () {
@@ -415,35 +415,66 @@
     $("#Guardar").click(function () {
 
         var table = $('#grid').tableToJSON();
-        
-        
-        alert(JSON.stringify({ Nombre: document.getElementById("Cliente").value, table }));
-        var prueba = JSON.stringify({ Nombre: document.getElementById("Cliente").value, table });
-        
-        
+
+
+        //alert(JSON.stringify({ Nombre: document.getElementById("Cliente").value, table }));
+        //var prueba = JSON.stringify({ Nombre: document.getElementById("Cliente").value,
+        //    Compania: document.getElementById("Compania").value,
+        //    Tarifa: document.getElementById("Tarifa").value,
+        //    Descripcion: document.getElementById("Compania").value,
+        //    TechoDisponible: document.getElementById("TechoDisponible").value,
+        //    HorasRespaldo: document.getElementById("HoraRespaldo").value,
+        //    HorasRespaldo: document.getElementById("HoraRespaldo").value,
+        //    TipoCambio: document.getElementById("TipoCambio").value,
+        //    PotenciadePanel: document.getElementById("PotenciaPanel").value,
+        //    CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+        //    TamanoFijo: document.getElementById("TamanoFijo").value,
+        //    CostoUnitarioFijo: document.getElementById("PotenciadePanel").value,
+        //    CostoMantenimiento: document.getElementById("CostoMantenimiento").value,
+        //    CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+        //    CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+        //    table
+        //});
+
+
         $.ajax({
             type: "POST",
             url: '@Url.Action("Create", "Reporte")',
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            data: JSON.stringify({ Nombre: document.getElementById("Cliente").value, table }),
+            data: JSON.stringify({
+                Nombre: document.getElementById("Cliente").value,
+                Compania: document.getElementById("Compania").value,
+                Tarifa: document.getElementById("Tarifa").value,
+                Descripcion: document.getElementById("Compania").value,
+                TechoDisponible: document.getElementById("TechoDisponible").value,
+                HorasRespaldo: document.getElementById("HoraRespaldo").value,
+                TipoCambio: document.getElementById("TipoCambio").value,
+                PotenciaPanel: document.getElementById("PotenciaPanel").value,
+                CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+                TamanoFijo: document.getElementById("TamanoFijo").value,
+                CostoUnitarioFijo: document.getElementById("CostoMantenimiento").value,
+                CostoUnitarioFijo: document.getElementById("CrecimientoAnual").value,
+                CostoUnitarioFijo: document.getElementById("NumCotizacion").value,
+                CostoUnitarioFijo: document.getElementById("Tecnologia").value,
+                table}),
             success: function (resultado) {
             if (resultado.success) {
 
-
-                alert("SE AGREGÓ CORRECTAMENTE");
+                alert(resultado.url);
+                window.location.replace(resultado.url);
              } else {
-
-                alert("ERROR BUSCANDO EL CLIENTE");
+                alert("Hubo un error");
+               window.location.replace(resultado.url);
              }
 
              },
              error: function (ex) {
              $("#Cliente").val("");
-              alert('Hubo un error cargando los datos ' + ex);
+              //alert('Hubo un error cargando los datos ' + ex);
         }
     });
-        
+
 
     });
 </script>

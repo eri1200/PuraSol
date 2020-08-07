@@ -12,48 +12,53 @@
         }
         Purasol
     </title>
-    
+    <link href="~/Content/alertify/alertify.default.css" rel="stylesheet" />
+    <link href="~/Content/alertify/alertify.core.css" rel="stylesheet" />
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <link rel="shortcut icon" href="~/Content/img/puraS.png"/>
+    <link rel="shortcut icon" href="~/Content/img/puraS.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     @Styles.Render("~/Bundles/css")
-   
+    <script src="@Url.Content("~/Scripts/alertify/alertify.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/plugins/jquery/jquery-3.3.1.min.js")"></script>
 </head>
-<style>
-    .content-header{ 
-        color:white;
-    }
-     .content-wrapper {
-        background-color: white;
-        margin-top:0px;
-        padding-top:0px;
-        padding-bottom:0px;
-    }
-</style>
+
 
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
         @Html.Partial("_Header")
-        
+
 
         <div class="content-wrapper">
             <div class="content-header">
-                <br /> 
-                
+                <br />
+
                 <h1> Purasol</h1>
                 <br />
                 <label> Brindando Energía Solar a Hogares y Negocios por más de 10 años.</label>
-                
+
             </div>
 
             <section class="content">
-                
+
                 @RenderBody()
             </section>
-    
+        </div>
+    </div>
     <script src="@RouteJs.RouteJsHandler.HandlerUrl"></script>
     <script src="@EnumHandler.HandlerUrl"></script>
     @Scripts.Render("~/Bundles/js")
     @RenderSection("ViewSpecificJavascript", required: false)
 </body>
 </html>
+<style>
+    .content-header {
+        color: white;
+    }
+
+    .content-wrapper {
+        background-color: white;
+        margin-top: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+</style>

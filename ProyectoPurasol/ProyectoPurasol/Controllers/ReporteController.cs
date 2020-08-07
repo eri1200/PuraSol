@@ -14,6 +14,7 @@ namespace ProyectoPurasol.Controllers
 {
     public class ReporteController : Controller
     {
+        int tipofactura = 0;
         Reporte reporte = new Reporte();
         // GET: Reporte
         public ActionResult Index()
@@ -46,19 +47,23 @@ namespace ProyectoPurasol.Controllers
                 switch (id)
                 {
                     case 1:
+                        tipofactura = id;
                         NombreTarifa = "Comercial";
                         ViewBag.NombreTarifa = NombreTarifa;
                         break;
 
                     case 2:
+                        tipofactura = id;
                         NombreTarifa = "Residencial";
                         ViewBag.NombreTarifa = NombreTarifa;
                         break;
                     case 3:
+                        tipofactura = id;
                         NombreTarifa = "Microred";
                         ViewBag.NombreTarifa = NombreTarifa;
                         break;
                     case 4:
+                        tipofactura = id;
                         NombreTarifa = "TMT";
                         ViewBag.NombreTarifa = NombreTarifa;
                         break;
@@ -79,26 +84,42 @@ namespace ProyectoPurasol.Controllers
         {
             return View();
         }
+
+
         [HttpPost]
-        public void Create(Reporte usuario,List<Electrodomestico> reporte)
+        public JsonResult Create(Reporte usuario)
         {
             try
             {
                 //foreach (var id in reporte.Electro)
                 //{
-                    Console.WriteLine(usuario.table[0].Electro);
+
                 //}
+                if (usuario != null) {
+                    Console.WriteLine(usuario.table[0].Electro);
+
+                    //return Json (new {success=true, url= "http://localhost:51104/Reporte/MesesConsumo" }, JsonRequestBehavior.AllowGet);
+                    return Json(new { success = true, url = Url.Action("MesesConsumo") }, JsonRequestBehavior.AllowGet);
+
+                }
+                else
+                {
+                    return Json(new { success = true, url = Url.Action("Create","Reporte",tipofactura) }, JsonRequestBehavior.AllowGet);
+                }
                 
-                // Json(new { success = true, resul = "Se cargó excelente" }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
             {
-                //return Json(new { success = true, resul = "Hubo Un Error" }, JsonRequestBehavior.AllowGet);
+
+                return Json(new { success = true, url = Url.Action("Create", "Reporte", tipofactura) }, JsonRequestBehavior.AllowGet);
             }
            
             
         }
-
+        public ActionResult MesesConsumo()
+        {
+            return View();
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Upload(HttpPostedFileBase upload)
