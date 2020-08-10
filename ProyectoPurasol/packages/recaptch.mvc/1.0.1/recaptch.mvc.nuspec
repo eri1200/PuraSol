@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>reCAPTCH.MVC</id>
+    <version>1.0.1</version>
+    <title>reCAPTCH.MVC</title>
+    <authors>Bhaumik Patel</authors>
+    <owners>Bhaumik Patel</owners>
+    <projectUrl>http://recaptchamvc.apphb.com/</projectUrl>
+    <iconUrl>http://lh6.googleusercontent.com/-ZsZOOEX_A38/VWrG0sP9d_I/AAAAAAAAES8/8M6eViVCpwc/w143-h149-no/reCAPTCHA.MVC.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ReCAPTCHA MVC lets you embed a CAPTCHA in your web pages in order to protect them against spam and other types of automated abuse.
+
+DEMO and Document =&gt; http://recaptchamvc.apphb.com/
+
+The primary features of the library are:
+--&gt; reCAPTCHA API verion 2.0 Support
+--&gt; The color theme of the widget. (dark, light)
+--&gt; The type of CAPTCHA to serve. (audio, image)
+--&gt; MVC 4 and MVC 5 Support</description>
+    <summary>Google ReCAPTCHA MVC lets you embed a CAPTCHA in your web pages in order to protect them against spam and other types of automated abuse.</summary>
+    <tags>mvc google reCAPTCH HtmlHelper Razor</tags>
+  </metadata>
+</package>

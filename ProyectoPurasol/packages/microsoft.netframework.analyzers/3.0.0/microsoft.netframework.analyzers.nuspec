@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.NetFramework.Analyzers</id>
+    <version>3.0.0</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <projectUrl>https://github.com/dotnet/roslyn-analyzers</projectUrl>
+    <description>Microsoft recommended API usage rules for APIs specific to the full .NetFramework which are not present in .NetCore, implemented as analyzers using the .NET Compiler Platform (Roslyn). This package is included as a part of Microsoft.CodeAnalysis.FxCopAnalyzers NuGet package and does not need to be installed separately.</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Roslyn CodeAnalysis Compiler CSharp VB VisualBasic Diagnostic Analyzers Syntax Semantics</tags>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/dotnet/roslyn-analyzers" commit="6e0571aca8ab029ff427017edbb734cda076aaae" />
+  </metadata>
+</package>

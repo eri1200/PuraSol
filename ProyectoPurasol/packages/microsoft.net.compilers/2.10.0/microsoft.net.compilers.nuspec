@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Net.Compilers</id>
+    <version>2.10.0</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=529443</licenseUrl>
+    <projectUrl>https://github.com/dotnet/roslyn</projectUrl>
+    <description>.NET Compilers package.
+      Referencing this package will cause the project to be built using the specific version of the C# and Visual Basic compilers contained in the package, as opposed to any system installed version.
+
+      This package can be used to compile code targeting any platform, but can only be run using the desktop .NET 4.6+ Full Framework.
+
+      More details at https://aka.ms/roslyn-packages
+
+      This package was built from the source at https://github.com/dotnet/roslyn/commit/b9fb1610c87cccc8ceb74a770dba261a58e39c4a.</description>
+    <summary>.NET Compilers package.</summary>
+    <releaseNotes></releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <language>en-US</language>
+    <tags>Roslyn CodeAnalysis Compiler CSharp VB VisualBasic Parser Scanner Lexer Emit CodeGeneration Metadata IL Compilation Scripting Syntax Semantics</tags>
+    <repository type="git" url="https://github.com/dotnet/roslyn" commit="b9fb1610c87cccc8ceb74a770dba261a58e39c4a" />
+  </metadata>
+</package>

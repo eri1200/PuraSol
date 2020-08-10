@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.ReportingServices.ReportViewerControl.WebForms</id>
+    <version>140.1000.523</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://go.microsoft.com/fwlink/?LinkId=826162</licenseUrl>
+    <description>Microsoft Report Viewer Control for ASP.Net Web Forms applications. Contains the assemblies required to use the ASP.Net Web Forms Report Viewer Control. Feedback: RVCFeedback@Microsoft.com</description>
+    <releaseNotes>See Reporting Services Blog: https://blogs.msdn.microsoft.com/sqlrsteamblog</releaseNotes>
+    <copyright>Copyright (c) Microsoft Corporation.</copyright>
+    <tags>Microsoft Report Reporting Control Viewer</tags>
+    <dependencies>
+      <dependency id="Microsoft.SqlServer.Types" version="14.0.0" />
+    </dependencies>
+  </metadata>
+</package>

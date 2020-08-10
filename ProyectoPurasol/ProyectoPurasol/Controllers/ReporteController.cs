@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DAL;
 using ExcelDataReader;
+using Microsoft.Reporting.WebForms;
 using ProyectoPurasol.Models;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,7 @@ using System.IO;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace ProyectoPurasol.Controllers
 {
@@ -120,6 +122,12 @@ namespace ProyectoPurasol.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult MesesConsumo(ConsumoMeses consumoMeses)
+        {
+            return RedirectToAction("ReporteExtra");
+        }
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Upload(HttpPostedFileBase upload)
@@ -165,7 +173,39 @@ namespace ProyectoPurasol.Controllers
             }
             return View();
         }
+        public ActionResult ReporteExtra()
+        {
 
+            ReportViewer reportViewer = new ReportViewer();
+            reportViewer.ProcessingMode = ProcessingMode.Local;
+            reportViewer.SizeToReportContent = true;
+            reportViewer.Width = Unit.Percentage(9000);
+            reportViewer.Height = Unit.Percentage(9000);
+            reportViewer.ZoomMode = ZoomMode.Percent;
+            reportViewer.ZoomPercent = 150;
+            reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\ReporteConsulta.rdlc";
+            List<ReportParameter> Parametros = new List<ReportParameter>();
+            Parametros.Add(new ReportParameter("Potencia", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("ConsumoBajodeT", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("Autoconsumo", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("PorcentajeConsumoCubierto", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("Almacenamiento", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("ProduccionAnual", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("CostoWatt", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("Compania", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("Area", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("Paneles", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("RetornoSimple", (12345).ToString(), true));
+            Parametros.Add(new ReportParameter("AhorroAnualPromedio", (12345).ToString(), true));
+
+
+            reportViewer.LocalReport.SetParameters(Parametros.ToArray());
+            reportViewer.LocalReport.Refresh();
+            reportViewer.LocalReport.Refresh();
+            
+            ViewBag.ReportViewer = reportViewer;
+            return View();
+        }
 
 
 

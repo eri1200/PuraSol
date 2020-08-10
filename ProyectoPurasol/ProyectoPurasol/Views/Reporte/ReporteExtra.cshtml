@@ -1,0 +1,11 @@
+﻿@using ReportViewerForMvc
+@{
+    ViewBag.Title = "ReporteExtra";
+}
+
+
+<h2>ReporteExtra</h2>
+<div class="col-md-12">
+    @Html.ReportViewer(ViewBag.ReportViewer as Microsoft.Reporting.WebForms.ReportViewer, htmlAttributes: new { @class = "col-md-12", @style = "max-width:100%; width:100%;" })
+</div>
+

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Chaso.ReportViewerForMvc</id>
+    <version>1.1.1.1</version>
+    <title>ReportViewer for MVC</title>
+    <authors>Armando Aguirre, Charles Oliveira</authors>
+    <owners>Armando Aguirre</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/chasoliveira/ReportViewerForMvc/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/chasoliveira/ReportViewerForMvc</projectUrl>
+    <description>ReportViewer for MVC is a .NET project that make possible to use an ASP.NET ReportViewer control into an MVC web application.
+      It provides a set of HTML Helpers and a simple ASP.NET Web Form for displaying the ReportViewer within an auto-resized iframe tag.
+      Update to depends of Microsoft.ReportingServices.ReportViewerControl.WebForms Version 140.1000.523.</description>
+    <copyright>Copyright (c) 2014 Armando Aguirre Sepulveda</copyright>
+    <tags>ReportViewer MVC Report Viewer Reports SSRS HtmlHelper HtmlHelpers Reporting Chaso Chasoliveira</tags>
+    <dependencies>
+      <dependency id="Microsoft.ReportingServices.ReportViewerControl.WebForms" version="140.1000.523" />
+    </dependencies>
+  </metadata>
+</package>
