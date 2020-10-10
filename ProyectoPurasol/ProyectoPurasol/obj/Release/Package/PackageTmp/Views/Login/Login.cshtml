@@ -1,0 +1,122 @@
+﻿@model ProyectoPurasol.Models.LoginViewModel
+@using System.Web.Optimization
+@using ProyectoPurasol.Models
+
+@{
+    Layout = null;
+}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Inicio Sesión</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="~/Scripts/adminlte/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Scripts/adminlte/components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Scripts/adminlte/components/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Content/adminlte/css/AdminLTE2.css">
+    <link rel="stylesheet" href="~/Scripts/adminlte/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<style>
+    .form-signin {
+        margin: 0 auto;
+        max-width: 650px;
+        padding: 10px;
+        background-color: #00210D;
+    }
+
+    .hold-transition {
+        background-color: #00210D;
+        max-height: 90%;
+    }
+
+    .login {
+        padding: 20px;
+        border-top: 0;
+        max-height: 250%;
+    }
+
+    #LoginButton {
+        background-color: #E1E65F;
+        color: #FFFFFF;
+    }
+
+    .form-signin-heading {
+        color: #FFFFFF;
+        font-size: medium;
+        text-align: center;
+    }
+
+    .Purasol {
+        color: #FFFFFF;
+    }
+
+    .container-fluid {
+        color: #FFFFFF;
+    }
+
+    #pura {
+        height: 9%;
+    }
+</style>
+
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/css/AdminLTE.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="~/Content/img/puraS.png" />
+<script src="~/Content/js/plugins/jquery/jquery-3.3.1.min.js"></script>
+<script src="~/Content/js/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+
+<body class="hold-transition">
+    <div class="login-box">
+        <div class="login-logo">
+            <div class="Purasol">
+                <p>Reportes Purasol <p />
+                    <img src="~/Content/img/puraS.png" id="pura" />
+            </div>
+        </div>
+       
+        <div class="login">
+            <div class="container-fluid">
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form-signin", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <h2 class="form-signin-heading">Ingrese los Datos</h2>
+                    <div class="form-group form-header input-group-lg">
+                        @Html.TextBoxFor(m => m.Usuario, new { @class = "form-control", placeholder = "Usuario", tabindex = 1 })
+                        @Html.ValidationMessageFor(m => m.Usuario, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group form-header input-group-lg">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Contraseña", tabindex = 2 })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="remember">
+                        @Html.CheckBoxFor(m => m.RememberMe, htmlAttributes: new { @id = "login-remember", tabindex = 3 })
+                        @Html.LabelFor(m => m.RememberMe)
+                    </div>
+                    <button type="submit" id="LoginButton" class="btn btn-lg btn-success btn-block" tabindex="4">Ingresar</button>
+                }
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+
+
+<!-- /.container-fluid -->
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

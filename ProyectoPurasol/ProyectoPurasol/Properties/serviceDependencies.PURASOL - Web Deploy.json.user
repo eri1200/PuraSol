@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-08-12T17:31:59.9720743Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "ProyectoPurasol"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "e5ee9b1c-463a-4790-999b-e77fe0c1f340"
+    }
+  }
+}

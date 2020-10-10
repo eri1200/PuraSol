@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="ReportesConnectionString-Web.config Connection String" description="ReportesConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=LAPTOP-PSFS3M07\SQLEXPRESS01;Initial Catalog=Reportes;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\FIDELITAS\\2020\\Segundo\ Cuatrimestre\\Analisis\ 2\\Proyecto\ Analisis\\Sistema\ de\ Reportes\\ProyectoPurasol\\ProyectoPurasol\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ReportesConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="DAL.Properties.Settings.ProyectoPurasolConnectionString-Web.config Connection String" description="DAL.Properties.Settings.ProyectoPurasolConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=Proyecto;Password=masterkey11." tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\FIDELITAS\\2020\\Segundo\ Cuatrimestre\\Analisis\ 2\\Proyecto\ Analisis\\Sistema\ de\ Reportes\\ProyectoPurasol\\ProyectoPurasol\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DAL.Properties.Settings.ProyectoPurasolConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="ProyectoPurasolBD-Web.config Connection String" description="ProyectoPurasolBD Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultValue="[PlaceHolder for connection: ]" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\FIDELITAS\\2020\\Segundo\ Cuatrimestre\\Analisis\ 2\\Proyecto\ Analisis\\Sistema\ de\ Reportes\\ProyectoPurasol\\ProyectoPurasol\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ProyectoPurasolBD']/@connectionString" />
+  </parameter>
+</parameters>

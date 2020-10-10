@@ -31,14 +31,15 @@ namespace ProyectoPurasol.Controllers
 
                 modelo.NombreUsuario = item.usuario;
 
-                if (item.activo)
-                {
-                    modelo.Activo = "Activo";
-                }
-                else
-                {
-                    modelo.Activo = "Desactivado";
-                }
+                //if (item.activo)
+                //{
+                //    modelo.Activo = "Activo";
+                //}
+                //else
+                //{
+                //    modelo.Activo = "Desactivado";
+                //}
+                modelo.Activo=item.activo;
                 listaUsuario.Add(modelo);
 
             }
@@ -124,47 +125,86 @@ namespace ProyectoPurasol.Controllers
 
 
         // GET: Usuario/Edit/5
-        //public ActionResult Edit(int id)
-        //{
-        //    return View();
-        //}
+        public ActionResult Edit(string usuario)
+        {
+            clsRol rol = new clsRol();
+            ViewBag.ListaRol = rol.ConsultarRoles().Select(x => x.Nombre);
+            List<Usuario> listaCliente = new List<Usuario>();
+            clsUsuario User = new clsUsuario();
+            var data = User.ConsultarUsuario(usuario).ToList();
+            Usuario modelo = new Usuario();
+            foreach (var item in data)
+            {
+                Session["NOMBREUSUARIO"] = item.usuario;
 
-        //// POST: Usuario/Edit/5
-        //[HttpPost]
-        //public ActionResult Edit(int id, FormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add update logic here
+                modelo.NombreUsuario = item.usuario;
+                modelo.Activo = item.activo;
+                var contrasena = Security.Desencriptar(item.Clave);
+                modelo.Clave = contrasena;
 
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+                
 
-        //// GET: Usuario/Delete/5
-        //public ActionResult Delete(int id)
-        //{
-        //    return View();
-        //}
+            }
 
-        //// POST: Usuario/Delete/5
-        //[HttpPost]
-        //public ActionResult Delete(int id, FormCollection collection)
-        //{
-        //    try
-        //    {
-        //        // TODO: Add delete logic here
+            return View(modelo);
+            
+        }
 
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+         
+        [HttpPost]
+		public ActionResult Edit(String NombreUsuario, String activo, String Clave, String ListaRol)
+		{
+			try
+			{
+                String UsuarioSession= Session["NOMBREUSUARIO"].ToString();
+                String ClaveEncriptada= Tools.Security.Encriptar(Clave);
+                clsUsuario User = new clsUsuario();
+                bool respuesta= User.ActualizarUsuario(NombreUsuario, ClaveEncriptada, UsuarioSession, ListaRol);
+                if (respuesta)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Edit");
+                }
+
+                
+			}
+			catch
+			{
+				return View();
+			}
+		}
+
+		//// GET: Usuario/Delete/5
+		//public ActionResult Delete(int id)
+		//{
+		//    return View();
+		//}
+
+		
+		[HttpPost]
+        public ActionResult Delete(String id)
+        {
+            try
+            {
+
+                clsUsuario User = new clsUsuario();
+                bool respuesta = User.EliminarUsuario(id);
+                if (respuesta)
+                {
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+                }
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

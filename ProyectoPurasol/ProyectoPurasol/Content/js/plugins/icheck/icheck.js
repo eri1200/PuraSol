@@ -117,7 +117,7 @@
           offset = -area + '%',
           size = 100 + (area * 2) + '%',
           layer = {
-            position: 'absolute',
+            position: 'relative',
             top: offset,
             left: offset,
             display: 'block',
@@ -127,16 +127,16 @@
             padding: 0,
             background: '#fff',
             border: 0,
-            opacity: 0
+            opacity: 1
           },
 
           // Choose how to hide input
           hide = _mobile ? {
-            position: 'absolute',
+            position: 'relative',
             visibility: 'hidden'
           } : area ? layer : {
-            position: 'absolute',
-            opacity: 0
+            position: 'relative',
+            opacity: 1
           },
 
           // Get proper class

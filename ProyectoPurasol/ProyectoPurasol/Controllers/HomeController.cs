@@ -1,9 +1,11 @@
 ﻿using System.Web.Mvc;
+using BLL;
 
 namespace ProyectoPurasol.Controllers
 {
     public class HomeController : Controller
     {
+        [CustomAuthorize]
         [HttpGet]
         public ActionResult Index()
         {

@@ -1,0 +1,62 @@
+﻿@model ProyectoPurasol.Models.UsuarioCrear
+<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+@using reCAPTCHA.MVC
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="panel panel-primary">
+        <div class="panel-body ">
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <h4>CREAR USUARIO</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.Label("Rol", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-6">
+                            @Html.DropDownListFor(model => model.ListaRol, new SelectList(ViewBag.ListaRol, "NombreRol"), "--Rol--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NombreUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NombreUsuario, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+
+                            @Html.PasswordFor(model => model.Contrasena, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                @Html.EditorFor(model => model.Activo)
+                                @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        @Html.Recaptcha()
+                        @Html.ValidationMessage("ReCaptcha")
+                        <input type="submit" value="Create" class="btn btn btn-lg btn-success btn-block" />
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+
+

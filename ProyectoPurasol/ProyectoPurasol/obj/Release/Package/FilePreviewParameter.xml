@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="PURASOL" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\FIDELITAS\\2020\\Segundo\ Cuatrimestre\\Analisis\ 2\\Proyecto\ Analisis\\Sistema\ de\ Reportes\\ProyectoPurasol\\ProyectoPurasol\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\FIDELITAS\\2020\\Segundo\ Cuatrimestre\\Analisis\ 2\\Proyecto\ Analisis\\Sistema\ de\ Reportes\\ProyectoPurasol\\ProyectoPurasol\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="ReportesConnectionString-Web.config Connection String" description="ReportesConnectionString Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." value="Data Source=LAPTOP-PSFS3M07\SQLEXPRESS01;Initial Catalog=Reportes;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\FIDELITAS\\2020\\Segundo\ Cuatrimestre\\Analisis\ 2\\Proyecto\ Analisis\\Sistema\ de\ Reportes\\ProyectoPurasol\\ProyectoPurasol\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ReportesConnectionString']/@connectionString" />
+  </parameter>
+</parameters>

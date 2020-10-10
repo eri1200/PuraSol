@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ProyectoPurasol.Models.Usuario>
+
+@{
+    ViewBag.Title = "Usuarios";
+}
+
+
+
+<div class="panel panel-primary">
+    <div class="panel-body ">
+        <div class="modal-body">
+            <div class="modal-footer">
+                @Html.ActionLink("Nuevo Usuario", "Create", "Usuario", null, new { data_modal = "", id = "btnCreate", @class = "btn btn-small btn-primary pull-left" })
+            </div>
+            <div class="form-horizontal">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NombreUsuario)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Activo)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NombreUsuario)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Activo)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

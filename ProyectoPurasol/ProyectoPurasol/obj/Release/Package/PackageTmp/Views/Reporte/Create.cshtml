@@ -1,0 +1,486 @@
+﻿@model ProyectoPurasol.Models.Reporte
+
+@{
+
+    ViewBag.Title = ViewBag.NombreTarifa;
+    List<ProyectoPurasol.Models.Electrodomestico> lista = new List<ProyectoPurasol.Models.Electrodomestico>();
+    IEnumerable<ProyectoPurasol.Models.Electrodomestico> objeto = lista;
+    WebGrid grid = new WebGrid(objeto, rowsPerPage: 5);
+}
+
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="panel panel-primary">
+        <div class="panel-body ">
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="form-horizontal">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin: auto;">
+                            Seleccionar Cliente
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            @Html.Label("Identificacion", htmlAttributes: new { @class = "control-label col-md-2", @id = "Identificacion" })
+                                            <div class="col-md-6">
+                                                <input class="form-control" type="text" name="IdCliente" id="IdCliente" />
+                                                <input class="btn btn-primary" type="button" name="Buscar" id="Buscar" value="Buscar Cliente" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                    <script>
+                                        $(document).ready(function () {
+                                            try {
+                                                $("#Buscar").click(function () {
+
+                                                    if ((document.getElementById("IdCliente").value != "" && !isNaN(parseInt(document.getElementById("IdCliente").value)))) {
+                                                    @*$.post('@Url.Action("ConsultarCliente", "Cliente")', { id: document.getElementById("IdCliente").value })
+                                                        .done(function (resultado) {
+                                                            $("#Nombre").val(resultado[0].Nombre);
+                                                            $("#Apellido1").val(resultado[0].Apellido);
+                                                            $("#Apellido2").val(resultado[0].Correo);
+                                                        }).fail(function () {
+                                                            alert("Información No Encontrada");
+                                                        });*@
+                                                    $.ajax({
+                                                        type: 'POST',
+                                                        url: '@Url.Action("ConsultarCliente", "Cliente")',
+                                                        contentType: "application/json; charset=utf-8",
+                                                        dataType: 'json',
+                                                        data: JSON.stringify({ id: document.getElementById("IdCliente").value }),
+                                                        success: function (resultado) {
+                                                            if (resultado.success) {
+                                                                
+                                                                $("#Cliente").val(resultado.resul[0].Nombre);
+                                                                alert("SE AGREGÓ CORRECTAMENTE");
+                                                            } else {
+                                                                $("#Cliente").val("");
+                                                                alert("ERROR BUSCANDO EL CLIENTE");
+                                                            }
+                                                            
+                                                        },
+                                                        error: function (ex) {
+                                                            $("#Cliente").val("");
+                                                            alert('Hubo un error cargando los datos ' + ex);
+                                                        }
+                                                    })
+                                                } else {
+                                                    alert("INFORMACIÓN INCORRECTA");
+                                                }
+                                            });
+                                            }
+                                            catch (err) {
+                                                alert("Hubo un error",err);
+                                            }
+
+
+                                            });
+
+
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-horizontal" id="FormularioReporte">
+                        
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @id = "Cliente" } })
+                                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Compania, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownListFor(model => model.Compania, new SelectList(ViewBag.listaCompania, "IdCompania", "Nombre"), "--Compañía--", new { @class = "form-control", @id = "Compania", style = "font-size: 1.3em; font-weight:700;" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control", @id = "Descripcion" } })
+                                @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Tarifa, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownListFor(model => model.Tarifa, new SelectList(ViewBag.listaTarifas, "IdTarifa", "Nombre"), "--Tarifa--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tarifa" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TechoDisponible, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TechoDisponible, new { htmlAttributes = new { @class = "form-control", @id = "TechoDisponible" } })
+                                @Html.ValidationMessageFor(model => model.TechoDisponible, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.HorasRespaldo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.HorasRespaldo, new { htmlAttributes = new { @class = "form-control", @id = "HoraRespaldo" } })
+                                @Html.ValidationMessageFor(model => model.HorasRespaldo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TipoCambio, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TipoCambio, new { htmlAttributes = new { @class = "form-control", @id = "TipoCambio" } })
+                                @Html.ValidationMessageFor(model => model.TipoCambio, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.PotenciadePanel, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.PotenciadePanel, new { htmlAttributes = new { @class = "form-control", @id = "PotenciaPanel" } })
+                                @Html.ValidationMessageFor(model => model.PotenciadePanel, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CostoUnitarioFijo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.CostoUnitarioFijo, new { htmlAttributes = new { @class = "form-control", @id = "CostoUnitarioFijo" } })
+                                @Html.ValidationMessageFor(model => model.CostoUnitarioFijo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TamanoFijo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TamanoFijo, new { htmlAttributes = new { @class = "form-control", @id = "TamanoFijo" } })
+                                @Html.ValidationMessageFor(model => model.TamanoFijo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CostosdeMantenimiento, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.CostosdeMantenimiento, new { htmlAttributes = new { @class = "form-control", @id = "CostoMantenimiento" } })
+                                @Html.ValidationMessageFor(model => model.CostosdeMantenimiento, "", new { @class = "text-danger" })
+
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.CrecimientoAnual, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.CrecimientoAnual, new { htmlAttributes = new { @class = "form-control", @id = "CrecimientoAnual" } })
+                                @Html.ValidationMessageFor(model => model.CrecimientoAnual, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.NumCotizacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.NumCotizacion, new { htmlAttributes = new { @class = "form-control", @id = "NumCotizacion" } })
+                                @Html.ValidationMessageFor(model => model.NumCotizacion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Tecnologia, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.DropDownListFor(model => model.Tarifa, new SelectList(ViewBag.listaTecnologia, "Value", "Text"), "--Tecnología--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tecnologia" })
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-body ">
+            <div class="modal-footer">
+                <div class="form-group">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.electro, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.electro, new { htmlAttributes = new { @class = "form-control", @id = "Electro" } })
+                                @Html.ValidationMessageFor(model => model.electro, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Cantidad, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "form-control", @id = "Cantidad" } })
+                                @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.uso, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div>
+                                    <select name="uso" id="uso" class="form-control">
+                                        <option value="True">True</option>
+                                        <option value="False">False</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.HoraInicio, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.HoraInicio, new { @type = "time", htmlAttributes = new { @class = "form-control", @id = "HoraInicio" } })
+                                @Html.ValidationMessageFor(model => model.HoraInicio, "", new { @class = "text-danger" })
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.HoraFinal, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.HoraFinal,  new { @type = "time", htmlAttributes = new { @class = "form-control", @id = "HoraFinal" } })
+                                @Html.ValidationMessageFor(model => model.HoraFinal, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Dia, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <select name="Dia" id="Dia" class="form-control">
+                                    <option value="Lunes a Viernes">Lunes a Viernes</option>
+                                    <option value="Fines de Semana">Fines de Semana</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <style type="text/css">
+                            .table {
+                                margin: 4px;
+                                border-collapse: collapse;
+                                width: 300px;
+                                margin: 0 auto;
+                            }
+
+                            .header {
+                                background-color: black;
+                                font-weight: bold;
+                                color: white;
+                            }
+
+                            .table th, .table td {
+                                border: 1px solid black;
+                                padding: 5px;
+                                background-color: gray;
+                                color: white;
+                                text-align: center;
+                            }
+                        </style>
+                        @grid.GetHtml(
+                       htmlAttributes: new { id = "grid" },
+                            tableStyle: "table", // applying style on grid
+                            fillEmptyRows: false,
+                            //show empty row when there is only one record on page to it will display all empty rows there.
+                            headerStyle: "header", //applying style.
+                            footerStyle: "grid-footer", //applying style.
+                            mode: WebGridPagerModes.All, //paging to grid
+                            firstText: "<< First",
+                            previousText: "< Prev",
+                            nextText: "Next >",
+                            lastText: "Last >>",
+                            columns: new[]  // colums in grid
+                            {
+                                grid.Column("Electro"), //the model fields to display
+                                grid.Column("Cantidad"  ),
+                                grid.Column("Uso"),
+                                grid.Column("HoraInicio"),
+                                grid.Column("HoraFinal"),
+                                grid.Column("Dia"),
+                           })
+                        <input class="btn btn-primary" type="button" value="Agregar" id="Agregar" name="Agregar" />
+                        <input class="btn btn-primary" type="button" value="Quitar" id="Quitar" name="Quitar" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer justify-content-start">
+        <input class="btn btn btn-primary btn-block" type="button" value="Guardar" id="Guardar" name="Guardar" />
+    </div>
+
+}
+<script type="text/javascript">
+
+    var electro = [];
+    var jsonObject = [];
+
+       // Electrodomestico:[]
+
+
+
+    $("#Agregar").click(function () {
+
+
+
+        var existrow = $('.save').length;
+
+        if (existrow == 0) {
+
+            var index = $("#grid tbody tr").length + 1;
+
+            //electro.Electrodomestico.push({"Electrodomestico" : document.getElementById("Electrodomestico").value,
+
+            //"Cantidad" : document.getElementById("Cantidad").value,
+
+            //"Uso" : document.getElementById("uso").value,
+
+            //"HoraInicio" : document.getElementById("HoraInicio").value,
+
+            //"HoraFinal" : document.getElementById("HoraFinal").value,
+
+            //"Dia": document.getElementById("Dia").value
+            ////electro.push(Electrodomestico, Cantidad, Uso, HoraInicio, HoraFinal, Dia);
+
+
+            //} )
+            jsonObject = ([{ electro: document.getElementById("Cantidad").value, cantidad: 0, uso: false, horaInicio: "0001-01-01T00:00:00", horaFinal: "0001-01-01T00:00:00", dia: null }
+                , { electro: document.getElementById("Cantidad").value, cantidad: 0, uso: false, horaInicio: "0001-01-01T00:00:00", horaFinal: "0001-01-01T00:00:00", dia: null }]);
+
+            var tr = '<tr class="alternate-row"><td><span> ' + document.getElementById("Electro").value  + '</span>' +
+
+                '</td > <td><span> ' + document.getElementById("Cantidad").value + '</span></td>' +
+
+                '<td><span> ' + document.getElementById("uso").value  + '  </span></td>' +
+
+                '<td><span> ' + document.getElementById("HoraInicio").value  + ' </span></td>' +
+
+                '<td><span> ' + document.getElementById("HoraFinal").value  + '</span></td>' +
+
+                '<td><span> ' + document.getElementById("Dia").value  + '</span></td>';
+
+
+            $("#grid tbody").append(tr);
+
+        }
+
+        else {
+
+            alert('First Save your previous record !!');
+
+        }
+
+
+
+    });
+
+    $("#Quitar").click(function () {
+
+        var flag = confirm('Are you sure to cancel');
+
+        if (flag) {
+            var table = document.getElementById("grid");
+            var totalRowCount = table.rows.length - 1;
+            //$(this).parents("tr").remove();
+            document.getElementById("grid").deleteRow(totalRowCount);
+        }
+
+
+
+    });
+    $("#Guardar").click(function () {
+
+        var table = $('#grid').tableToJSON();
+
+
+        //alert(JSON.stringify({ Nombre: document.getElementById("Cliente").value, table }));
+        //var prueba = JSON.stringify({ Nombre: document.getElementById("Cliente").value,
+        //    Compania: document.getElementById("Compania").value,
+        //    Tarifa: document.getElementById("Tarifa").value,
+        //    Descripcion: document.getElementById("Compania").value,
+        //    TechoDisponible: document.getElementById("TechoDisponible").value,
+        //    HorasRespaldo: document.getElementById("HoraRespaldo").value,
+        //    HorasRespaldo: document.getElementById("HoraRespaldo").value,
+        //    TipoCambio: document.getElementById("TipoCambio").value,
+        //    PotenciadePanel: document.getElementById("PotenciaPanel").value,
+        //    CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+        //    TamanoFijo: document.getElementById("TamanoFijo").value,
+        //    CostoUnitarioFijo: document.getElementById("PotenciadePanel").value,
+        //    CostoMantenimiento: document.getElementById("CostoMantenimiento").value,
+        //    CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+        //    CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+        //    table
+        //});
+
+
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("Create", "Reporte")',
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            data: JSON.stringify({
+                Nombre: document.getElementById("Cliente").value,
+                Compania: document.getElementById("Compania").value,
+                Tarifa: document.getElementById("Tarifa").value,
+                Descripcion: document.getElementById("Compania").value,
+                TechoDisponible: document.getElementById("TechoDisponible").value,
+                HorasRespaldo: document.getElementById("HoraRespaldo").value,
+                TipoCambio: document.getElementById("TipoCambio").value,
+                PotenciaPanel: document.getElementById("PotenciaPanel").value,
+                CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
+                TamanoFijo: document.getElementById("TamanoFijo").value,
+                CostoUnitarioFijo: document.getElementById("CostoMantenimiento").value,
+                CostoUnitarioFijo: document.getElementById("CrecimientoAnual").value,
+                CostoUnitarioFijo: document.getElementById("NumCotizacion").value,
+                CostoUnitarioFijo: document.getElementById("Tecnologia").value,
+                table}),
+            success: function (resultado) {
+            if (resultado.success) {
+
+                alert(resultado.url);
+                window.location.replace(resultado.url);
+             } else {
+                alert("Hubo un error");
+               window.location.replace(resultado.url);
+             }
+
+             },
+             error: function (ex) {
+             $("#Cliente").val("");
+              //alert('Hubo un error cargando los datos ' + ex);
+        }
+    });
+
+
+    });
+</script>
+<script>
+    /* Este fue el código que pegue de la pagina*/
+    $(document).ready(function () {
+        !function (a) { "use strict"; a.fn.tableToJSON = function (b) { var c = { ignoreColumns: [], onlyColumns: null, ignoreHiddenRows: !0, ignoreEmptyRows: !1, headings: null, allowHTML: !1, includeRowId: !1, textDataOverride: "data-override", textExtractor: null }; b = a.extend(c, b); var d = function (a) { return void 0 !== a && null !== a }, e = function (c) { return d(b.onlyColumns) ? -1 === a.inArray(c, b.onlyColumns) : -1 !== a.inArray(c, b.ignoreColumns) }, f = function (b, c) { var e = {}, f = 0; return a.each(c, function (a, c) { f < b.length && d(c) && (e[b[f]] = c, f++) }), e }, g = function (c, d, e) { var f = a(d), g = b.textExtractor, h = f.attr(b.textDataOverride); return null === g || e ? a.trim(h || (b.allowHTML ? f.html() : d.textContent || f.text()) || "") : a.isFunction(g) ? a.trim(h || g(c, f)) : "object" == typeof g && a.isFunction(g[c]) ? a.trim(h || g[c](c, f)) : a.trim(h || (b.allowHTML ? f.html() : d.textContent || f.text()) || "") }, h = function (c, d) { var e = [], f = b.includeRowId, h = "boolean" == typeof f ? f : "string" == typeof f ? !0 : !1, i = "string" == typeof f == !0 ? f : "rowId"; return h && "undefined" == typeof a(c).attr("id") && e.push(i), a(c).children("td,th").each(function (a, b) { e.push(g(a, b, d)) }), e }, i = function (a) { var c = a.find("tr:first").first(); return d(b.headings) ? b.headings : h(c, !0) }, j = function (c, h) { var i, j, k, l, m, n, o, p = [], q = 0, r = []; return c.children("tbody,*").children("tr").each(function (c, e) { if (c > 0 || d(b.headings)) { var f = b.includeRowId, h = "boolean" == typeof f ? f : "string" == typeof f ? !0 : !1; n = a(e); var r = n.find("td").length === n.find("td:empty").length ? !0 : !1; !n.is(":visible") && b.ignoreHiddenRows || r && b.ignoreEmptyRows || n.data("ignore") && "false" !== n.data("ignore") || (q = 0, p[c] || (p[c] = []), h && (q += 1, "undefined" != typeof n.attr("id") ? p[c].push(n.attr("id")) : p[c].push("")), n.children().each(function () { for (o = a(this); p[c][q];)q++; if (o.filter("[rowspan]").length) for (k = parseInt(o.attr("rowspan"), 10) - 1, m = g(q, o), i = 1; k >= i; i++)p[c + i] || (p[c + i] = []), p[c + i][q] = m; if (o.filter("[colspan]").length) for (k = parseInt(o.attr("colspan"), 10) - 1, m = g(q, o), i = 1; k >= i; i++)if (o.filter("[rowspan]").length) for (l = parseInt(o.attr("rowspan"), 10), j = 0; l > j; j++)p[c + j][q + i] = m; else p[c][q + i] = m; m = p[c][q] || g(q, o), d(m) && (p[c][q] = m), q++ })) } }), a.each(p, function (c, g) { if (d(g)) { var i = d(b.onlyColumns) || b.ignoreColumns.length ? a.grep(g, function (a, b) { return !e(b) }) : g, j = d(b.headings) ? h : a.grep(h, function (a, b) { return !e(b) }); m = f(j, i), r[r.length] = m } }), r }, k = i(this); return j(this, k) } }(jQuery);
+    });
+</script>

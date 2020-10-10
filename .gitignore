@@ -1,0 +1,11 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+/ProyectoPurasol/packages/alertify/0.3.11/content/Content/alertify
+/ProyectoPurasol/packages/antlr/3.5.0.2
+/ProyectoPurasol/packages/bootstrap/3.4.1
+/ProyectoPurasol/packages/chaso.reportviewerformvc/1.1.1.1
+/ProyectoPurasol/packages/Chaso.ReportViewerForMvc.1.1.1.1
+/ProyectoPurasol/packages/alertify/0.3.11
+/ProyectoPurasol/packages

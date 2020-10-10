@@ -59,7 +59,10 @@
                 <a href="@Url.Action("Index", "Usuario")" id="usuario" class="btn btn-success btn-sm" img="~/Content/Iconos/USER.png">
                     <img class="resize_fit_center" src="~/Content/Iconos/USER.png" width="20px" id="people" /> <p>@Session["ROLES"] </p>
                 </a>
-
+                <a href="@Url.Action("Salir","Login")" class="logo">
+                    <i class="fa fa-close  fa-2x"></i><br />
+                    Salir
+                </a>
             </nav>
 
         </header>

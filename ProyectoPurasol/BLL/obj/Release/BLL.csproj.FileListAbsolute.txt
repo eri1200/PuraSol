@@ -1,0 +1,12 @@
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Release\BLL.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Release\BLL.pdb
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Release\DAL.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Release\reCAPTCHA.MVC.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Release\Newtonsoft.Json.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Release\DAL.pdb
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Release\DAL.dll.config
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Release\BLL.csprojAssemblyReference.cache
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Release\BLL.csproj.CoreCompileInputs.cache
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Release\BLL.csproj.CopyComplete
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Release\BLL.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\obj\Release\BLL.pdb

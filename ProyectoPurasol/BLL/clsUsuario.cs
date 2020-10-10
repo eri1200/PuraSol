@@ -105,13 +105,13 @@ namespace BLL
                 throw;
             }
         }
-        public bool ActualizarUsuario(string Usuario, string Clave/*, bool Estado*/)
+        public bool ActualizarUsuario(string Usuario, string Clave, string UsuarioAnterior, string rol)
         {
             try
             {
                 int respuesta = 1;
                 DatosDataContext dc = new DatosDataContext();
-                respuesta = dc.ActualizarUsuario(Usuario, Clave);
+                respuesta = dc.ActualizarUsuario(Usuario,UsuarioAnterior, Clave, rol);
                 if (respuesta == 0)
                 {
                     return true;
