@@ -19,11 +19,22 @@
       <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ActualizarUsuario" Method="ActualizarUsuario">
+    <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="usuarioAnterior" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="clave" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="rol" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.AgregarUsuario" Method="AgregarUsuario">
     <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="clave" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="activo" Type="System.Boolean" DbType="Bit" />
     <Parameter Name="rol" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.Cantones" Method="Cantones">
@@ -32,6 +43,22 @@
       <Column Name="Provincia" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
       <Column Name="Canton" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaListaUsuario" Method="ConsultaListaUsuario">
+    <ElementType Name="ConsultaListaUsuarioResult">
+      <Column Name="usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultarUsuario" Method="ConsultarUsuario">
+    <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
+    <ElementType Name="ConsultarUsuarioResult">
+      <Column Name="usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Clave" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.CrearActualizarCliente" Method="CrearActualizarCliente">
@@ -80,6 +107,8 @@
       <Column Name="Usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Clave" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ListaClientes" Method="ListaClientes">
@@ -124,26 +153,5 @@
       <Column Name="Cod" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultarUsuario" Method="ConsultarUsuario">
-    <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
-    <ElementType Name="ConsultarUsuarioResult">
-      <Column Name="usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="Clave" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaListaUsuario" Method="ConsultaListaUsuario">
-    <ElementType Name="ConsultaListaUsuarioResult">
-      <Column Name="usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ActualizarUsuario" Method="ActualizarUsuario">
-    <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="usuarioAnterior" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="clave" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="rol" Type="System.String" DbType="VarChar(100)" />
-    <Return Type="System.Int32" />
   </Function>
 </Database>

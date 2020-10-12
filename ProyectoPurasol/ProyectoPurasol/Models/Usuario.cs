@@ -10,6 +10,8 @@ namespace ProyectoPurasol.Models
         public string NombreUsuario { get; set; }
         public bool Activo { get; set; }
         public string Clave { get; set; }
+        public string Correo { get; set; }
+        public string Descripcion { get; set; }
 
         public string ListaRol { get; set; }
     }

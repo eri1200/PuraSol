@@ -54,13 +54,13 @@ namespace BLL
             }
 
         }
-        public bool AgregarUsuario(string Usuario, string Clave, bool activo, string rol) //Método para agregar usuario, con la información usuario, clave, si esta activo o no, y el rol
+        public bool AgregarUsuario(string Usuario, string Clave, bool activo, string rol, string descripcion, string correo) //Método para agregar usuario, con la información usuario, clave, si esta activo o no, y el rol
         {
             try
             {
                 
                 DatosDataContext dc = new DatosDataContext(); //Instanciar la Base de datos.
-                int respuesta = Convert.ToInt32(dc.AgregarUsuario(Usuario, Clave,activo,rol)); //Convertir la información en Int, para guardarlo.
+                int respuesta = Convert.ToInt32(dc.AgregarUsuario(Usuario, Clave,activo,rol, correo,descripcion)); //Convertir la información en Int, para guardarlo.
                 if (string.IsNullOrWhiteSpace(rol))
                 {
                     respuesta = 1;
@@ -105,13 +105,13 @@ namespace BLL
                 throw;
             }
         }
-        public bool ActualizarUsuario(string Usuario, string Clave, string UsuarioAnterior, string rol)
+        public bool ActualizarUsuario(string Usuario, string Clave, string UsuarioAnterior, string rol,string correo, string descripcion)
         {
             try
             {
                 int respuesta = 1;
                 DatosDataContext dc = new DatosDataContext();
-                respuesta = dc.ActualizarUsuario(Usuario,UsuarioAnterior, Clave, rol);
+                respuesta = dc.ActualizarUsuario(Usuario,UsuarioAnterior, Clave, rol, correo,descripcion);
                 if (respuesta == 0)
                 {
                     return true;

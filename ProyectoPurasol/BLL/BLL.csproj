@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCliente.cs" />
+    <Compile Include="clsCorreo.cs" />
     <Compile Include="clsInformacion.cs" />
     <Compile Include="clsLogin.cs" />
     <Compile Include="clsReporte.cs" />

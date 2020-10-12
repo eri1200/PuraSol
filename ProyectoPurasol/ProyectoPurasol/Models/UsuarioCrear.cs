@@ -17,5 +17,7 @@ namespace ProyectoPurasol.Models
 
         public bool Activo { get; set; } //se tienen los constructores del Activo
         public string ListaRol { get; set; } //se tienen los constructores del ListaRol
+        public string Correo { get; set; }
+        public string Descripcion { get; set; }
     }
 }

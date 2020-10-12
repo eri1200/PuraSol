@@ -128,8 +128,6 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Release\ProyectoPurasol.csprojAssemblyReference.cache
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Release\RdlCompile.cache
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Release\RdlCompile.compiled
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Release\ProyectoPurasol.csproj.CoreCompileInputs.cache
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Release\ProyectoPurasol.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Release\ProyectoPurasol.dll
@@ -138,3 +136,11 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\EntityFramework.SqlServer.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Logging.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Tokens.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Logging.xml
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Tokens.xml
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.JsonWebTokens.xml

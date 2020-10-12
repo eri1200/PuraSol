@@ -72,16 +72,19 @@ namespace ProyectoPurasol.Controllers
                 if (captchaValid) //revisar manualmente el captcha
                 {
 
-
-                    string ContraseñaEncriptada = Security.Encriptar(usuario.Contrasena);
+                    var randomNumber = new Random().Next(100, 1000);
+                    DateTime hora = new DateTime();
+                    string Contrasena = usuario.NombreUsuario + randomNumber + hora.Second.ToString();
+                    string ContraseñaEncriptada = Security.Encriptar(Contrasena);
                     clsUsuario clsUsuario = new clsUsuario();
-
+                    clsCorreo clsCorreo = new clsCorreo();
+                    clsCorreo.SendEmailAsync(usuario.Correo, usuario.NombreUsuario, Contrasena);
                     bool respuesta = false;
-                    var Resultado = clsUsuario.ConsultarUsuario(usuario.NombreUsuario, ContraseñaEncriptada).Count();
+                    var Resultado = clsUsuario.ConsultarUsuario(usuario.NombreUsuario).Count();
 
                     if (Resultado == 0)
                     {
-                        respuesta = clsUsuario.AgregarUsuario(usuario.NombreUsuario, ContraseñaEncriptada, usuario.Activo, usuario.ListaRol);
+                        respuesta = clsUsuario.AgregarUsuario(usuario.NombreUsuario, ContraseñaEncriptada, true, usuario.ListaRol,usuario.Descripcion,usuario.Correo);
                         if (respuesta)
                         {
                             return RedirectToAction("Index");
@@ -139,9 +142,11 @@ namespace ProyectoPurasol.Controllers
 
                 modelo.NombreUsuario = item.usuario;
                 modelo.Activo = item.activo;
+                modelo.Descripcion = item.Descripcion;
+                modelo.Correo = item.Correo;
                 var contrasena = Security.Desencriptar(item.Clave);
                 modelo.Clave = contrasena;
-
+                
                 
 
             }
@@ -152,14 +157,14 @@ namespace ProyectoPurasol.Controllers
 
          
         [HttpPost]
-		public ActionResult Edit(String NombreUsuario, String activo, String Clave, String ListaRol)
+		public ActionResult Edit(String NombreUsuario, String activo, String Clave, String ListaRol, String Descripcion, String Correo)
 		{
 			try
 			{
                 String UsuarioSession= Session["NOMBREUSUARIO"].ToString();
                 String ClaveEncriptada= Tools.Security.Encriptar(Clave);
                 clsUsuario User = new clsUsuario();
-                bool respuesta= User.ActualizarUsuario(NombreUsuario, ClaveEncriptada, UsuarioSession, ListaRol);
+                bool respuesta= User.ActualizarUsuario(NombreUsuario, ClaveEncriptada, UsuarioSession, ListaRol,Correo,Descripcion);
                 if (respuesta)
                 {
                     return RedirectToAction("Index");
