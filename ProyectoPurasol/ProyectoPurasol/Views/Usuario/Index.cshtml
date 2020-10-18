@@ -1,10 +1,23 @@
-﻿@model IEnumerable<ProyectoPurasol.Models.Usuario>
+﻿
+@model IEnumerable<ProyectoPurasol.Models.Usuario>
 
 @{
     ViewBag.Title = "Usuarios";
 }
 
-
+<style>
+    .btn-success {
+        background: #E1E65F;
+        border-color: #E1E65F;
+    }
+    .panel-primary{ 
+        border-color:white;
+    }
+    .btn-danger {
+        background: #E1E65F;
+        border-color: #E1E65F;
+    }
+</style>
 
 <div class="panel panel-primary">
     <div class="panel-body ">
@@ -36,7 +49,7 @@
 							<td>
 								@Html.ActionLink("Editar", "Edit", new { usuario = item.NombreUsuario }, new { @class = "btn btn-success btn-sm" }) |
 								
-								@Html.ActionLink("Delete", "Delete", new {  id=item.NombreUsuario })
+								@Html.ActionLink("Delete", "Delete", new {  id=item.NombreUsuario }, new { @class = "btn btn-danger btn-sm" })
 							</td>
                         </tr>
                     }

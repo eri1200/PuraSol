@@ -76,3 +76,37 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.Razor.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\BLL.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\BLL.pdb
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\DAL.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\reCAPTCHA.MVC.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Security.Permissions.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Web.Mvc.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Web.Razor.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\DAL.pdb
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\DAL.dll.config
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Security.Permissions.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.pdb

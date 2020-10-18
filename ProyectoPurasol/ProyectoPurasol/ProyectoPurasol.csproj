@@ -273,12 +273,18 @@
     <Content Include="bin\WebHelpers.Mvc5.dll" />
     <Content Include="bin\WebMatrix.Data.dll" />
     <Content Include="bin\WebMatrix.WebData.dll" />
+    <Content Include="Content\css\icheck\blue.css" />
+    <Content Include="Content\css\icheck\blue.min.css" />
     <Content Include="Content\Iconos\USER.png" />
     <Content Include="Content\img\imagen1.jpg" />
     <Content Include="Content\img\imagen2.jpg" />
     <Content Include="Content\img\imagen3.jpg" />
     <Content Include="Content\img\puraS.png" />
     <Content Include="Content\img\remplazo.jpg" />
+    <Content Include="Content\css\skins\skin-blue.min.css" />
+    <Content Include="Content\css\skins\skin-blue.css" />
+    <Content Include="Content\css\skins\skin-blue-light.css" />
+    <Content Include="Content\css\skins\skin-blue-light.min.css" />
     <Content Include="Global.asax" />
     <Content Include="ReportViewerWebForm.aspx" />
     <Content Include="Scripts\alertify\alertify.js" />
@@ -379,7 +385,7 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="Content\css\AdminLTE.css" />
-    <Content Include="Content\css\AdminLTE2.css" />
+    <Content Include="Content\css\AdminLTE.min.css" />
     <Content Include="Content\css\bootstrap-datepicker3.min.css" />
     <Content Include="Content\css\bootstrap-select.css" />
     <Content Include="Content\css\bootstrap-select.min.css" />

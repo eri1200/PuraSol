@@ -1,14 +1,33 @@
-﻿
+﻿<style>
+    .form-group {
+        background: white;
+    }
+    #Comercial, #Microred, #Residencial, #TMT {
+        background: #00210D;
+        height: 40px;
+        
+    }
+    .Inicio{ 
+        align-content: center;
+        text-align: center;
+    }
+    .modal-footer {
+        background: white;
+    }
+    .panel-primary {
+        border-color: white;
+    }
+</style>
 <div>
     <h3>Crear Reporte</h3>
     <div class="panel panel-primary">
         <div class="panel-body ">
-            <h4>Seleccione el tipo de reporte</h4>
+           <h4 class ="Inicio"> Seleccione el tipo de reporte</h4>
             <div class="modal-footer">
 
                 <div class="form-group">
                     <a href='@Url.Action("Create", "Reporte", new { id=1})'>
-                        <input type="button" value='Oferta Comercial' class="btn  btn-primary btn-block" name="Comercial" id="Comercial" style="height:40px" />
+                        <input type="button" value='Oferta Comercial' class="btn  btn-primary btn-block" name="Comercial" id="Comercial"  />
                     </a>
                     <br>
                     <a href='@Url.Action("Create", "Reporte", new { id=2})'>

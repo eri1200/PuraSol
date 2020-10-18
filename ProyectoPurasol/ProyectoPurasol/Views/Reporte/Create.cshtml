@@ -8,18 +8,23 @@
     WebGrid grid = new WebGrid(objeto, rowsPerPage: 5);
 }
 
+<style>
+    .btn-primary {
+        background: #E1E65F; 
+        border-color: #E1E65F;
+        color:white;
+    }
+    .panel-primary{ 
+        border-color: white;
+    }
+</style>
 
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <div class="panel panel-primary">
+<div class="panel panel-primary">
         <div class="panel-body ">
             <div class="modal-footer">
                 <div class="form-group">
                     <div class="form-horizontal">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin: auto;">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                             Seleccionar Cliente
                         </button>
 
@@ -300,6 +305,9 @@
                                 color: white;
                                 text-align: center;
                             }
+
+                          
+                       
                         </style>
                         @grid.GetHtml(
                        htmlAttributes: new { id = "grid" },
