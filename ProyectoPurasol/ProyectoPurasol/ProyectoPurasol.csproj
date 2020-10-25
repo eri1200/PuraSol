@@ -273,6 +273,22 @@
     <Content Include="bin\WebHelpers.Mvc5.dll" />
     <Content Include="bin\WebMatrix.Data.dll" />
     <Content Include="bin\WebMatrix.WebData.dll" />
+    <Content Include="Content\css\alertify\alertify.css" />
+    <Content Include="Content\css\alertify\alertify.min.css" />
+    <Content Include="Content\css\alertify\alertify.rtl.css" />
+    <Content Include="Content\css\alertify\alertify.rtl.min.css" />
+    <Content Include="Content\css\alertify\themes\bootstrap.css" />
+    <Content Include="Content\css\alertify\themes\bootstrap.min.css" />
+    <Content Include="Content\css\alertify\themes\bootstrap.rtl.css" />
+    <Content Include="Content\css\alertify\themes\bootstrap.rtl.min.css" />
+    <Content Include="Content\css\alertify\themes\default.css" />
+    <Content Include="Content\css\alertify\themes\default.min.css" />
+    <Content Include="Content\css\alertify\themes\default.rtl.css" />
+    <Content Include="Content\css\alertify\themes\default.rtl.min.css" />
+    <Content Include="Content\css\alertify\themes\semantic.css" />
+    <Content Include="Content\css\alertify\themes\semantic.min.css" />
+    <Content Include="Content\css\alertify\themes\semantic.rtl.css" />
+    <Content Include="Content\css\alertify\themes\semantic.rtl.min.css" />
     <Content Include="Content\css\icheck\blue.css" />
     <Content Include="Content\css\icheck\blue.min.css" />
     <Content Include="Content\Iconos\USER.png" />
@@ -349,6 +365,7 @@
     <Content Include="Views\Reporte\MesesConsumo.cshtml" />
     <Content Include="Views\Reporte\ReporteExtra.cshtml" />
     <Content Include="Views\Usuario\Edit.cshtml" />
+    <Content Include="Views\Usuario\EditarRoles.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -368,6 +385,7 @@
     <Compile Include="Models\JWT.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Reporte.cs" />
+    <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Usuario.cs" />
     <Compile Include="Models\UsuarioCrear.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

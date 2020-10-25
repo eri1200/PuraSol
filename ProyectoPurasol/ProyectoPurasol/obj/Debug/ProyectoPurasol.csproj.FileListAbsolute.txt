@@ -449,7 +449,6 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\EnvDTE.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.Shell.Interop.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.ReportViewer.WinForms.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\stdole.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.OLE.Interop.dll
@@ -459,75 +458,11 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\BLL.pdb
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.pdb
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.dll.config
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\de\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\es\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\fr\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\it\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ja\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ko\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pt\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ru\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\de\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\es\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\it\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\de\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\es\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\fr\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\it\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ja\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ko\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pt\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ru\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHS\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHT\Microsoft.ReportViewer.Design.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\de\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\es\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\fr\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\it\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ja\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ko\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pt\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ru\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHS\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHT\Microsoft.ReportViewer.WebDesign.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\de\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\es\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\fr\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\it\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ja\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ko\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pt\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ru\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHS\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHT\Microsoft.ReportViewer.WebForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\de\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\es\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\fr\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\it\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ja\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ko\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\pt\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ru\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csprojAssemblyReference.cache
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CoreCompileInputs.cache
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\EntityFramework.xml
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\EntityFramework.SqlServer.xml
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Logging.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Tokens.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.IdentityModel.Tokens.Jwt.dll
@@ -682,3 +617,84 @@ C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc.rsp
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x64\msvcr120.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x86\msvcr120.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\csc.exe
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\csc.exe.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\csc.rsp
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\csi.exe
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\csi.exe.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\csi.rsp
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.Managed.Core.targets
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.AppContext.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Collections.Immutable.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Console.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Globalization.Calendars.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.IO.FileSystem.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Net.Http.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Net.Sockets.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Reflection.Metadata.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.ValueTuple.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Xml.XmlDocument.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Xml.XPath.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc.exe
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc.exe.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc.rsp
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\BLL.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Logging.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Tokens.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\EnvDTE.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.Shell.Interop.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\stdole.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.OLE.Interop.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.TextManager.Interop.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.MSXML.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\BLL.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\DAL.dll.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Logging.xml
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.Tokens.xml
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csprojAssemblyReference.cache
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CoreCompileInputs.cache
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb

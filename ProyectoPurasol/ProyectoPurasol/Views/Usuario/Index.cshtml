@@ -46,15 +46,18 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.Activo)
                             </td>
-							<td>
-								@Html.ActionLink("Editar", "Edit", new { usuario = item.NombreUsuario }, new { @class = "btn btn-success btn-sm" }) |
-								
-								@Html.ActionLink("Delete", "Delete", new {  id=item.NombreUsuario }, new { @class = "btn btn-danger btn-sm" })
-							</td>
+                            <td>
+                                @Html.ActionLink("Editar", "Edit", new { usuario = item.NombreUsuario }, new { @class = "btn btn-success btn-sm" }) |
+
+                                @Html.ActionLink("Delete", "Delete", new { id = item.NombreUsuario }, new { @class = "btn btn-danger btn-sm" }) |
+
+                                @Html.ActionLink("Editar Roles", "EditarRoles", new { id = item.NombreUsuario }, new { @class = "btn btn-danger btn-sm" })
+                            </td>
                         </tr>
                     }
 
                 </table>
+                <div class="panel-footer">Cantidad = @Model.Count()</div>
             </div>
         </div>
     </div>

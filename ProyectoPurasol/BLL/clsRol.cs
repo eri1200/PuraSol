@@ -23,5 +23,27 @@ namespace BLL
             }
 
         }
+        public bool EliminarRol(string rol, string usuario)
+        {
+            try
+            {
+                DatosDataContext dc = new DatosDataContext(); //Instanciar la Base de datos.
+                int respuesta = dc.EliminarRolUsuario(rol,usuario);
+                if (respuesta == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+
+        }
     }
 }

@@ -211,5 +211,64 @@ namespace ProyectoPurasol.Controllers
                 return View();
             }
         }
+        
+        public ActionResult EditarRoles(String id)
+        {
+            try
+            {
+                List<Rol> listaRol = new List<Rol>();
+
+                clsUsuario usuario = new clsUsuario();
+                var data = usuario.ObtenerRol(id);
+                Session["USUARIOROLTEMP"] = id;
+                if (data.Count==1)
+                {
+                    return Content("<script language='javascript' type='text/javascript'>alert('EL USUARIO SOLO TIENE UN ROL, NO SE PUEDE ELIMINAR');" +
+                        "window.history.back();" +
+                        "" +
+                        "</script>");
+                }
+                foreach (var item in data)
+                {
+                    Rol modelo = new Rol();
+
+                    modelo.NombreRol = item.Nombre;
+
+                    
+                    listaRol.Add(modelo);
+
+                }
+
+
+
+                return View(listaRol);
+
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult EliminarRoles(String roles)
+        {
+            try
+            {
+                clsRol rol = new clsRol();
+                bool respuesta = rol.EliminarRol(roles, Session["USUARIOROLTEMP"].ToString());
+                if (respuesta)
+                {
+                    return RedirectToAction("EditarRoles", new {id =Session["USUARIOROLTEMP"].ToString() });
+                }
+                else
+                {
+                    return RedirectToAction("EditarRoles", new { id = Session["USUARIOROLTEMP"].ToString() });
+                }
+                
+            }
+            catch
+            {
+                return View();
+            }
+        }
     }
 }

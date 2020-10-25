@@ -55,7 +55,7 @@ namespace BLL.Tests
             usuariocrear.IdUsuario = 1;
             usuariocrear.ListaRol = "Administrador";
             clsUsuario usuario = new clsUsuario();
-            var respuesta = usuario.AgregarUsuario(usuariocrear.NombreUsuario,usuariocrear.Contrasena,usuariocrear.Activo,usuariocrear.ListaRol);
+            var respuesta = usuario.AgregarUsuario(usuariocrear.NombreUsuario,usuariocrear.Contrasena,usuariocrear.Activo,usuariocrear.ListaRol,"","");
             Assert.IsInstanceOfType(respuesta, typeof(Boolean));
         }
         [TestMethod()]

@@ -41,7 +41,15 @@ namespace ProyectoPurasol.Controllers
                 if (Resultado > 0)
                 {
                     var Usuario = Objcliente.ObtenerRol(model.Usuario);
-                    Session["ROLES"] = Usuario[0].Nombre;
+                    foreach (var item in Usuario)
+                    {
+                        if (item.Nombre=="Administrador")
+                        {
+                            Session["ROLES"] = item.Nombre;
+                        }
+                        
+                    }
+                    
                     Session["US"] = model.Usuario;
                     Session["PW"] = model.Password;
 

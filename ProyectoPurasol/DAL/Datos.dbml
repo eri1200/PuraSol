@@ -1,23 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProyectoPurasol" Class="DatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=PurasolAdmin" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="ProyectoPurasolConnectionString1" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=Proyecto" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="ProyectoPurasolConnectionString" Provider="System.Data.SqlClient" />
   <Function Name="dbo.ActualizarClave" Method="ActualizarClave">
     <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="clave" Type="System.String" DbType="VarChar(100)" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.SeleccionarCliente" Method="SeleccionarCliente">
-    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
-    <ElementType Name="SeleccionarClienteResult">
-      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Cedula" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Telefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Distrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Canton" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
   </Function>
   <Function Name="dbo.ActualizarUsuario" Method="ActualizarUsuario">
     <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
@@ -153,5 +139,24 @@
       <Column Name="Cod" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.SeleccionarCliente" Method="SeleccionarCliente">
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
+    <ElementType Name="SeleccionarClienteResult">
+      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Distrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Canton" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EliminarRolUsuario" Method="EliminarRolUsuario">
+    <Parameter Name="Rol" Parameter="rol" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
