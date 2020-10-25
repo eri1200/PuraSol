@@ -1,5 +1,14 @@
 ﻿@model ProyectoPurasol.Models.UsuarioCrear
 <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<style>
+    .btn {
+        color: white;
+        background-color: #00210D;
+    }
+    .captcha {
+        display: inline-block;
+    }
+</style>
 @using reCAPTCHA.MVC
 
 @using (Html.BeginForm())
@@ -57,9 +66,13 @@
                     </div>*@
 
                     <div class="modal-footer">
-                        @Html.Recaptcha()
-                        @Html.ValidationMessage("ReCaptcha")
-                        <input type="submit" value="Create" class="btn btn btn-lg btn-success btn-block" />
+                        <div class="captcha">
+                            @Html.Recaptcha()
+                            @Html.ValidationMessage("ReCaptcha")
+                        </div>
+                        <br />
+
+                        <input type="submit" value="Create" class="btn"/>
                     </div>
 
                 </div>
