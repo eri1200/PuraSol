@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
+using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
@@ -16,6 +17,7 @@ namespace ProyectoPurasol.Controllers
 {
     public class ReporteController : Controller
     {
+        clsCliente clscliente = new clsCliente();
         int tipofactura = 0;
         Reporte reporte = new Reporte();
         // GET: Reporte
@@ -101,8 +103,15 @@ namespace ProyectoPurasol.Controllers
                     Console.WriteLine(usuario.table[0].Electro);
 
                     //return Json (new {success=true, url= "http://localhost:51104/Reporte/MesesConsumo" }, JsonRequestBehavior.AllowGet);
+                     var cliente=clscliente.ConsultaCliente(int.Parse(usuario.Identificacion)).Select(x => new { ID = x.Correo });
+                    
+                    foreach (var obj in cliente)
+                    {
+                        Session["CORREOCLIENTE"]  = obj.ID;
+                    }
+                    
                     return Json(new { success = true, url = Url.Action("MesesConsumo") }, JsonRequestBehavior.AllowGet);
-
+                    
                 }
                 else
                 {
@@ -202,7 +211,30 @@ namespace ProyectoPurasol.Controllers
             reportViewer.LocalReport.SetParameters(Parametros.ToArray());
             reportViewer.LocalReport.Refresh();
             reportViewer.LocalReport.Refresh();
+
+            Warning[] warnings;
+            string[] streamIds;
+            string contentType;
+            string encoding;
+            string extension;
+            string deviceInfo = @"<DeviceInfo>
+                      <OutputFormat>EMF</OutputFormat>
+                      <PageWidth>8.5in</PageWidth>
+                      <PageHeight>11in</PageHeight>
+                      <MarginTop>0.25in</MarginTop>
+                      <MarginLeft>0.25in</MarginLeft>
+                      <MarginRight>0.25in</MarginRight>
+                      <MarginBottom>0.25in</MarginBottom>
+                    </DeviceInfo>"; //DATOS PARA EXPORTACIÓN
+
+            //Export the RDLC Report to Byte Array.
             
+
+            clsCorreo clsCorreo = new clsCorreo();
+            byte[] reportePDF = reportViewer.LocalReport.Render("PDF", deviceInfo, out contentType, out encoding,
+                                       out extension, out streamIds, out warnings);
+            clsCorreo.EnviarPDF(Session["CORREOCLIENTE"].ToString(), reportePDF);
+
             ViewBag.ReportViewer = reportViewer;
             return View();
         }

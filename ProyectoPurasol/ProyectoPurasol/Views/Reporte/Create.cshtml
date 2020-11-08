@@ -71,6 +71,7 @@
                                                             if (resultado.success) {
                                                                 
                                                                 $("#Cliente").val(resultado.resul[0].Nombre);
+                                                                $("#ID").val(document.getElementById("IdCliente").value);
                                                                 alert("SE AGREGÓ CORRECTAMENTE");
                                                             } else {
                                                                 $("#Cliente").val("");
@@ -104,7 +105,7 @@
                 </div>
                 <div class="form-group">
                     <div class="form-horizontal" id="FormularioReporte">
-                        
+
                         <hr />
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                         <div class="form-group">
@@ -115,6 +116,13 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Identificacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Identificacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @id = "ID" } })
+                                @Html.ValidationMessageFor(model => model.Identificacion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
                         <div class="form-group">
                             @Html.LabelFor(model => model.Compania, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
@@ -452,6 +460,7 @@
             dataType: "json",
             data: JSON.stringify({
                 Nombre: document.getElementById("Cliente").value,
+                Identificacion: document.getElementById("ID").value,
                 Compania: document.getElementById("Compania").value,
                 Tarifa: document.getElementById("Tarifa").value,
                 Descripcion: document.getElementById("Compania").value,
@@ -469,7 +478,7 @@
             success: function (resultado) {
             if (resultado.success) {
 
-                alert(resultado.url);
+                //alert(resultado.url);
                 window.location.replace(resultado.url);
              } else {
                 alert("Hubo un error");

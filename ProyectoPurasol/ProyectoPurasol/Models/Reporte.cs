@@ -11,6 +11,8 @@ namespace ProyectoPurasol.Models
         [Required]
         public string Nombre { get; set; } //se tienen los constructores del Nombre
         [Required]
+        public string Identificacion { get; set; }//se tienen los constructores de la Identificacion
+        [Required]
         public string Compania { get; set; } //se tienen los constructores de la Compañia
         [Required]
         public string Descripcion { get; set; } //se tienen los constructores de la Descripción

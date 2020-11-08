@@ -144,3 +144,8 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CoreCom
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.SqlServer.Types.dll
