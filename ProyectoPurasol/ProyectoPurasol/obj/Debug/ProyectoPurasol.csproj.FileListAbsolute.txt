@@ -634,3 +634,4 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\Proyec
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc

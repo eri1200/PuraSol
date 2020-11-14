@@ -149,3 +149,8 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportVi
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.SqlServer.Types.dll
