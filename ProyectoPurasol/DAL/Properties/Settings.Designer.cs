@@ -55,5 +55,40 @@ namespace DAL.Properties {
                 return ((string)(this["ProyectoPurasolConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Pers" +
+            "ist Security Info=True;User ID=PurasolAdmin")]
+        public string ProyectoPurasolConnectionString2 {
+            get {
+                return ((string)(this["ProyectoPurasolConnectionString2"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Pers" +
+            "ist Security Info=True;User ID=Proyecto")]
+        public string ProyectoPurasolConnectionString3 {
+            get {
+                return ((string)(this["ProyectoPurasolConnectionString3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Inte" +
+            "grated Security=False;Persist Security Info=True;User ID=Proyecto;Password=maste" +
+            "rkey11.;Encrypt=True;Authentication=\"Sql Password\";Column Encryption Setting=Dis" +
+            "abled")]
+        public string ProyectoPurasolConnectionString4 {
+            get {
+                return ((string)(this["ProyectoPurasolConnectionString4"]));
+            }
+        }
     }
 }

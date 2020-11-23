@@ -33,7 +33,7 @@ namespace DAL
     #endregion
 		
 		public DatosDataContext() : 
-				base(global::DAL.Properties.Settings.Default.ProyectoPurasolConnectionString, mappingSource)
+				base(global::DAL.Properties.Settings.Default.ProyectoPurasolConnectionString4, mappingSource)
 		{
 			OnCreated();
 		}
@@ -69,10 +69,24 @@ namespace DAL
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ActualizarCompanias")]
+		public int ActualizarCompanias([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCompania", DbType="Int")] System.Nullable<int> idCompania, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nombre", DbType="VarChar(50)")] string nombre)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCompania, nombre);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ActualizarUsuario")]
 		public int ActualizarUsuario([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string usuarioAnterior, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string clave, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string rol, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string descripcion)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario, usuarioAnterior, clave, rol, correo, descripcion);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.AgregarCompanias")]
+		public int AgregarCompanias([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCompania", DbType="Int")] System.Nullable<int> idCompania, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nombre", DbType="VarChar(50)")] string nombre)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCompania, nombre);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -90,11 +104,25 @@ namespace DAL
 			return ((ISingleResult<CantonesResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaCompanias")]
+		public ISingleResult<ConsultaCompaniasResult> ConsultaCompanias([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCompania", DbType="Int")] System.Nullable<int> idCompania)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCompania);
+			return ((ISingleResult<ConsultaCompaniasResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaListaUsuario")]
 		public ISingleResult<ConsultaListaUsuarioResult> ConsultaListaUsuario()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<ConsultaListaUsuarioResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarCompanias")]
+		public ISingleResult<ConsultarCompaniasResult> ConsultarCompanias()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ConsultarCompaniasResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarUsuario")]
@@ -125,10 +153,24 @@ namespace DAL
 			return ((ISingleResult<DistritosResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminaCompanias")]
+		public int EliminaCompanias([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCompania", DbType="Int")] System.Nullable<int> idCompania)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCompania);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminarCliente")]
 		public int EliminarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminarRolUsuario")]
+		public int EliminarRolUsuario([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Rol", DbType="VarChar(50)")] string rol, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Usuario", DbType="VarChar(50)")] string usuario)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), rol, usuario);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -195,10 +237,10 @@ namespace DAL
 			return ((ISingleResult<SeleccionarClienteResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminarRolUsuario")]
-		public int EliminarRolUsuario([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Rol", DbType="VarChar(50)")] string rol, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Usuario", DbType="VarChar(50)")] string usuario)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CrearReporte")]
+		public int CrearReporte([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DatosReporte", DbType="NVarChar(2048)")] string datosReporte, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Descripcion", DbType="VarChar(50)")] string descripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Potencia", DbType="Float")] System.Nullable<double> potencia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Paneles", DbType="Int")] System.Nullable<int> paneles, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Area", DbType="Float")] System.Nullable<double> area, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Compania", DbType="VarChar(50)")] string compania, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Costo", DbType="Float")] System.Nullable<double> costo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Produccion", DbType="Float")] System.Nullable<double> produccion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Almacenamiento", DbType="Float")] System.Nullable<double> almacenamiento, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ConsumoAbierto", DbType="Float")] System.Nullable<double> consumoAbierto, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Autoconsumo", DbType="Float")] System.Nullable<double> autoconsumo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ConsumoBajo", DbType="Float")] System.Nullable<double> consumoBajo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="RetornoSimple", DbType="Float")] System.Nullable<double> retornoSimple, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AhorroAnual", DbType="Float")] System.Nullable<double> ahorroAnual)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), rol, usuario);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula, datosReporte, descripcion, potencia, paneles, area, compania, costo, produccion, almacenamiento, consumoAbierto, autoconsumo, consumoBajo, retornoSimple, ahorroAnual);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -265,6 +307,50 @@ namespace DAL
 		}
 	}
 	
+	public partial class ConsultaCompaniasResult
+	{
+		
+		private int _IdCompania;
+		
+		private string _Nombre;
+		
+		public ConsultaCompaniasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCompania", DbType="Int NOT NULL")]
+		public int IdCompania
+		{
+			get
+			{
+				return this._IdCompania;
+			}
+			set
+			{
+				if ((this._IdCompania != value))
+				{
+					this._IdCompania = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+	}
+	
 	public partial class ConsultaListaUsuarioResult
 	{
 		
@@ -304,6 +390,50 @@ namespace DAL
 				if ((this._activo != value))
 				{
 					this._activo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ConsultarCompaniasResult
+	{
+		
+		private int _IdCompania;
+		
+		private string _Nombre;
+		
+		public ConsultarCompaniasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCompania", DbType="Int NOT NULL")]
+		public int IdCompania
+		{
+			get
+			{
+				return this._IdCompania;
+			}
+			set
+			{
+				if ((this._IdCompania != value))
+				{
+					this._IdCompania = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
 				}
 			}
 		}

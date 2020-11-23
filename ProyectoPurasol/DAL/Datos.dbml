@@ -1,8 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProyectoPurasol" Class="DatosDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=Proyecto" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="ProyectoPurasolConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Integrated Security=False;Persist Security Info=True;User ID=Proyecto;Encrypt=True;Authentication=&quot;Sql Password&quot;;Column Encryption Setting=Disabled" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="ProyectoPurasolConnectionString4" Provider="System.Data.SqlClient" />
   <Function Name="dbo.ActualizarClave" Method="ActualizarClave">
     <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="clave" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ActualizarCompanias" Method="ActualizarCompanias">
+    <Parameter Name="IdCompania" Parameter="idCompania" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ActualizarUsuario" Method="ActualizarUsuario">
@@ -12,6 +17,11 @@
     <Parameter Name="rol" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="correo" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AgregarCompanias" Method="AgregarCompanias">
+    <Parameter Name="IdCompania" Parameter="idCompania" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nombre" Parameter="nombre" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.AgregarUsuario" Method="AgregarUsuario">
@@ -31,10 +41,23 @@
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ConsultaCompanias" Method="ConsultaCompanias">
+    <Parameter Name="IdCompania" Parameter="idCompania" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaCompaniasResult">
+      <Column Name="IdCompania" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ConsultaListaUsuario" Method="ConsultaListaUsuario">
     <ElementType Name="ConsultaListaUsuarioResult">
       <Column Name="usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultarCompanias" Method="ConsultarCompanias">
+    <ElementType Name="ConsultarCompaniasResult">
+      <Column Name="IdCompania" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultarUsuario" Method="ConsultarUsuario">
@@ -77,8 +100,17 @@
       <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.EliminaCompanias" Method="EliminaCompanias">
+    <Parameter Name="IdCompania" Parameter="idCompania" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.EliminarCliente" Method="EliminarCliente">
     <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EliminarRolUsuario" Method="EliminarRolUsuario">
+    <Parameter Name="Rol" Parameter="rol" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(50)" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.EliminarUsuario" Method="EliminarUsuario">
@@ -154,9 +186,22 @@
       <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.EliminarRolUsuario" Method="EliminarRolUsuario">
-    <Parameter Name="Rol" Parameter="rol" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="Usuario" Parameter="usuario" Type="System.String" DbType="VarChar(50)" />
+  <Function Name="dbo.CrearReporte" Method="CrearReporte">
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DatosReporte" Parameter="datosReporte" Type="System.String" DbType="NVarChar(2048)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Potencia" Parameter="potencia" Type="System.Double" DbType="Float" />
+    <Parameter Name="Paneles" Parameter="paneles" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Area" Parameter="area" Type="System.Double" DbType="Float" />
+    <Parameter Name="Compania" Parameter="compania" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Costo" Parameter="costo" Type="System.Double" DbType="Float" />
+    <Parameter Name="Produccion" Parameter="produccion" Type="System.Double" DbType="Float" />
+    <Parameter Name="Almacenamiento" Parameter="almacenamiento" Type="System.Double" DbType="Float" />
+    <Parameter Name="ConsumoAbierto" Parameter="consumoAbierto" Type="System.Double" DbType="Float" />
+    <Parameter Name="Autoconsumo" Parameter="autoconsumo" Type="System.Double" DbType="Float" />
+    <Parameter Name="ConsumoBajo" Parameter="consumoBajo" Type="System.Double" DbType="Float" />
+    <Parameter Name="RetornoSimple" Parameter="retornoSimple" Type="System.Double" DbType="Float" />
+    <Parameter Name="AhorroAnual" Parameter="ahorroAnual" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

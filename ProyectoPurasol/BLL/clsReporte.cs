@@ -40,5 +40,29 @@ namespace BLL
 
 
         }
+        public bool CrearReporte(int cliente, string DatosReporte,string descripcion,double potencia, int paneles,double area,string compania,double costo,double produccion, double almacenamiento
+            ,double consumoAbierto, double autoconsumo, double consumobajo, double RetornoSimple, double ahorroAnual)
+        {
+            try
+            {
+                DatosDataContext data = new DatosDataContext();
+                int repuesta = data.CrearReporte( cliente,  DatosReporte,  descripcion,  potencia,  paneles,  area,  compania,  costo,  produccion,  almacenamiento,  consumoAbierto,  autoconsumo,  consumobajo,  RetornoSimple,  ahorroAnual);
+                if (repuesta == 0)
+                {
+                    return true;
+                }else
+                {
+                    return false;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+
+        }
     }
 }

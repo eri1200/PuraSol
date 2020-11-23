@@ -26,5 +26,29 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=PurasolAdmin;Password=Pablocl366</Value>
     </Setting>
+    <Setting Name="ProyectoPurasolConnectionString2" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=PurasolAdmin&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=PurasolAdmin</Value>
+    </Setting>
+    <Setting Name="ProyectoPurasolConnectionString3" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=Proyecto&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Persist Security Info=True;User ID=Proyecto</Value>
+    </Setting>
+    <Setting Name="ProyectoPurasolConnectionString4" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Integrated Security=False;Persist Security Info=True;User ID=Proyecto;Password=masterkey11.;Encrypt=True;Authentication="Sql Password";Column Encryption Setting=Disabled&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=proyectopsl.database.windows.net;Initial Catalog=ProyectoPurasol;Integrated Security=False;Persist Security Info=True;User ID=Proyecto;Password=masterkey11.;Encrypt=True;Authentication="Sql Password";Column Encryption Setting=Disabled</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

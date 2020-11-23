@@ -2,6 +2,7 @@
 using DAL;
 using ExcelDataReader;
 using Microsoft.Reporting.WebForms;
+using Newtonsoft.Json.Linq;
 using ProyectoPurasol.Models;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,10 @@ namespace ProyectoPurasol.Controllers
 {
     public class ReporteController : Controller
     {
+        
+
+        
+
         clsCliente clscliente = new clsCliente();
         int tipofactura = 0;
         Reporte reporte = new Reporte();
@@ -228,8 +233,35 @@ namespace ProyectoPurasol.Controllers
                     </DeviceInfo>"; //DATOS PARA EXPORTACIÓN
 
             //Export the RDLC Report to Byte Array.
-            
 
+            //DATATABLE MESES 
+
+            DataTable dt = new DataTable();
+            dt.Clear();
+            dt.Columns.Add("Mes");
+            dt.Columns.Add("HWHTarifaregular");
+            dt.Columns.Add("HWHTarifaacceso");
+            dt.Columns.Add("Carga");
+            dt.Columns.Add("impuesto");
+            
+            for (int x = 1;x <= 12; x++)
+            {
+                DataRow _ravi = dt.NewRow();
+                _ravi["Mes"] = x;
+                _ravi["HWHTarifaregular"] = "500";
+                _ravi["HWHTarifaacceso"] = "500";
+                _ravi["Carga"] = "500";
+                _ravi["impuesto"] = "500";
+                dt.Rows.Add(_ravi);
+            }
+            var tabla =ToJson(dt).ToString();
+
+            clsReporte reporte = new clsReporte();
+            reporte.CrearReporte(1111,  tabla, "", 0.00, 0, 0.00, "", 0.00, 0.00, 0.00
+            , 0.00, 0.00, 0.00, 0.00, 0.00);
+
+
+            //
             clsCorreo clsCorreo = new clsCorreo();
             byte[] reportePDF = reportViewer.LocalReport.Render("PDF", deviceInfo, out contentType, out encoding,
                                        out extension, out streamIds, out warnings);
@@ -241,20 +273,21 @@ namespace ProyectoPurasol.Controllers
 
 
 
-        //[HttpPost]
-        //public ActionResult Create()
-        //{
-        //    try
-        //    {
-        //        // TODO: Add insert logic here
-
-        //        return RedirectToAction("Index");
-        //    }
-        //    catch
-        //    {
-        //        return View();
-        //    }
-        //}
+        public JArray ToJson(System.Data.DataTable source)
+        {
+            JArray result = new JArray();
+            JObject row;
+            foreach (System.Data.DataRow dr in source.Rows)
+            {
+                row = new JObject();
+                foreach (System.Data.DataColumn col in source.Columns)
+                {
+                    row.Add(col.ColumnName.Trim(), JToken.FromObject(dr[col]));
+                }
+                result.Add(row);
+            }
+            return result;
+        }
         public ActionResult ReportePrueba()
         {
             return View();

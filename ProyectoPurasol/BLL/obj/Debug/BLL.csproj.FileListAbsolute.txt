@@ -110,12 +110,18 @@ C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CoreC
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.dll
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\BLL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\BLL.pdb
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\DAL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Logging.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.WebForms.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\reCAPTCHA.MVC.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Configuration.ConfigurationManager.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
@@ -123,11 +129,15 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Security.Ac
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Security.Permissions.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Security.Principal.Windows.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.Mvc.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.Common.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Newtonsoft.Json.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.Razor.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.Razor.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.SqlServer.Types.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\DAL.pdb
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\DAL.dll.config
@@ -144,13 +154,3 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CoreCom
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.WebForms.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.Common.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.SqlServer.Types.dll
-C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.WebForms.dll
-C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.Common.dll
-C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
-C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
-C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\Microsoft.SqlServer.Types.dll

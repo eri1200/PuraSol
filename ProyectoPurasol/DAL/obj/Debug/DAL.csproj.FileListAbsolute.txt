@@ -58,6 +58,7 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\DAL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\DAL.pdb
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\reCAPTCHA.MVC.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.dll

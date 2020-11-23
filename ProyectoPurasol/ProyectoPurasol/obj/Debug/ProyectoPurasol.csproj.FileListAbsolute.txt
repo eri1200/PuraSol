@@ -552,10 +552,12 @@ C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc.rsp
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x64\msvcr120.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x86\msvcr120.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll.config
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.pdb
@@ -629,9 +631,9 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.Id
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\System.IdentityModel.Tokens.Jwt.xml
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.IdentityModel.JsonWebTokens.xml
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csprojAssemblyReference.cache
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.cache
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.compiled
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CoreCompileInputs.cache
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc
-C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc

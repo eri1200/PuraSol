@@ -216,7 +216,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Tecnologia, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.DropDownListFor(model => model.Tarifa, new SelectList(ViewBag.listaTecnologia, "Value", "Text"), "--Tecnología--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tecnologia" })
+                                @Html.DropDownListFor(model => model.Tecnologia, new SelectList(ViewBag.listaTecnologia, "Value", "Text"), "--Tecnología--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tecnologia" })
 
                             </div>
                         </div>
@@ -456,7 +456,6 @@
                 Nombre: document.getElementById("Cliente").value,
                 Identificacion: document.getElementById("ID").value,
                 Compania: document.getElementById("Compania").value,
-                Tarifa: document.getElementById("Tarifa").value,
                 Descripcion: document.getElementById("Compania").value,
                 TechoDisponible: document.getElementById("TechoDisponible").value,
                 HorasRespaldo: document.getElementById("HoraRespaldo").value,
