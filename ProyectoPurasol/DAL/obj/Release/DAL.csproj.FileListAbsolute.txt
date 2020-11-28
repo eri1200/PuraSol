@@ -8,3 +8,13 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\DAL.dll.config
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\DAL.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\DAL.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\reCAPTCHA.MVC.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\Newtonsoft.Json.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.pdb

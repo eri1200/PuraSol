@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ProyectoPurasol.Models.Rol>
+
+
+
+<h2>Editar Roles</h2>
+<style>
+    .btn-success {
+        background: #E1E65F;
+        border-color: #E1E65F;
+    }
+
+    .panel-primary {
+        border-color: white;
+    }
+
+    .btn-danger {
+        background: #E1E65F;
+        border-color: #E1E65F;
+    }
+</style>
+
+<div class="panel panel-primary">
+    <div class="panel-body ">
+        <div class="modal-body">
+            <div class="form-horizontal">
+
+                <table class="table">
+                    <tr>
+
+                        <th>
+                            @Html.DisplayNameFor(model => model.NombreRol)
+                        </th>
+
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NombreRol)
+                            </td>
+                            <td>
+
+                                @Html.ActionLink("Eliminar", "EliminarRoles", new { roles = item.NombreRol }, new { @class = "btn btn-danger btn-sm" })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+                <div class="panel-footer">Cantidad = @Model.Count()</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

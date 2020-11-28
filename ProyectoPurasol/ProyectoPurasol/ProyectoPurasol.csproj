@@ -28,6 +28,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -366,6 +368,9 @@
     <Content Include="Views\Reporte\ReporteExtra.cshtml" />
     <Content Include="Views\Usuario\Edit.cshtml" />
     <Content Include="Views\Usuario\EditarRoles.cshtml" />
+    <Content Include="Views\Reporte\BuscarCliente.cshtml" />
+    <Content Include="Views\Reporte\ListaReportes.cshtml" />
+    <Content Include="Views\Reporte\GenerarReporte.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -383,6 +388,7 @@
     <Compile Include="Models\Electrodomestico.cs" />
     <Compile Include="Models\JsonReporte.cs" />
     <Compile Include="Models\JWT.cs" />
+    <Compile Include="Models\ListaReporte.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Reporte.cs" />
     <Compile Include="Models\Rol.cs" />

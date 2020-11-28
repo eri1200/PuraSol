@@ -2,6 +2,7 @@
 using DAL;
 using ExcelDataReader;
 using Microsoft.Reporting.WebForms;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ProyectoPurasol.Models;
 using System;
@@ -12,16 +13,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Helpers;
 using System.Web.Mvc;
+using System.Web.Routing;
 using System.Web.UI.WebControls;
 
 namespace ProyectoPurasol.Controllers
 {
     public class ReporteController : Controller
     {
-        
+
+
 
         
-
         clsCliente clscliente = new clsCliente();
         int tipofactura = 0;
         Reporte reporte = new Reporte();
@@ -296,7 +298,134 @@ namespace ProyectoPurasol.Controllers
         {
             return View();
         }
+        public ActionResult BuscarCliente()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult BuscarCliente(string Id)
+        {
+            try
+            {
+                int Cedula = int.Parse(Id);
+                clsCliente cliente = new clsCliente();
+                var numclientes= cliente.ConsultaCliente(Cedula);
+                if(numclientes.Count() > 0)
+                {
+                    clsReporte reporte = new clsReporte();
+                    List<ConsultarClienteReportesResult> ReporteCliente =reporte.ConsultarClienteReportes(Cedula);
 
+                    Session["list"] = ReporteCliente.ToList();
+                    return RedirectToAction("ListaReportes",new RouteValueDictionary(ReporteCliente));
+                }
+                else
+                {
+                    RedirectToAction("Error", "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return View();
+        }
+        public ActionResult ListaReportes()
+        {
+            try
+            {
+                var reporteCliente = Session["list"] as List<ConsultarClienteReportesResult>;
+                List<ListaReporte> ListaReportes = new List<ListaReporte>();
+                foreach (var item in reporteCliente)
+                {
+                    ListaReporte modelo = new ListaReporte();
+                    modelo.Nombre = item.Nombre;
+                    DateTime fecha=item.Fecha;
+
+                    modelo.Fecha = fecha.ToString("dd-MM-yyyy");
+                    modelo.IdReporte = item.IdReporte;
+                    modelo.Cedula = item.Cedula;
+                    ListaReportes.Add(modelo);
+                }
+                return View(ListaReportes);
+
+
+            }catch(Exception ex){
+                throw;
+            }
+            
+        }
+        public ActionResult GenerarReporte(string id)
+        {
+            try
+            {
+                clsReporte reporte = new clsReporte();
+                List<ReporteInfoResult> info = reporte.ReporteInfo(int.Parse(id));
+                JArray arreglo = JArray.Parse(JsonConvert.SerializeObject(info)); 
+                //JArray hist = JArray.Parse(reporte.HistReporte(int.Parse(id)));
+                //JArray proy = JArray.Parse(reporte.ProyReporte(int.Parse(id)));
+
+                
+
+                ReportViewer reportViewer = new ReportViewer();
+                reportViewer.ProcessingMode = ProcessingMode.Local;
+                reportViewer.SizeToReportContent = true;
+                reportViewer.Width = Unit.Percentage(9000);
+                reportViewer.Height = Unit.Percentage(9000);
+                reportViewer.ZoomMode = ZoomMode.Percent;
+                reportViewer.ZoomPercent = 150;
+                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\ReporteConsulta.rdlc";
+                List<ReportParameter> Parametros = new List<ReportParameter>();
+                foreach (var item in info)
+                {
+                    
+                    Parametros.Add(new ReportParameter("Potencia", (item.Potencia).ToString(), true));
+                    Parametros.Add(new ReportParameter("ConsumoBajodeT", (item.ConsumoBajo).ToString(), true));
+                    Parametros.Add(new ReportParameter("Autoconsumo", (item.AutoConsumo).ToString(), true));
+                    Parametros.Add(new ReportParameter("PorcentajeConsumoCubierto", (item.ConsumoAbierto).ToString(), true));
+                    Parametros.Add(new ReportParameter("Almacenamiento", (item.Almacenamiento).ToString(), true));
+                    Parametros.Add(new ReportParameter("ProduccionAnual", (item.Produccion).ToString(), true));
+                    Parametros.Add(new ReportParameter("CostoWatt", (item.CostoWatt).ToString(), true));
+                    Parametros.Add(new ReportParameter("Compania", (item.Compania).ToString(), true));
+                    Parametros.Add(new ReportParameter("Area", (item.Area).ToString(), true));
+                    Parametros.Add(new ReportParameter("Paneles", (item.Paneles).ToString(), true));
+                    Parametros.Add(new ReportParameter("RetornoSimple", (item.RetornoSimple).ToString(), true));
+                    Parametros.Add(new ReportParameter("AhorroAnualPromedio", (item.AhorroAnual).ToString(), true));
+                }
+                
+
+
+                reportViewer.LocalReport.SetParameters(Parametros.ToArray());
+                reportViewer.LocalReport.Refresh();
+                reportViewer.LocalReport.Refresh();
+
+                Warning[] warnings;
+                string[] streamIds;
+                string contentType;
+                string encoding;
+                string extension;
+                string deviceInfo = @"<DeviceInfo>
+                      <OutputFormat>EMF</OutputFormat>
+                      <PageWidth>8.5in</PageWidth>
+                      <PageHeight>11in</PageHeight>
+                      <MarginTop>0.25in</MarginTop>
+                      <MarginLeft>0.25in</MarginLeft>
+                      <MarginRight>0.25in</MarginRight>
+                      <MarginBottom>0.25in</MarginBottom>
+                    </DeviceInfo>"; //DATOS PARA EXPORTACIÓN
+
+                //Export the RDLC Report to Byte Array.
+                ViewBag.ReportViewer = reportViewer;
+                return View();
+                
+
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+            return View();
+        }
 
     }
 }

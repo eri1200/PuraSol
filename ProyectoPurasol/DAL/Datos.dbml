@@ -204,4 +204,55 @@
     <Parameter Name="AhorroAnual" Parameter="ahorroAnual" Type="System.Double" DbType="Float" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.ConsultarClienteReportes" Method="ConsultarClienteReportes">
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultarClienteReportesResult">
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IdReporte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ProyeccionReporte" Method="ProyeccionReporte">
+    <Parameter Name="IdReporte" Parameter="idReporte" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ProyeccionReporteResult">
+      <Column Name="IdReporte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Carga" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Impuestos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TarifaRegular" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TarifaAcceso" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ReporteInfo" Method="ReporteInfo">
+    <Parameter Name="IdReporte" Parameter="idReporte" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ReporteInfoResult">
+      <Column Name="IdReporteEncabezado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdReporteDetalle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Potencia" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Paneles" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Area" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Compania" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CostoWatt" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Produccion" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Almacenamiento" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ConsumoAbierto" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AutoConsumo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="ConsumoBajo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="RetornoSimple" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="AhorroAnual" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HistoricoReporte" Method="HistoricoReporte">
+    <Parameter Name="IdReporte" Parameter="idReporte" Type="System.Int32" DbType="Int" />
+    <ElementType Name="HistoricoReporteResult">
+      <Column Name="IdReporte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cargo" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IdMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Impuestos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TarifaRegular" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

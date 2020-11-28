@@ -553,11 +553,11 @@ C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\vbc
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x64\msvcr120.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x64\SqlServerSpatial140.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x86\msvcr120.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\SqlServerTypes\x86\SqlServerSpatial140.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Reports\ReporteConsulta.rdlc
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll.config
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\ProyectoPurasol.pdb

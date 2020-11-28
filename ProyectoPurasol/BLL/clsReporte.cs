@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using Newtonsoft.Json;
 
 namespace BLL
 {
@@ -55,6 +56,74 @@ namespace BLL
                     return false;
                 }
                 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+
+        }
+        public List<ConsultarClienteReportesResult> ConsultarClienteReportes(int Cedula)
+        {
+            try
+            {
+                DatosDataContext data = new DatosDataContext();
+                List<ConsultarClienteReportesResult> lista = data.ConsultarClienteReportes(Cedula).ToList();
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+
+        }
+        public string HistReporte(int reporte)
+        {
+            try
+            {
+                DatosDataContext data = new DatosDataContext();
+                var hist = data.HistoricoReporte(reporte).ToString();
+                return hist;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+
+        }
+        public string ProyReporte(int reporte)
+        {
+            try
+            {
+                DatosDataContext data = new DatosDataContext();
+                var proy = data.ProyeccionReporte(reporte).ToString();
+                return proy;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+
+        }
+        public List<ReporteInfoResult> ReporteInfo(int reporte)
+        {
+            try
+            {
+                DatosDataContext data = new DatosDataContext();
+                List<ReporteInfoResult> info = data.ReporteInfo(reporte).ToList();
+
+                // or
+                // var obj = JsonConvert.DeserializeObject<Array<T>>(result)
+
+                return info;
             }
             catch (Exception ex)
             {

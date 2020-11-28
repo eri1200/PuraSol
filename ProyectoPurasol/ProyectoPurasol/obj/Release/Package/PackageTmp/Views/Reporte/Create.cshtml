@@ -8,18 +8,23 @@
     WebGrid grid = new WebGrid(objeto, rowsPerPage: 5);
 }
 
+<style>
+    .btn-primary {
+        background: #E1E65F; 
+        border-color: #E1E65F;
+        color:white;
+    }
+    .panel-primary{ 
+        border-color: white;
+    }
+</style>
 
-
-
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <div class="panel panel-primary">
+<div class="panel panel-primary">
         <div class="panel-body ">
             <div class="modal-footer">
                 <div class="form-group">
                     <div class="form-horizontal">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin: auto;">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                             Seleccionar Cliente
                         </button>
 
@@ -66,6 +71,7 @@
                                                             if (resultado.success) {
                                                                 
                                                                 $("#Cliente").val(resultado.resul[0].Nombre);
+                                                                $("#ID").val(document.getElementById("IdCliente").value);
                                                                 alert("SE AGREGÓ CORRECTAMENTE");
                                                             } else {
                                                                 $("#Cliente").val("");
@@ -99,7 +105,7 @@
                 </div>
                 <div class="form-group">
                     <div class="form-horizontal" id="FormularioReporte">
-                        
+
                         <hr />
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                         <div class="form-group">
@@ -110,6 +116,13 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Identificacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Identificacion, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @id = "ID" } })
+                                @Html.ValidationMessageFor(model => model.Identificacion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
                         <div class="form-group">
                             @Html.LabelFor(model => model.Compania, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
@@ -125,17 +138,11 @@
                             </div>
                         </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Tarifa, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.DropDownListFor(model => model.Tarifa, new SelectList(ViewBag.listaTarifas, "IdTarifa", "Nombre"), "--Tarifa--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tarifa" })
-                            </div>
-                        </div>
-
+                        
                         <div class="form-group">
                             @Html.LabelFor(model => model.TechoDisponible, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.EditorFor(model => model.TechoDisponible, new { htmlAttributes = new { @class = "form-control", @id = "TechoDisponible" } })
+                                @Html.EditorFor(model => model.TechoDisponible, new { htmlAttributes = new { @class = "form-control", @id = "TechoDisponible"  } })
                                 @Html.ValidationMessageFor(model => model.TechoDisponible, "", new { @class = "text-danger" })
                             </div>
                         </div>
@@ -209,7 +216,7 @@
                         <div class="form-group">
                             @Html.LabelFor(model => model.Tecnologia, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.DropDownListFor(model => model.Tarifa, new SelectList(ViewBag.listaTecnologia, "Value", "Text"), "--Tecnología--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tecnologia" })
+                                @Html.DropDownListFor(model => model.Tecnologia, new SelectList(ViewBag.listaTecnologia, "Value", "Text"), "--Tecnología--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tecnologia" })
 
                             </div>
                         </div>
@@ -300,6 +307,9 @@
                                 color: white;
                                 text-align: center;
                             }
+
+                          
+                       
                         </style>
                         @grid.GetHtml(
                        htmlAttributes: new { id = "grid" },
@@ -444,8 +454,8 @@
             dataType: "json",
             data: JSON.stringify({
                 Nombre: document.getElementById("Cliente").value,
+                Identificacion: document.getElementById("ID").value,
                 Compania: document.getElementById("Compania").value,
-                Tarifa: document.getElementById("Tarifa").value,
                 Descripcion: document.getElementById("Compania").value,
                 TechoDisponible: document.getElementById("TechoDisponible").value,
                 HorasRespaldo: document.getElementById("HoraRespaldo").value,
@@ -461,7 +471,7 @@
             success: function (resultado) {
             if (resultado.success) {
 
-                alert(resultado.url);
+                //alert(resultado.url);
                 window.location.replace(resultado.url);
              } else {
                 alert("Hubo un error");

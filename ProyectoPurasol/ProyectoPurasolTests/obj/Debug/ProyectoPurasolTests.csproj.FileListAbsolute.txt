@@ -53,16 +53,17 @@ D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de R
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.csproj.CopyComplete
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.dll
 D:\FIDELITAS\2020\Segundo Cuatrimestre\Analisis 2\Proyecto Analisis\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\obj\Debug\ProyectoPurasolTests.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x64\msvcr120.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x86\msvcr120.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Reports\ReporteConsulta.rdlc
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ProyectoPurasolTests.dll.config
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ProyectoPurasolTests.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ProyectoPurasolTests.pdb
@@ -83,6 +84,7 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\N
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\System.Web.Optimization.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Newtonsoft.Json.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\reCAPTCHA.MVC.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\WebHelpers.Mvc5.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\ExcelDataReader.DataSet.dll
@@ -90,7 +92,6 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\M
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\WebGrease.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.ReportViewer.Common.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Newtonsoft.Json.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Antlr3.Runtime.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasolTests\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll

@@ -243,6 +243,34 @@ namespace DAL
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula, datosReporte, descripcion, potencia, paneles, area, compania, costo, produccion, almacenamiento, consumoAbierto, autoconsumo, consumoBajo, retornoSimple, ahorroAnual);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarClienteReportes")]
+		public ISingleResult<ConsultarClienteReportesResult> ConsultarClienteReportes([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula);
+			return ((ISingleResult<ConsultarClienteReportesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ProyeccionReporte")]
+		public ISingleResult<ProyeccionReporteResult> ProyeccionReporte([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdReporte", DbType="Int")] System.Nullable<int> idReporte)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReporte);
+			return ((ISingleResult<ProyeccionReporteResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ReporteInfo")]
+		public ISingleResult<ReporteInfoResult> ReporteInfo([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdReporte", DbType="Int")] System.Nullable<int> idReporte)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReporte);
+			return ((ISingleResult<ReporteInfoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HistoricoReporte")]
+		public ISingleResult<HistoricoReporteResult> HistoricoReporte([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdReporte", DbType="Int")] System.Nullable<int> idReporte)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReporte);
+			return ((ISingleResult<HistoricoReporteResult>)(result.ReturnValue));
+		}
 	}
 	
 	public partial class CantonesResult
@@ -1296,6 +1324,596 @@ namespace DAL
 				if ((this._Provincia != value))
 				{
 					this._Provincia = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ConsultarClienteReportesResult
+	{
+		
+		private System.DateTime _Fecha;
+		
+		private string _Nombre;
+		
+		private int _IdReporte;
+		
+		private int _Cedula;
+		
+		public ConsultarClienteReportesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="Date NOT NULL")]
+		public System.DateTime Fecha
+		{
+			get
+			{
+				return this._Fecha;
+			}
+			set
+			{
+				if ((this._Fecha != value))
+				{
+					this._Fecha = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdReporte", DbType="Int NOT NULL")]
+		public int IdReporte
+		{
+			get
+			{
+				return this._IdReporte;
+			}
+			set
+			{
+				if ((this._IdReporte != value))
+				{
+					this._IdReporte = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", DbType="Int NOT NULL")]
+		public int Cedula
+		{
+			get
+			{
+				return this._Cedula;
+			}
+			set
+			{
+				if ((this._Cedula != value))
+				{
+					this._Cedula = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ProyeccionReporteResult
+	{
+		
+		private int _IdReporte;
+		
+		private int _IdMes;
+		
+		private System.Nullable<decimal> _Carga;
+		
+		private System.Nullable<decimal> _Impuestos;
+		
+		private System.Nullable<decimal> _TarifaRegular;
+		
+		private System.Nullable<decimal> _TarifaAcceso;
+		
+		public ProyeccionReporteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdReporte", DbType="Int NOT NULL")]
+		public int IdReporte
+		{
+			get
+			{
+				return this._IdReporte;
+			}
+			set
+			{
+				if ((this._IdReporte != value))
+				{
+					this._IdReporte = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdMes", DbType="Int NOT NULL")]
+		public int IdMes
+		{
+			get
+			{
+				return this._IdMes;
+			}
+			set
+			{
+				if ((this._IdMes != value))
+				{
+					this._IdMes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Carga", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Carga
+		{
+			get
+			{
+				return this._Carga;
+			}
+			set
+			{
+				if ((this._Carga != value))
+				{
+					this._Carga = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Impuestos", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Impuestos
+		{
+			get
+			{
+				return this._Impuestos;
+			}
+			set
+			{
+				if ((this._Impuestos != value))
+				{
+					this._Impuestos = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TarifaRegular", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> TarifaRegular
+		{
+			get
+			{
+				return this._TarifaRegular;
+			}
+			set
+			{
+				if ((this._TarifaRegular != value))
+				{
+					this._TarifaRegular = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TarifaAcceso", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> TarifaAcceso
+		{
+			get
+			{
+				return this._TarifaAcceso;
+			}
+			set
+			{
+				if ((this._TarifaAcceso != value))
+				{
+					this._TarifaAcceso = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ReporteInfoResult
+	{
+		
+		private int _IdReporteEncabezado;
+		
+		private int _IdReporteDetalle;
+		
+		private string _Descripcion;
+		
+		private System.DateTime _Fecha;
+		
+		private double _Potencia;
+		
+		private int _Paneles;
+		
+		private double _Area;
+		
+		private string _Compania;
+		
+		private double _CostoWatt;
+		
+		private double _Produccion;
+		
+		private double _Almacenamiento;
+		
+		private double _ConsumoAbierto;
+		
+		private double _AutoConsumo;
+		
+		private double _ConsumoBajo;
+		
+		private double _RetornoSimple;
+		
+		private double _AhorroAnual;
+		
+		public ReporteInfoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdReporteEncabezado", DbType="Int NOT NULL")]
+		public int IdReporteEncabezado
+		{
+			get
+			{
+				return this._IdReporteEncabezado;
+			}
+			set
+			{
+				if ((this._IdReporteEncabezado != value))
+				{
+					this._IdReporteEncabezado = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdReporteDetalle", DbType="Int NOT NULL")]
+		public int IdReporteDetalle
+		{
+			get
+			{
+				return this._IdReporteDetalle;
+			}
+			set
+			{
+				if ((this._IdReporteDetalle != value))
+				{
+					this._IdReporteDetalle = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Descripcion", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Descripcion
+		{
+			get
+			{
+				return this._Descripcion;
+			}
+			set
+			{
+				if ((this._Descripcion != value))
+				{
+					this._Descripcion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fecha", DbType="Date NOT NULL")]
+		public System.DateTime Fecha
+		{
+			get
+			{
+				return this._Fecha;
+			}
+			set
+			{
+				if ((this._Fecha != value))
+				{
+					this._Fecha = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Potencia", DbType="Float NOT NULL")]
+		public double Potencia
+		{
+			get
+			{
+				return this._Potencia;
+			}
+			set
+			{
+				if ((this._Potencia != value))
+				{
+					this._Potencia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Paneles", DbType="Int NOT NULL")]
+		public int Paneles
+		{
+			get
+			{
+				return this._Paneles;
+			}
+			set
+			{
+				if ((this._Paneles != value))
+				{
+					this._Paneles = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Area", DbType="Float NOT NULL")]
+		public double Area
+		{
+			get
+			{
+				return this._Area;
+			}
+			set
+			{
+				if ((this._Area != value))
+				{
+					this._Area = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Compania", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Compania
+		{
+			get
+			{
+				return this._Compania;
+			}
+			set
+			{
+				if ((this._Compania != value))
+				{
+					this._Compania = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CostoWatt", DbType="Float NOT NULL")]
+		public double CostoWatt
+		{
+			get
+			{
+				return this._CostoWatt;
+			}
+			set
+			{
+				if ((this._CostoWatt != value))
+				{
+					this._CostoWatt = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Produccion", DbType="Float NOT NULL")]
+		public double Produccion
+		{
+			get
+			{
+				return this._Produccion;
+			}
+			set
+			{
+				if ((this._Produccion != value))
+				{
+					this._Produccion = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Almacenamiento", DbType="Float NOT NULL")]
+		public double Almacenamiento
+		{
+			get
+			{
+				return this._Almacenamiento;
+			}
+			set
+			{
+				if ((this._Almacenamiento != value))
+				{
+					this._Almacenamiento = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ConsumoAbierto", DbType="Float NOT NULL")]
+		public double ConsumoAbierto
+		{
+			get
+			{
+				return this._ConsumoAbierto;
+			}
+			set
+			{
+				if ((this._ConsumoAbierto != value))
+				{
+					this._ConsumoAbierto = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AutoConsumo", DbType="Float NOT NULL")]
+		public double AutoConsumo
+		{
+			get
+			{
+				return this._AutoConsumo;
+			}
+			set
+			{
+				if ((this._AutoConsumo != value))
+				{
+					this._AutoConsumo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ConsumoBajo", DbType="Float NOT NULL")]
+		public double ConsumoBajo
+		{
+			get
+			{
+				return this._ConsumoBajo;
+			}
+			set
+			{
+				if ((this._ConsumoBajo != value))
+				{
+					this._ConsumoBajo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RetornoSimple", DbType="Float NOT NULL")]
+		public double RetornoSimple
+		{
+			get
+			{
+				return this._RetornoSimple;
+			}
+			set
+			{
+				if ((this._RetornoSimple != value))
+				{
+					this._RetornoSimple = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_AhorroAnual", DbType="Float NOT NULL")]
+		public double AhorroAnual
+		{
+			get
+			{
+				return this._AhorroAnual;
+			}
+			set
+			{
+				if ((this._AhorroAnual != value))
+				{
+					this._AhorroAnual = value;
+				}
+			}
+		}
+	}
+	
+	public partial class HistoricoReporteResult
+	{
+		
+		private int _IdReporte;
+		
+		private System.Nullable<decimal> _Cargo;
+		
+		private int _IdMes;
+		
+		private System.Nullable<decimal> _Impuestos;
+		
+		private System.Nullable<decimal> _TarifaRegular;
+		
+		public HistoricoReporteResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdReporte", DbType="Int NOT NULL")]
+		public int IdReporte
+		{
+			get
+			{
+				return this._IdReporte;
+			}
+			set
+			{
+				if ((this._IdReporte != value))
+				{
+					this._IdReporte = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cargo", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Cargo
+		{
+			get
+			{
+				return this._Cargo;
+			}
+			set
+			{
+				if ((this._Cargo != value))
+				{
+					this._Cargo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdMes", DbType="Int NOT NULL")]
+		public int IdMes
+		{
+			get
+			{
+				return this._IdMes;
+			}
+			set
+			{
+				if ((this._IdMes != value))
+				{
+					this._IdMes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Impuestos", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> Impuestos
+		{
+			get
+			{
+				return this._Impuestos;
+			}
+			set
+			{
+				if ((this._Impuestos != value))
+				{
+					this._Impuestos = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TarifaRegular", DbType="Decimal(18,2)")]
+		public System.Nullable<decimal> TarifaRegular
+		{
+			get
+			{
+				return this._TarifaRegular;
+			}
+			set
+			{
+				if ((this._TarifaRegular != value))
+				{
+					this._TarifaRegular = value;
 				}
 			}
 		}
