@@ -1,24 +1,30 @@
 ﻿@model ProyectoPurasol.Models.Usuario
 
 @{
-	ViewBag.Title = "Edit";
+    ViewBag.Title = "Edit";
 
 }
 <style>
-	.CheckBox {
-		opacity: 1;
-		position: relative;
-	}
+    .CheckBox {
+        opacity: 1;
+        position: relative;
+    }
 </style>
 <h2>Edit</h2>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
 
 @using (Html.BeginForm())
 {
-	@Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-	<div class="panel panel-primary">
-		<div class="panel-body ">
-			<div class="modal-body">
+    <div class="panel panel-primary">
+        <div class="panel-body ">
+            <div class="modal-body">
                 <div class="form-horizontal">
                     <h4>Usuario</h4>
                     <hr />
@@ -39,13 +45,13 @@
 
 
                     @*<div class="form-group">
-                        @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
+                            @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
 
-                            @Html.CheckBoxFor(model => model.Activo, htmlAttributes: new { @class = "CheckBox", @style = "opacity:1" })
-                            @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
-                        </div>
-                    </div>*@
+                                @Html.CheckBoxFor(model => model.Activo, htmlAttributes: new { @class = "CheckBox", @style = "opacity:1" })
+                                @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
                     <div class="form-group">
                         @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
@@ -79,11 +85,11 @@
                         </div>
                     </div>
                 </div>
-			</div>
-		</div>
-	</div>
+            </div>
+        </div>
+    </div>
 }
 
 <div>
-	@Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index")
 </div>

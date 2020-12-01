@@ -15,6 +15,7 @@ namespace ProyectoPurasol.Controllers
     {
         clsInformacion Informacion = new clsInformacion();
         // GET: Cliente
+        [CustomAuthorize]
         public ActionResult Index()
         {
             try
@@ -29,7 +30,7 @@ namespace ProyectoPurasol.Controllers
                     {
                         Cliente modelo = new Cliente();
                         modelo.IdCliente = item.IdCliente;
-                        modelo.Identificacion = item.Cedula.ToString();
+                        modelo.Identificacion = item.Cedula;
                         modelo.Nombre = item.Nombre;
                         modelo.Apellido = item.Apellido;
                         
@@ -94,9 +95,17 @@ namespace ProyectoPurasol.Controllers
                 
                     
                     clsCliente Objcliente = new clsCliente();
-                    bool Resultado = Objcliente.AgregarCliente( cliente.Identificacion,
+                if (Objcliente.ConsultaCliente(cliente.Identificacion).Count() >=1||Objcliente.ConsultarClientes().Where(x =>x.Correo==cliente.Correo).Count() >= 1)
+                {
+                    TempData["SuccessMessage"] = "LOS DATOS ADMINISTRADOS YA EXISTEN EN OTRO CLIENTE";
+                    return RedirectToAction("Crear");
+                }
+                else
+                {
+                    TempData["SuccessMessage"] = null;
+                    bool Resultado = Objcliente.AgregarCliente(cliente.Identificacion.ToString(),
                         cliente.Nombre, cliente.Apellido, cliente.Correo, Convert.ToInt32(cliente.Telefono),
-                       Convert.ToInt32(cliente.Distrito),Convert.ToInt32(cliente.Canton), Convert.ToInt32(cliente.Provincia));
+                       Convert.ToInt32(cliente.Distrito), Convert.ToInt32(cliente.Canton), Convert.ToInt32(cliente.Provincia));
 
                     if (Resultado)
                     {
@@ -104,12 +113,14 @@ namespace ProyectoPurasol.Controllers
                     }
                     else
                     {
-                                              
+                        TempData["SuccessMessage"] = "HUBO UN ERROR INSERTANDO LA INFORMACION";
                         ViewBag.ListaProvincias = CargaProvincias();
                         return RedirectToAction("Crear");
                     }
-                
-                
+                }
+
+                return RedirectToAction("Crear");
+
 
 
             }
@@ -139,7 +150,7 @@ namespace ProyectoPurasol.Controllers
                 Cliente modelo = new Cliente();
                 modelo.IdCliente = dato[0].IdCliente;
                 
-                modelo.Identificacion = dato[0].Cedula.ToString();
+                modelo.Identificacion = dato[0].Cedula;
                 modelo.Nombre = dato[0].Nombre;
                 modelo.Apellido = dato[0].Apellido;
                 modelo.Correo = dato[0].Correo;
@@ -150,8 +161,8 @@ namespace ProyectoPurasol.Controllers
 
 
                 ViewBag.ListaProvincias = CargaProvincias();
-                ViewBag.ListaCantones = CargaCanton(Convert.ToChar(dato[0].Provincia));
-                ViewBag.ListaDistritos = CargaDistrito(Convert.ToChar(dato[0].Provincia), dato[0].Canton.ToString());
+                ViewBag.ListaCantones = CargaCanton(dato[0].Provincia);
+                ViewBag.ListaDistritos = CargaDistrito(dato[0].Provincia, dato[0].Canton);
                 return View(modelo);
             }
             catch (Exception)
@@ -162,8 +173,9 @@ namespace ProyectoPurasol.Controllers
           
         }
 
-        // POST: Cliente/Editar/5
-        [HttpPost]
+        
+            // POST: Cliente/Editar/5
+            [HttpPost]
         public ActionResult Editar(string id, Cliente cliente)
         {
             try
@@ -193,8 +205,10 @@ namespace ProyectoPurasol.Controllers
                 return View();
             }
         }
+        
+        
 
-        [HttpPost]
+        //[HttpPost]
         // POST: Cliente/Eliminar/5
         public ActionResult Eliminar(string id)
         {
@@ -215,7 +229,7 @@ namespace ProyectoPurasol.Controllers
             }
             catch
             {
-                return View();
+                return RedirectToAction("Index");
             }
         }
         /// <summary>
@@ -232,7 +246,7 @@ namespace ProyectoPurasol.Controllers
         /// </summary>
         /// <param name="provincia"></param>
         /// <returns></returns>
-        public List<CantonesResult> CargaCanton(char provincia)
+        public List<CantonesResult> CargaCanton(int provincia)
         {
             List<CantonesResult> cantones = Informacion.ObtenerCantones(provincia);
             return cantones;
@@ -243,7 +257,7 @@ namespace ProyectoPurasol.Controllers
         /// <param name="provincia"></param>
         /// <param name="canton"></param>
         /// <returns></returns>
-        public List<DistritosResult> CargaDistrito(char provincia, string canton)
+        public List<DistritosResult> CargaDistrito(int provincia, int canton)
         {
             List<DistritosResult> distritos = Informacion.ObtenerDistritos(provincia, canton);
             return distritos;
@@ -254,7 +268,7 @@ namespace ProyectoPurasol.Controllers
         /// <param name="provincia"></param>
         /// <returns></returns>
         [HttpPost]
-        public JsonResult CargaCantones(char provincia)
+        public JsonResult CargaCantones(int provincia)
         {
             List<CantonesResult> cantones = Informacion.ObtenerCantones(provincia);
             return Json(cantones, JsonRequestBehavior.AllowGet);
@@ -266,7 +280,7 @@ namespace ProyectoPurasol.Controllers
         /// <param name="canton"></param>
         /// <returns></returns>
         [HttpPost]
-        public JsonResult CargaDistritos(char provincia, string canton)
+        public JsonResult CargaDistritos(int provincia, int canton)
         {
             List<DistritosResult> distritos = Informacion.ObtenerDistritos(provincia, canton);
             return Json(distritos, JsonRequestBehavior.AllowGet);

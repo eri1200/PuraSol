@@ -5,10 +5,18 @@
         color: white;
         background-color: #00210D;
     }
+
     .captcha {
         display: inline-block;
     }
 </style>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
+<script src="https://www.google.com/recaptcha/api.js"></script>
 @using reCAPTCHA.MVC
 
 @using (Html.BeginForm())
@@ -37,7 +45,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
@@ -56,14 +64,14 @@
                     </div>
 
                     @*<div class="form-group">
-                        @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            <div class="checkbox">
-                                @Html.EditorFor(model => model.Activo)
-                                @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+                            @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.Activo)
+                                    @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+                                </div>
                             </div>
-                        </div>
-                    </div>*@
+                        </div>*@
 
                     <div class="modal-footer">
                         <div class="captcha">
@@ -72,7 +80,7 @@
                         </div>
                         <br />
 
-                        <input type="submit" value="Create" class="btn"/>
+                        <input type="submit" value="Create" class="btn" />
                     </div>
 
                 </div>

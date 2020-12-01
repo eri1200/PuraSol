@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,7 @@ namespace ProyectoPurasol.Models
     {
         //CONSUMO Meses
         [Required]
+        
         public double Enero { get; set; }
         [Required]
         public double Febrero { get; set; }
@@ -36,28 +38,40 @@ namespace ProyectoPurasol.Models
 
         //CONSUMO Meses SOLARGIS
         [Required]
+        [DisplayName("Solargis Mes: ENERO")]
         public double SOLARGISEnero { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: FEBRERO")]
         public double SOLARGISFebrero { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: MARZO")]
         public double SOLARGISMarzo { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: ABRIL")]
         public double SOLARGISAbril { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: MAYO")]
         public double SOLARGISMayo { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: JUNIO")]
         public double SOLARGISJunio { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: JULIO")]
         public double SOLARGISJulio { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: AGOSTO")]
         public double SOLARGISAgosto { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: SETIEMBRE")]
         public double SOLARGISSetiembre { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: OCTUBRE")]
         public double SOLARGISOctubre { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: NOVIEMBRE")]
         public double SOLARGISNoviembre { get; set; }
         [Required]
+        [DisplayName("Solargis Mes: DICIEMBRE")]
         public double SOLARGISDiciembre { get; set; }
 
 

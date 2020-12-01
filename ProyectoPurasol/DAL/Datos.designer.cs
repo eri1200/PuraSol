@@ -97,25 +97,11 @@ namespace DAL
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Cantones")]
-		public ISingleResult<CantonesResult> Cantones([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Provincia", DbType="Char(1)")] System.Nullable<char> provincia)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), provincia);
-			return ((ISingleResult<CantonesResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaCompanias")]
 		public ISingleResult<ConsultaCompaniasResult> ConsultaCompanias([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCompania", DbType="Int")] System.Nullable<int> idCompania)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCompania);
 			return ((ISingleResult<ConsultaCompaniasResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaListaUsuario")]
-		public ISingleResult<ConsultaListaUsuarioResult> ConsultaListaUsuario()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<ConsultaListaUsuarioResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarCompanias")]
@@ -146,24 +132,10 @@ namespace DAL
 			return ((ISingleResult<CrearUsuarioResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Distritos")]
-		public ISingleResult<DistritosResult> Distritos([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Provincia", DbType="Char(1)")] System.Nullable<char> provincia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Canton", DbType="Char(2)")] string canton)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), provincia, canton);
-			return ((ISingleResult<DistritosResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminaCompanias")]
 		public int EliminaCompanias([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdCompania", DbType="Int")] System.Nullable<int> idCompania)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idCompania);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminarCliente")]
-		public int EliminarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula);
 			return ((int)(result.ReturnValue));
 		}
 		
@@ -186,13 +158,6 @@ namespace DAL
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), usuario, clave);
 			return ((ISingleResult<ExisteUsuarioResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ListaClientes")]
-		public ISingleResult<ListaClientesResult> ListaClientes()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<ListaClientesResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ListaRoles")]
@@ -221,13 +186,6 @@ namespace DAL
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<ObtenerTarifasResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Provincias")]
-		public ISingleResult<ProvinciasResult> Provincias()
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<ProvinciasResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SeleccionarCliente")]
@@ -271,67 +229,47 @@ namespace DAL
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReporte);
 			return ((ISingleResult<HistoricoReporteResult>)(result.ReturnValue));
 		}
-	}
-	
-	public partial class CantonesResult
-	{
 		
-		private char _Provincia;
-		
-		private string _Canton;
-		
-		private string _Nombre;
-		
-		public CantonesResult()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Cantones")]
+		public ISingleResult<CantonesResult> Cantones([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Provincia", DbType="Int")] System.Nullable<int> provincia)
 		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), provincia);
+			return ((ISingleResult<CantonesResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provincia", DbType="Char(1) NOT NULL")]
-		public char Provincia
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Distritos")]
+		public ISingleResult<DistritosResult> Distritos([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Provincia", DbType="Int")] System.Nullable<int> provincia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Canton", DbType="Int")] System.Nullable<int> canton)
 		{
-			get
-			{
-				return this._Provincia;
-			}
-			set
-			{
-				if ((this._Provincia != value))
-				{
-					this._Provincia = value;
-				}
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), provincia, canton);
+			return ((ISingleResult<DistritosResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Canton", DbType="Char(2) NOT NULL", CanBeNull=false)]
-		public string Canton
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Provincias")]
+		public ISingleResult<ProvinciasResult> Provincias()
 		{
-			get
-			{
-				return this._Canton;
-			}
-			set
-			{
-				if ((this._Canton != value))
-				{
-					this._Canton = value;
-				}
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ProvinciasResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
-		public string Nombre
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ListaClientes")]
+		public ISingleResult<ListaClientesResult> ListaClientes()
 		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this._Nombre = value;
-				}
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ListaClientesResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.EliminarCliente")]
+		public int EliminarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaListaUsuario")]
+		public ISingleResult<ConsultaListaUsuarioResult> ConsultaListaUsuario()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<ConsultaListaUsuarioResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -374,50 +312,6 @@ namespace DAL
 				if ((this._Nombre != value))
 				{
 					this._Nombre = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ConsultaListaUsuarioResult
-	{
-		
-		private string _usuario;
-		
-		private bool _activo;
-		
-		public ConsultaListaUsuarioResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuario", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
-		public string usuario
-		{
-			get
-			{
-				return this._usuario;
-			}
-			set
-			{
-				if ((this._usuario != value))
-				{
-					this._usuario = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_activo", DbType="Bit NOT NULL")]
-		public bool activo
-		{
-			get
-			{
-				return this._activo;
-			}
-			set
-			{
-				if ((this._activo != value))
-				{
-					this._activo = value;
 				}
 			}
 		}
@@ -591,86 +485,6 @@ namespace DAL
 		}
 	}
 	
-	public partial class DistritosResult
-	{
-		
-		private char _Provincia;
-		
-		private string _Canton;
-		
-		private int _Distrito;
-		
-		private string _Nombre;
-		
-		public DistritosResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provincia", DbType="Char(1) NOT NULL")]
-		public char Provincia
-		{
-			get
-			{
-				return this._Provincia;
-			}
-			set
-			{
-				if ((this._Provincia != value))
-				{
-					this._Provincia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Canton", DbType="Char(2) NOT NULL", CanBeNull=false)]
-		public string Canton
-		{
-			get
-			{
-				return this._Canton;
-			}
-			set
-			{
-				if ((this._Canton != value))
-				{
-					this._Canton = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Distrito", DbType="Int NOT NULL")]
-		public int Distrito
-		{
-			get
-			{
-				return this._Distrito;
-			}
-			set
-			{
-				if ((this._Distrito != value))
-				{
-					this._Distrito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this._Nombre = value;
-				}
-			}
-		}
-	}
-	
 	public partial class ExisteUsuarioResult
 	{
 		
@@ -782,176 +596,6 @@ namespace DAL
 				if ((this._Descripcion != value))
 				{
 					this._Descripcion = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ListaClientesResult
-	{
-		
-		private int _IdCliente;
-		
-		private int _Cedula;
-		
-		private string _Nombre;
-		
-		private string _Apellido;
-		
-		private System.Nullable<int> _Telefono;
-		
-		private string _Correo;
-		
-		private int _Distrito;
-		
-		private int _Canton;
-		
-		private int _Provincia;
-		
-		public ListaClientesResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCliente", DbType="Int NOT NULL")]
-		public int IdCliente
-		{
-			get
-			{
-				return this._IdCliente;
-			}
-			set
-			{
-				if ((this._IdCliente != value))
-				{
-					this._IdCliente = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", DbType="Int NOT NULL")]
-		public int Cedula
-		{
-			get
-			{
-				return this._Cedula;
-			}
-			set
-			{
-				if ((this._Cedula != value))
-				{
-					this._Cedula = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this._Nombre = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellido", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Apellido
-		{
-			get
-			{
-				return this._Apellido;
-			}
-			set
-			{
-				if ((this._Apellido != value))
-				{
-					this._Apellido = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefono", DbType="Int")]
-		public System.Nullable<int> Telefono
-		{
-			get
-			{
-				return this._Telefono;
-			}
-			set
-			{
-				if ((this._Telefono != value))
-				{
-					this._Telefono = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Correo", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string Correo
-		{
-			get
-			{
-				return this._Correo;
-			}
-			set
-			{
-				if ((this._Correo != value))
-				{
-					this._Correo = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Distrito", DbType="Int NOT NULL")]
-		public int Distrito
-		{
-			get
-			{
-				return this._Distrito;
-			}
-			set
-			{
-				if ((this._Distrito != value))
-				{
-					this._Distrito = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Canton", DbType="Int NOT NULL")]
-		public int Canton
-		{
-			get
-			{
-				return this._Canton;
-			}
-			set
-			{
-				if ((this._Canton != value))
-				{
-					this._Canton = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provincia", DbType="Int NOT NULL")]
-		public int Provincia
-		{
-			get
-			{
-				return this._Provincia;
-			}
-			set
-			{
-				if ((this._Provincia != value))
-				{
-					this._Provincia = value;
 				}
 			}
 		}
@@ -1099,50 +743,6 @@ namespace DAL
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(20) NOT NULL", CanBeNull=false)]
-		public string Nombre
-		{
-			get
-			{
-				return this._Nombre;
-			}
-			set
-			{
-				if ((this._Nombre != value))
-				{
-					this._Nombre = value;
-				}
-			}
-		}
-	}
-	
-	public partial class ProvinciasResult
-	{
-		
-		private char _Cod;
-		
-		private string _Nombre;
-		
-		public ProvinciasResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cod", DbType="Char(1) NOT NULL")]
-		public char Cod
-		{
-			get
-			{
-				return this._Cod;
-			}
-			set
-			{
-				if ((this._Cod != value))
-				{
-					this._Cod = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
 		public string Nombre
 		{
 			get
@@ -1914,6 +1514,442 @@ namespace DAL
 				if ((this._TarifaRegular != value))
 				{
 					this._TarifaRegular = value;
+				}
+			}
+		}
+	}
+	
+	public partial class CantonesResult
+	{
+		
+		private int _Provincia;
+		
+		private int _Canton;
+		
+		private string _Nombre;
+		
+		public CantonesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provincia", DbType="Int NOT NULL")]
+		public int Provincia
+		{
+			get
+			{
+				return this._Provincia;
+			}
+			set
+			{
+				if ((this._Provincia != value))
+				{
+					this._Provincia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Canton", DbType="Int NOT NULL")]
+		public int Canton
+		{
+			get
+			{
+				return this._Canton;
+			}
+			set
+			{
+				if ((this._Canton != value))
+				{
+					this._Canton = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+	}
+	
+	public partial class DistritosResult
+	{
+		
+		private int _Provincia;
+		
+		private int _Canton;
+		
+		private int _Distrito;
+		
+		private string _Nombre;
+		
+		public DistritosResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provincia", DbType="Int NOT NULL")]
+		public int Provincia
+		{
+			get
+			{
+				return this._Provincia;
+			}
+			set
+			{
+				if ((this._Provincia != value))
+				{
+					this._Provincia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Canton", DbType="Int NOT NULL")]
+		public int Canton
+		{
+			get
+			{
+				return this._Canton;
+			}
+			set
+			{
+				if ((this._Canton != value))
+				{
+					this._Canton = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Distrito", DbType="Int NOT NULL")]
+		public int Distrito
+		{
+			get
+			{
+				return this._Distrito;
+			}
+			set
+			{
+				if ((this._Distrito != value))
+				{
+					this._Distrito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ProvinciasResult
+	{
+		
+		private int _Cod;
+		
+		private string _Nombre;
+		
+		public ProvinciasResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cod", DbType="Int NOT NULL")]
+		public int Cod
+		{
+			get
+			{
+				return this._Cod;
+			}
+			set
+			{
+				if ((this._Cod != value))
+				{
+					this._Cod = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50)")]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ListaClientesResult
+	{
+		
+		private int _IdCliente;
+		
+		private int _Cedula;
+		
+		private string _Nombre;
+		
+		private string _Apellido;
+		
+		private System.Nullable<int> _Telefono;
+		
+		private string _Correo;
+		
+		private int _Distrito;
+		
+		private int _Canton;
+		
+		private int _Provincia;
+		
+		private System.Nullable<bool> _Activo;
+		
+		public ListaClientesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdCliente", DbType="Int NOT NULL")]
+		public int IdCliente
+		{
+			get
+			{
+				return this._IdCliente;
+			}
+			set
+			{
+				if ((this._IdCliente != value))
+				{
+					this._IdCliente = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cedula", DbType="Int NOT NULL")]
+		public int Cedula
+		{
+			get
+			{
+				return this._Cedula;
+			}
+			set
+			{
+				if ((this._Cedula != value))
+				{
+					this._Cedula = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nombre", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Nombre
+		{
+			get
+			{
+				return this._Nombre;
+			}
+			set
+			{
+				if ((this._Nombre != value))
+				{
+					this._Nombre = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Apellido", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Apellido
+		{
+			get
+			{
+				return this._Apellido;
+			}
+			set
+			{
+				if ((this._Apellido != value))
+				{
+					this._Apellido = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefono", DbType="Int")]
+		public System.Nullable<int> Telefono
+		{
+			get
+			{
+				return this._Telefono;
+			}
+			set
+			{
+				if ((this._Telefono != value))
+				{
+					this._Telefono = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Correo", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string Correo
+		{
+			get
+			{
+				return this._Correo;
+			}
+			set
+			{
+				if ((this._Correo != value))
+				{
+					this._Correo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Distrito", DbType="Int NOT NULL")]
+		public int Distrito
+		{
+			get
+			{
+				return this._Distrito;
+			}
+			set
+			{
+				if ((this._Distrito != value))
+				{
+					this._Distrito = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Canton", DbType="Int NOT NULL")]
+		public int Canton
+		{
+			get
+			{
+				return this._Canton;
+			}
+			set
+			{
+				if ((this._Canton != value))
+				{
+					this._Canton = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Provincia", DbType="Int NOT NULL")]
+		public int Provincia
+		{
+			get
+			{
+				return this._Provincia;
+			}
+			set
+			{
+				if ((this._Provincia != value))
+				{
+					this._Provincia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Activo", DbType="Bit")]
+		public System.Nullable<bool> Activo
+		{
+			get
+			{
+				return this._Activo;
+			}
+			set
+			{
+				if ((this._Activo != value))
+				{
+					this._Activo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ConsultaListaUsuarioResult
+	{
+		
+		private string _usuario;
+		
+		private bool _activo;
+		
+		private string _Correo;
+		
+		public ConsultaListaUsuarioResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_usuario", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		public string usuario
+		{
+			get
+			{
+				return this._usuario;
+			}
+			set
+			{
+				if ((this._usuario != value))
+				{
+					this._usuario = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_activo", DbType="Bit NOT NULL")]
+		public bool activo
+		{
+			get
+			{
+				return this._activo;
+			}
+			set
+			{
+				if ((this._activo != value))
+				{
+					this._activo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Correo", DbType="VarChar(100)")]
+		public string Correo
+		{
+			get
+			{
+				return this._Correo;
+			}
+			set
+			{
+				if ((this._Correo != value))
+				{
+					this._Correo = value;
 				}
 			}
 		}

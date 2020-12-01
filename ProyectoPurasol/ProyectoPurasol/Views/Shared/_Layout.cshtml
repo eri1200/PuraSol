@@ -44,12 +44,12 @@
             </section>
         </div>
 
-        @Html.Partial("_ControlSidebar")
-    </div>
+         @Html.Partial("_ControlSidebar")
+        </div>
 
-    <script src="@RouteJs.RouteJsHandler.HandlerUrl"></script>
-    <script src="@EnumHandler.HandlerUrl"></script>
-    @Scripts.Render("~/Bundles/js")
-    @RenderSection("ViewSpecificJavascript", required: false)
-</body>
-</html>
+        <script src="@RouteJs.RouteJsHandler.HandlerUrl"></script>
+        <script src="@EnumHandler.HandlerUrl"></script>
+        @Scripts.Render("~/Bundles/js")
+        @RenderSection("ViewSpecificJavascript", required: false)
+    </body>
+    </html>

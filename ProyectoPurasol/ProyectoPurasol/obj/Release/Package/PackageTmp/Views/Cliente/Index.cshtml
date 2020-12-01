@@ -1,25 +1,14 @@
 ﻿@model IEnumerable<ProyectoPurasol.Models.Cliente>
-@{
-    ViewBag.Title = "Consulta Cliente";
-}
-
-<style>
-    .btn-success {
-        background: #E1E65F;
-        border-color: #E1E65F;
-    }
-
-    .panel-primary {
-        border-color: white;
-    }
-
-    .btn-danger {
-        background: #E1E65F;
-        border-color: #E1E65F;
-    }
-</style>
-
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+<link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
 <div>
+    <h3>Consulta Clientes</h3>
     <div class="panel panel-primary">
         <div class="panel-body ">
             <div class="modal-footer">
@@ -41,7 +30,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Telefono)
                         </th>
-
+                        
                     </tr>
                 </thead>
                 <tbody>
@@ -52,9 +41,9 @@
                                 @Html.DisplayFor(modelItem => item.Identificacion)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.Nombre)
-                                @Html.DisplayFor(modelItem => item.Apellido)
-
+                                @Html.DisplayFor(modelItem => item.Nombre) 
+                                @Html.DisplayFor(modelItem => item.Apellido) 
+                                
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Correo)
@@ -63,10 +52,11 @@
                                 @Html.DisplayFor(modelItem => item.Telefono)
                             </td>
                             <td>
+                                                          
                             </td>
                             <td>
                                 @Html.ActionLink("Editar", "Editar", new { id = item.Identificacion }, new { @class = "btn btn-success btn-sm" }) |
-                                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.IdCliente }, new { @class = "btn btn-danger btn-sm", onclick = "return Confirmar(this);" })
+                                @Html.ActionLink("Eliminar", "Eliminar", new { id = item.IdCliente}, new { @class = "btn btn-danger btn-sm", onclick = "return Confirmar(this);" })
                             </td>
                         </tr>
                     }
@@ -78,6 +68,6 @@
 </div>
 
 @*@section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-        @Scripts.Render("~/bundles/modalform")
-    }*@
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modalform")
+}*@

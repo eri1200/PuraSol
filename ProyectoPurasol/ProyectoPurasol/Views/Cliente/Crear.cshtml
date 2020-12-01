@@ -5,14 +5,20 @@
 <div class="modal-header">
     <h4 class="modal-title" id="myModalLabel">Agregar un nuevo Cliente</h4>
 </div>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
 @using (Html.BeginForm())
 {
     <div class="modal-body">
         <div class="form-horizontal">
             @Html.AntiForgeryToken()
-            @Html.Hidden("IdCliente",0)
+            @Html.Hidden("IdCliente", 0)
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-           
+
             <div class="form-group">
                 @Html.LabelFor(model => model.Identificacion, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-6">
@@ -52,7 +58,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Provincia, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-6">
-                     @Html.DropDownListFor(model => model.Provincia, new SelectList(ViewBag.ListaProvincias, "Cod", "Nombre"), "--Provincia--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;" })
+                    @Html.DropDownListFor(model => model.Provincia, new SelectList(ViewBag.ListaProvincias, "Cod", "Nombre"), "--Provincia--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;" })
                 </div>
             </div>
             <div class="form-group">
@@ -72,7 +78,7 @@
     <div class="modal-footer justify-content-start">
         <button class="btn btn-danger" data-dismiss="modal">Regresar</button>
         <input class="btn btn-primary" type="submit" value="Guardar" />
-        <input class="btn btn-primary" type="button" value="Buscar" id="buscar" name="buscar" />
+        
     </div>
 }
 

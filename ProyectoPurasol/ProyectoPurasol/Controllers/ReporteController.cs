@@ -106,8 +106,9 @@ namespace ProyectoPurasol.Controllers
                 //{
 
                 //}
-                if (usuario != null) {
-                    Console.WriteLine(usuario.table[0].Electro);
+                if (usuario.Compania != null && usuario.CostosdeMantenimiento != 0 && usuario.CostoUnitarioFijo != 0 && usuario.CrecimientoAnual != 0 && string.IsNullOrEmpty(usuario.Descripcion)==false && usuario.HorasRespaldo != 0 && string.IsNullOrEmpty(usuario.Identificacion)== false && string.IsNullOrEmpty(usuario.Nombre)==false && usuario.NumCotizacion != 0 &&
+                    string.IsNullOrEmpty(usuario.PotenciadePanel)==false && usuario.TamanoFijo != 0 && usuario.Tarifa != 0 && usuario.TechoDisponible != 0) {
+                     //Console.WriteLine(usuario.table[0].Electro);
 
                     //return Json (new {success=true, url= "http://localhost:51104/Reporte/MesesConsumo" }, JsonRequestBehavior.AllowGet);
                      var cliente=clscliente.ConsultaCliente(int.Parse(usuario.Identificacion)).Select(x => new { ID = x.Correo });
@@ -116,20 +117,24 @@ namespace ProyectoPurasol.Controllers
                     {
                         Session["CORREOCLIENTE"]  = obj.ID;
                     }
-                    
+
                     return Json(new { success = true, url = Url.Action("MesesConsumo") }, JsonRequestBehavior.AllowGet);
-                    
+                    //return RedirectToAction("MesesConsumo");
                 }
                 else
                 {
+                    TempData["SuccessMessage"] = "COMPLETE LA INFROMACION SOLICTADA";
                     return Json(new { success = true, url = Url.Action("Create","Reporte",tipofactura) }, JsonRequestBehavior.AllowGet);
+                    //return RedirectToAction("Create");
                 }
                 
             }
             catch (Exception ex)
             {
-
+                TempData["SuccessMessage"] = "COMPLETE LA INFROMACION SOLICTADA";
                 return Json(new { success = true, url = Url.Action("Create", "Reporte", tipofactura) }, JsonRequestBehavior.AllowGet);
+                
+                //return RedirectToAction("Create");
             }
            
             
@@ -142,7 +147,27 @@ namespace ProyectoPurasol.Controllers
         [HttpPost]
         public ActionResult MesesConsumo(ConsumoMeses consumoMeses)
         {
-            return RedirectToAction("ReporteExtra");
+            try
+            {
+                if (consumoMeses.Enero!=0 && consumoMeses.Febrero != 0 && consumoMeses.Marzo != 0 && consumoMeses.Abril != 0 && consumoMeses.Mayo != 0 && consumoMeses.Junio != 0 && consumoMeses.Julio != 0 && consumoMeses.Agosto != 0 && consumoMeses.Setiembre != 0 && consumoMeses.Octubre != 0 && consumoMeses.Noviembre != 0 && consumoMeses.Diciembre != 0 &&
+                    consumoMeses.SOLARGISEnero != 0 && consumoMeses.SOLARGISFebrero != 0 && consumoMeses.SOLARGISMarzo != 0 && consumoMeses.SOLARGISAbril != 0 && consumoMeses.SOLARGISMayo != 0 && consumoMeses.SOLARGISJunio != 0 && consumoMeses.SOLARGISJulio != 0 && consumoMeses.SOLARGISAgosto != 0 && consumoMeses.SOLARGISSetiembre != 0 && consumoMeses.SOLARGISOctubre != 0 && consumoMeses.SOLARGISNoviembre != 0 && consumoMeses.SOLARGISDiciembre != 0 )
+                {
+
+                }
+                else
+                {
+                    TempData["SuccessMessage"] = "COMPLETE LA INFROMACION SOLICTADA";
+                    return RedirectToAction("MesesConsumo");
+                    
+                }
+                return RedirectToAction("MesesConsumo");
+            }
+            catch(Exception ex)
+            {
+                TempData["SuccessMessage"] = "HUBO UN ERROR";
+                Console.WriteLine(ex);
+            }
+            return RedirectToAction("MesesConsumo");
         }
         [HttpPost]
         [ValidateAntiForgeryToken]

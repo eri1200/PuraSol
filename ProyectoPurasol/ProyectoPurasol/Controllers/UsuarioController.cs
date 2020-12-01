@@ -69,7 +69,7 @@ namespace ProyectoPurasol.Controllers
         {
             try
             {
-                if (captchaValid) //revisar manualmente el captcha
+                if (captchaValid && string.IsNullOrEmpty(usuario.NombreUsuario)==false  && string.IsNullOrEmpty(usuario.Correo) == false && string.IsNullOrEmpty(usuario.Descripcion) == false && string.IsNullOrEmpty(usuario.ListaRol) == false) //revisar manualmente el captcha
                 {
 
                     var randomNumber = new Random().Next(100, 1000);
@@ -78,25 +78,28 @@ namespace ProyectoPurasol.Controllers
                     string ContraseñaEncriptada = Security.Encriptar(Contrasena);
                     clsUsuario clsUsuario = new clsUsuario();
                     clsCorreo clsCorreo = new clsCorreo();
-                    clsCorreo.SendEmailAsync(usuario.Correo, usuario.NombreUsuario, Contrasena);
+                    
                     bool respuesta = false;
                     var Resultado = clsUsuario.ConsultarUsuario(usuario.NombreUsuario).Count();
 
-                    if (Resultado == 0)
+                    if (Resultado == 0 || clsUsuario.ConsultaListaUsuario().Where(x =>x.Correo==usuario.Correo).Count() ==0)
                     {
                         respuesta = clsUsuario.AgregarUsuario(usuario.NombreUsuario, ContraseñaEncriptada, true, usuario.ListaRol,usuario.Descripcion,usuario.Correo);
                         if (respuesta)
                         {
+                            clsCorreo.SendEmailAsync(usuario.Correo, usuario.NombreUsuario, Contrasena);
                             return RedirectToAction("Index");
                         }
                         else
                         {
-                            return View();
+                            TempData["SuccessMessage"] = "HUBO UN ERROR";
+                            return RedirectToAction("Create");
                         }
                     }
                     else
                     {
-                        return RedirectToAction("Index");
+                        TempData["SuccessMessage"] = "EL USUARIO O EL CORREO YA EXISTEN";
+                        return RedirectToAction("Create");
                         //respuesta = clsUsuario.ActualizarUsuario(usuario.NombreUsuario, ContraseñaEncriptada);
                         //if (respuesta)
                         //{
@@ -114,6 +117,7 @@ namespace ProyectoPurasol.Controllers
                 }
                 else
                 {
+                    TempData["SuccessMessage"] = "COMPLETE LA INFORMACION";
                     return RedirectToAction("Create");
                 }
             }
@@ -130,6 +134,7 @@ namespace ProyectoPurasol.Controllers
         // GET: Usuario/Edit/5
         public ActionResult Edit(string usuario)
         {
+            
             clsRol rol = new clsRol();
             ViewBag.ListaRol = rol.ConsultarRoles().Select(x => x.Nombre);
             List<Usuario> listaCliente = new List<Usuario>();
@@ -161,19 +166,37 @@ namespace ProyectoPurasol.Controllers
 		{
 			try
 			{
-                String UsuarioSession= Session["NOMBREUSUARIO"].ToString();
-                String ClaveEncriptada= Tools.Security.Encriptar(Clave);
-                clsUsuario User = new clsUsuario();
-                bool respuesta= User.ActualizarUsuario(NombreUsuario, ClaveEncriptada, UsuarioSession, ListaRol,Correo,Descripcion);
-                if (respuesta)
+                try
                 {
-                    return RedirectToAction("Index");
+                    if ( string.IsNullOrEmpty(NombreUsuario) == false && string.IsNullOrEmpty(Correo) == false && string.IsNullOrEmpty(Descripcion) == false && string.IsNullOrEmpty(ListaRol) == false && string.IsNullOrEmpty(Clave) == false) //revisar manualmente el captcha
+                    {
+                        String UsuarioSession = Session["NOMBREUSUARIO"].ToString();
+                        String ClaveEncriptada = Tools.Security.Encriptar(Clave);
+                        clsUsuario User = new clsUsuario();
+                        bool respuesta = User.ActualizarUsuario(NombreUsuario, ClaveEncriptada, UsuarioSession, ListaRol, Correo, Descripcion);
+                        if (respuesta)
+                        {
+                            return RedirectToAction("Index");
+                        }
+                        else
+                        {
+                            TempData["SuccessMessage"] = "HUBO UN ERROR";
+                            return RedirectToAction("Edit");
+                        }
+                    }
+                    else
+                    {
+                        TempData["SuccessMessage"] = "COMPLETE LA INFORMACION";
+                        return RedirectToAction("Create");
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    return RedirectToAction("Edit");
+                    TempData["SuccessMessage"] = "HUBO UN ERROR";
+                    return RedirectToAction("Create");
                 }
-
+                
+                
                 
 			}
 			catch

@@ -122,6 +122,7 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.Identity
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Logging.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.IdentityModel.Tokens.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.WebForms.dll
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Newtonsoft.Json.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\reCAPTCHA.MVC.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Configuration.ConfigurationManager.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
@@ -130,7 +131,6 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Security.Pe
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Security.Principal.Windows.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.Mvc.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Microsoft.ReportViewer.Common.dll
-D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\Newtonsoft.Json.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.WebPages.Razor.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\System.Web.Razor.dll
@@ -154,3 +154,4 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CoreCom
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
+D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\BLL.dll.config

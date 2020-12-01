@@ -33,25 +33,11 @@
     <Parameter Name="descripcion" Type="System.String" DbType="VarChar(100)" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Cantones" Method="Cantones">
-    <Parameter Name="Provincia" Parameter="provincia" Type="System.Char" DbType="Char(1)" />
-    <ElementType Name="CantonesResult">
-      <Column Name="Provincia" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Canton" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.ConsultaCompanias" Method="ConsultaCompanias">
     <Parameter Name="IdCompania" Parameter="idCompania" Type="System.Int32" DbType="Int" />
     <ElementType Name="ConsultaCompaniasResult">
       <Column Name="IdCompania" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaListaUsuario" Method="ConsultaListaUsuario">
-    <ElementType Name="ConsultaListaUsuarioResult">
-      <Column Name="usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultarCompanias" Method="ConsultarCompanias">
@@ -90,22 +76,8 @@
       <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.Distritos" Method="Distritos">
-    <Parameter Name="Provincia" Parameter="provincia" Type="System.Char" DbType="Char(1)" />
-    <Parameter Name="Canton" Parameter="canton" Type="System.String" DbType="Char(2)" />
-    <ElementType Name="DistritosResult">
-      <Column Name="Provincia" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Canton" Type="System.String" DbType="Char(2) NOT NULL" CanBeNull="false" />
-      <Column Name="Distrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.EliminaCompanias" Method="EliminaCompanias">
     <Parameter Name="IdCompania" Parameter="idCompania" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.EliminarCliente" Method="EliminarCliente">
-    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.EliminarRolUsuario" Method="EliminarRolUsuario">
@@ -127,19 +99,6 @@
       <Column Name="Activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="Descripcion" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ListaClientes" Method="ListaClientes">
-    <ElementType Name="ListaClientesResult">
-      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Cedula" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Telefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Distrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Canton" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.ListaRoles" Method="ListaRoles">
@@ -164,12 +123,6 @@
     <ElementType Name="ObtenerTarifasResult">
       <Column Name="IdTarifa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Nombre" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.Provincias" Method="Provincias">
-    <ElementType Name="ProvinciasResult">
-      <Column Name="Cod" Type="System.Char" DbType="Char(1) NOT NULL" CanBeNull="false" />
-      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.SeleccionarCliente" Method="SeleccionarCliente">
@@ -253,6 +206,55 @@
       <Column Name="IdMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Impuestos" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
       <Column Name="TarifaRegular" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Cantones" Method="Cantones">
+    <Parameter Name="Provincia" Parameter="provincia" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CantonesResult">
+      <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Canton" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Distritos" Method="Distritos">
+    <Parameter Name="Provincia" Parameter="provincia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Canton" Parameter="canton" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DistritosResult">
+      <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Canton" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Distrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Provincias" Method="Provincias">
+    <ElementType Name="ProvinciasResult">
+      <Column Name="Cod" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ListaClientes" Method="ListaClientes">
+    <ElementType Name="ListaClientesResult">
+      <Column Name="IdCliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Cedula" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Telefono" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Distrito" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Canton" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Activo" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.EliminarCliente" Method="EliminarCliente">
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConsultaListaUsuario" Method="ConsultaListaUsuario">
+    <ElementType Name="ConsultaListaUsuarioResult">
+      <Column Name="usuario" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
