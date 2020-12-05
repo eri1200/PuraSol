@@ -8,17 +8,17 @@
         <ul class="sidebar-menu" data-widget="tree">
 
             <li class="@Url.IsLinkActive("Index", "Home")">
-                <a href="@Url.Action("Index", "Home")"><i class="fa fa-link"></i> <span>Página Principal</span></a>
+                <a href="@Url.Action("Index", "Home")"> <span>Página Principal</span></a>
             </li>
 
             <li class="@Url.IsLinkActive("AnotherLink", "Reporte")">
-                <a href="@Url.Action("Index", "Reporte")"> <i class="fa fa-link"></i><span>Crear Reporte</span></a>
+                <a href="@Url.Action("Index", "Reporte")"> <span>Crear Reporte</span></a>
             </li>
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-link"></i> <span>Mantenimientos</span>
+                     <span>Mantenimientos</span>
                     <span class="pull-right-container">
-                        <i class="fa fa-angle-left pull-right"></i>
+                        
                     </span>
                 </a>
                 <ul class="treeview-menu">
@@ -27,7 +27,7 @@
                 </ul>
             </li>
             <li class="@Url.IsLinkActive("AnotherLink", "Reporte")">
-                <a href="@Url.Action("BuscarCliente", "Reporte")"> <i class="fa fa-link"></i><span>Buscar Reporte</span></a>
+                <a href="@Url.Action("BuscarCliente", "Reporte")"> <span>Buscar Reporte</span></a>
             </li>
         </ul>
         @* END Menu *@

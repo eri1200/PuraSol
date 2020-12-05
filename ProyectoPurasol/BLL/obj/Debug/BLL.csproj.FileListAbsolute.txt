@@ -155,3 +155,4 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyCom
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\BLL\bin\Debug\BLL.dll.config
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\BLL.dll.config

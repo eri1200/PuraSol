@@ -642,3 +642,8 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\BLL.dll.conf
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\xunit.abstractions.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\xunit.abstractions.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\xunit.abstractions.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\BLL.dll.config
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\EntityFramework.SqlServer.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\xunit.abstractions.xml

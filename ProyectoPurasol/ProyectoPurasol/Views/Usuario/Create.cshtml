@@ -1,4 +1,8 @@
-﻿@model ProyectoPurasol.Models.UsuarioCrear
+﻿
+@{
+    ViewBag.Title = "Crear Usuario";
+}
+@model ProyectoPurasol.Models.UsuarioCrear
 <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
 <style>
     .btn {
@@ -27,7 +31,7 @@
         <div class="panel-body ">
             <div class="modal-body">
                 <div class="form-horizontal">
-                    <h4>CREAR USUARIO</h4>
+                    
                     <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -80,7 +84,7 @@
                         </div>
                         <br />
 
-                        <input type="submit" value="Create" class="btn" />
+                        <input type="submit" value="Crear" class="btn" />
                     </div>
 
                 </div>

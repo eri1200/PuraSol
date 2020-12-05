@@ -1,12 +1,18 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Consultar Cliente";
 }
+
 
 <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
 <script src="~/Content/js/plugins/jquery/jquery-3.3.1.min.js"></script>
-<div class="modal-header">
-    <h4 class="modal-title" id="myModalLabel">Atender Consulta</h4>
-</div>
+<style>
+    .btn-primary {
+        background: #E1E65F;
+        border-color: #E1E65F;
+        color: white;
+    }
+</style>
+
 @using (Html.BeginForm())
 {
     <div class="modal-body">
