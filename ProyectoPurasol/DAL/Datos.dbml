@@ -139,24 +139,6 @@
       <Column Name="Provincia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.CrearReporte" Method="CrearReporte">
-    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
-    <Parameter Name="DatosReporte" Parameter="datosReporte" Type="System.String" DbType="NVarChar(2048)" />
-    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="Potencia" Parameter="potencia" Type="System.Double" DbType="Float" />
-    <Parameter Name="Paneles" Parameter="paneles" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Area" Parameter="area" Type="System.Double" DbType="Float" />
-    <Parameter Name="Compania" Parameter="compania" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="Costo" Parameter="costo" Type="System.Double" DbType="Float" />
-    <Parameter Name="Produccion" Parameter="produccion" Type="System.Double" DbType="Float" />
-    <Parameter Name="Almacenamiento" Parameter="almacenamiento" Type="System.Double" DbType="Float" />
-    <Parameter Name="ConsumoAbierto" Parameter="consumoAbierto" Type="System.Double" DbType="Float" />
-    <Parameter Name="Autoconsumo" Parameter="autoconsumo" Type="System.Double" DbType="Float" />
-    <Parameter Name="ConsumoBajo" Parameter="consumoBajo" Type="System.Double" DbType="Float" />
-    <Parameter Name="RetornoSimple" Parameter="retornoSimple" Type="System.Double" DbType="Float" />
-    <Parameter Name="AhorroAnual" Parameter="ahorroAnual" Type="System.Double" DbType="Float" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.ConsultarClienteReportes" Method="ConsultarClienteReportes">
     <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
     <ElementType Name="ConsultarClienteReportesResult">
@@ -256,5 +238,24 @@
       <Column Name="activo" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="Correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.CrearReporte" Method="CrearReporte">
+    <Parameter Name="Cedula" Parameter="cedula" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DatosHist" Parameter="datosHist" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DatosProy" Parameter="datosProy" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Descripcion" Parameter="descripcion" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Potencia" Parameter="potencia" Type="System.Double" DbType="Float" />
+    <Parameter Name="Paneles" Parameter="paneles" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Area" Parameter="area" Type="System.Double" DbType="Float" />
+    <Parameter Name="Compania" Parameter="compania" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Costo" Parameter="costo" Type="System.Double" DbType="Float" />
+    <Parameter Name="Produccion" Parameter="produccion" Type="System.Double" DbType="Float" />
+    <Parameter Name="Almacenamiento" Parameter="almacenamiento" Type="System.Double" DbType="Float" />
+    <Parameter Name="ConsumoAbierto" Parameter="consumoAbierto" Type="System.Double" DbType="Float" />
+    <Parameter Name="Autoconsumo" Parameter="autoconsumo" Type="System.Double" DbType="Float" />
+    <Parameter Name="ConsumoBajo" Parameter="consumoBajo" Type="System.Double" DbType="Float" />
+    <Parameter Name="RetornoSimple" Parameter="retornoSimple" Type="System.Double" DbType="Float" />
+    <Parameter Name="AhorroAnual" Parameter="ahorroAnual" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

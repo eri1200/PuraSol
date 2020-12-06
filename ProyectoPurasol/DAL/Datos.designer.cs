@@ -195,13 +195,6 @@ namespace DAL
 			return ((ISingleResult<SeleccionarClienteResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CrearReporte")]
-		public int CrearReporte([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DatosReporte", DbType="NVarChar(2048)")] string datosReporte, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Descripcion", DbType="VarChar(50)")] string descripcion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Potencia", DbType="Float")] System.Nullable<double> potencia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Paneles", DbType="Int")] System.Nullable<int> paneles, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Area", DbType="Float")] System.Nullable<double> area, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Compania", DbType="VarChar(50)")] string compania, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Costo", DbType="Float")] System.Nullable<double> costo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Produccion", DbType="Float")] System.Nullable<double> produccion, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Almacenamiento", DbType="Float")] System.Nullable<double> almacenamiento, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ConsumoAbierto", DbType="Float")] System.Nullable<double> consumoAbierto, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Autoconsumo", DbType="Float")] System.Nullable<double> autoconsumo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ConsumoBajo", DbType="Float")] System.Nullable<double> consumoBajo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="RetornoSimple", DbType="Float")] System.Nullable<double> retornoSimple, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="AhorroAnual", DbType="Float")] System.Nullable<double> ahorroAnual)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula, datosReporte, descripcion, potencia, paneles, area, compania, costo, produccion, almacenamiento, consumoAbierto, autoconsumo, consumoBajo, retornoSimple, ahorroAnual);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultarClienteReportes")]
 		public ISingleResult<ConsultarClienteReportesResult> ConsultarClienteReportes([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula)
 		{
@@ -270,6 +263,29 @@ namespace DAL
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<ConsultaListaUsuarioResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CrearReporte")]
+		public int CrearReporte(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Cedula", DbType="Int")] System.Nullable<int> cedula, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DatosHist", DbType="NVarChar(MAX)")] string datosHist, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DatosProy", DbType="NVarChar(MAX)")] string datosProy, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Descripcion", DbType="VarChar(50)")] string descripcion, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Potencia", DbType="Float")] System.Nullable<double> potencia, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Paneles", DbType="Int")] System.Nullable<int> paneles, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Area", DbType="Float")] System.Nullable<double> area, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Compania", DbType="VarChar(50)")] string compania, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Costo", DbType="Float")] System.Nullable<double> costo, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Produccion", DbType="Float")] System.Nullable<double> produccion, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Almacenamiento", DbType="Float")] System.Nullable<double> almacenamiento, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ConsumoAbierto", DbType="Float")] System.Nullable<double> consumoAbierto, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Autoconsumo", DbType="Float")] System.Nullable<double> autoconsumo, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ConsumoBajo", DbType="Float")] System.Nullable<double> consumoBajo, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="RetornoSimple", DbType="Float")] System.Nullable<double> retornoSimple, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="AhorroAnual", DbType="Float")] System.Nullable<double> ahorroAnual)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula, datosHist, datosProy, descripcion, potencia, paneles, area, compania, costo, produccion, almacenamiento, consumoAbierto, autoconsumo, consumoBajo, retornoSimple, ahorroAnual);
+			return ((int)(result.ReturnValue));
 		}
 	}
 	

@@ -41,13 +41,13 @@ namespace BLL
 
 
         }
-        public bool CrearReporte(int cliente, string DatosReporte,string descripcion,double potencia, int paneles,double area,string compania,double costo,double produccion, double almacenamiento
+        public bool CrearReporte(int cliente, string datosHist,string datosProy,string descripcion,double potencia, int paneles,double area,string compania,double costo,double produccion, double almacenamiento
             ,double consumoAbierto, double autoconsumo, double consumobajo, double RetornoSimple, double ahorroAnual)
         {
             try
             {
                 DatosDataContext data = new DatosDataContext();
-                int repuesta = data.CrearReporte( cliente,  DatosReporte,  descripcion,  potencia,  paneles,  area,  compania,  costo,  produccion,  almacenamiento,  consumoAbierto,  autoconsumo,  consumobajo,  RetornoSimple,  ahorroAnual);
+                int repuesta = data.CrearReporte( cliente, datosHist, datosProy,  descripcion,  potencia,  paneles,  area,  compania,  costo,  produccion,  almacenamiento,  consumoAbierto,  autoconsumo,  consumobajo,  RetornoSimple,  ahorroAnual);
                 if (repuesta == 0)
                 {
                     return true;

@@ -72,7 +72,7 @@ namespace BLL
                 // Smtp client
                 var client = new SmtpClient()
                 {
-                    Port = 25,
+                    Port = 587,//25
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     UseDefaultCredentials = false,
                     Host = "smtp.live.com",
@@ -85,8 +85,8 @@ namespace BLL
             }
             catch (Exception ex)
             {
-                // TODO: handle exception
-                throw new InvalidOperationException(ex.Message);
+                Console.WriteLine(ex.Message);
+                //throw new InvalidOperationException();
             }
 
             return Task.CompletedTask;

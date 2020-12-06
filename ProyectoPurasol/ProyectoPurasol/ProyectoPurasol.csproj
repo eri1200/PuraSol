@@ -402,6 +402,11 @@
     <Content Include="Views\Reporte\BuscarCliente.cshtml" />
     <Content Include="Views\Reporte\GenerarReporte.cshtml" />
     <Content Include="Views\Reporte\ListaReportes.cshtml" />
+    <Content Include="Views\Principal\CotizarCom.cshtml" />
+    <Content Include="Views\Principal\CotizarMTMT.cshtml" />
+    <Content Include="Views\Principal\CotizarRes.cshtml" />
+    <Content Include="Views\Principal\CotizarTMT.cshtml" />
+    <Content Include="Views\Principal\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -412,8 +417,10 @@
   <ItemGroup>
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PrincipalController.cs" />
     <Compile Include="Controllers\ReporteController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
+    <Compile Include="Models\CConstruida.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ConsumoMeses.cs" />
     <Compile Include="Models\Electrodomestico.cs" />
@@ -421,6 +428,11 @@
     <Compile Include="Models\JWT.cs" />
     <Compile Include="Models\ListaReporte.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\Principal.cs" />
+    <Compile Include="Models\PrincipalCom.cs" />
+    <Compile Include="Models\PrincipalmicroTMT.cs" />
+    <Compile Include="Models\PrincipalRes.cs" />
+    <Compile Include="Models\PrincipalTMT.cs" />
     <Compile Include="Models\Reporte.cs" />
     <Compile Include="Models\Rol.cs" />
     <Compile Include="Models\Usuario.cs" />

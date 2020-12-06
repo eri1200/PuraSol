@@ -63,3 +63,13 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csproj.CopyCom
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.pdb
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\DAL.dll.config
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\DAL.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\DAL.pdb
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\reCAPTCHA.MVC.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Debug\Newtonsoft.Json.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Debug\DAL.pdb
