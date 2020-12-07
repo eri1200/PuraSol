@@ -1,47 +1,52 @@
-﻿<style>
-   .col-lg-3{ 
-       margin: 75px;
-       margin-left: 125px;
-       
-      }
-   .row{ 
-       margin-left: 35px;
-   }
-   .Inicio{ 
-       text-align: center;
-   }
+﻿@{
+    ViewBag.Title = "Crear Reporte";
+}
+
+<style>
+    .col-lg-3 {
+        margin: 75px;
+        margin-left: 125px;
+    }
+
+    .row {
+        margin-left: 35px;
+    }
+
+    .Inicio {
+        text-align: center;
+    }
+
     .col-lg-3 {
         height: 35px;
         color: white;
         background-color: #00210D;
     }
- 
 </style>
 <div>
-    <h3>Crear Reporte</h3>
+
     <div class="panel panel-primary">
         <div class="panel-body ">
-           <h4 class ="Inicio"> Seleccione el tipo de reporte</h4>
+            <h4 class="Inicio"> Seleccione el tipo de reporte</h4>
             <div class="modal-footer">
                 <div class="row">
-                    
-                        <a href='@Url.Action("CotizarCom", "Principal")'>
-                            <input type="button" value='Oferta Comercial' class="col-lg-3 col-xs-6" name="Comercial" id="Comercial" />
-                        </a>
-                   
-                    
-                        <a href='@Url.Action("CotizarRes", "Principal")'>
-                            <input type="button" value='Oferta Residencial' class="col-lg-3 col-xs-6" name="Residencial" id="Residencial" />
-                        </a>
-                    
-                    <a href='@Url.Action("Create", "Reporte", new { id=3})'>
+
+                    <a href='@Url.Action("CotizarCom", "Principal")'>
+                        <input type="button" value='Oferta Comercial' class="col-lg-3 col-xs-6" name="Comercial" id="Comercial" />
+                    </a>
+
+
+                    <a href='@Url.Action("CotizarRes", "Principal")'>
+                        <input type="button" value='Oferta Residencial' class="col-lg-3 col-xs-6" name="Residencial" id="Residencial" />
+                    </a>
+
+                    <a href='@Url.Action("CotizarMTMT", "Principal", new { id=3})'>
                         <input type="button" value='Oferta Microred' class="col-lg-3 col-xs-6" name="Microred" id="Microred" />
                     </a>
-                    
-                        <a href='@Url.Action("Create", "Reporte", new { id=4})'>
-                            <input type="button" value='Oferta TMT' class="col-lg-3 col-xs-6" name="TMT" id="TMT" />
-                        </a>
-                    
+
+                    <a href='@Url.Action("CotizarTMT", "Principal", new { id=4})'>
+                        <input type="button" value='Oferta TMT' class="col-lg-3 col-xs-6" name="TMT" id="TMT" />
+                    </a>
+
                 </div>
             </div>
         </div>

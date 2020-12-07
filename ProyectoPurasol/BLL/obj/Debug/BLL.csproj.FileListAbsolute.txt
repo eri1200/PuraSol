@@ -195,3 +195,4 @@ D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.c
 D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.csproj.CopyComplete
 D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.dll
 D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\BLL\obj\Debug\BLL.pdb
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\BLL\bin\Debug\BLL.dll.config

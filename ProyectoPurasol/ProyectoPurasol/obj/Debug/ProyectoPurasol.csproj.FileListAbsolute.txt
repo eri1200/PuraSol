@@ -729,3 +729,8 @@ D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin
 D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.csproj.CopyComplete
 D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.dll
 D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\obj\Debug\ProyectoPurasol.pdb
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\xunit.abstractions.dll
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\BLL.dll.config
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\xunit.abstractions.xml
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.cache
+C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.compiled
