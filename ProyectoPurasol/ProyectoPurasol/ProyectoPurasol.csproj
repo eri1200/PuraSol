@@ -327,6 +327,8 @@
     <Content Include="Content\img\imagen1.jpg" />
     <Content Include="Content\img\imagen2.jpg" />
     <Content Include="Content\img\imagen3.jpg" />
+    <Content Include="Content\img\lista.png" />
+    <Content Include="Content\img\menu.png" />
     <Content Include="Content\img\puraS.png" />
     <Content Include="Content\img\remplazo.jpg" />
     <Content Include="Content\css\skins\skin-blue.min.css" />

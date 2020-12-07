@@ -1,10 +1,10 @@
 ﻿@model ProyectoPurasol.Models.Principal
 
 @{
-    ViewBag.Title = "CotizarRes";
+    ViewBag.Title = "Tarifa Residencial";
 }
 
-<h2>CotizarRes</h2>
+
 
 
 @if (TempData["SuccessMessage"] != null)
@@ -24,7 +24,7 @@
         <div class="modal-footer">
             <div class="form-group">
                 <div class="form-horizontal">
-                    <h4>Principal</h4>
+                
                     <div class="form-group">
                         <div class="form-horizontal">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
@@ -43,12 +43,13 @@
                                                 @Html.Label("Identificacion", htmlAttributes: new { @class = "control-label col-md-2", @id = "Identificacion" })
                                                 <div class="col-md-6">
                                                     <input class="form-control" type="text" name="IdCliente" id="IdCliente" />
+                                                    <br />
                                                     <input class="btn btn-primary" type="button" name="Buscar" id="Buscar" value="Buscar Cliente" />
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                         </div>
                                         <script>
                                         $(document).ready(function () {
@@ -423,7 +424,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Create" class="btn btn-default" />
+                            <input type="submit" value="Crear" class="btn btn-default" />
                         </div>
                     </div>
                 </div>
@@ -434,6 +435,6 @@
                     }
 
                     <div>
-                        @Html.ActionLink("Back to List", "Index")
+                        @Html.ActionLink("Devolverse al Inicio", "Index")
                     </div>
 

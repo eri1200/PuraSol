@@ -1,5 +1,7 @@
 ﻿@model ProyectoPurasol.Models.Cliente
-
+@{
+    ViewBag.Title = "Agregar Cliente";
+}
 <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
 <script src="~/Content/js/plugins/jquery/jquery-3.3.1.min.js"></script>
 <style>
@@ -8,10 +10,9 @@
         border-color: #E1E65F;
         color: white;
     }
-   
 </style>
 <div class="modal-header">
-    <h4 class="modal-title" id="myModalLabel">Agregar un nuevo Cliente</h4>
+
 </div>
 @if (TempData["SuccessMessage"] != null)
 {
@@ -86,7 +87,7 @@
     <div class="modal-footer justify-content-start">
         <button class="btn btn-primary" data-dismiss="modal">Regresar</button>
         <input class="btn btn-primary" type="submit" value="Guardar" />
-        
+
     </div>
 }
 

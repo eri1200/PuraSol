@@ -123,7 +123,7 @@ namespace ProyectoPurasol.Controllers
                 }
                 else
                 {
-                    TempData["SuccessMessage"] = "COMPLETE LA INFROMACION SOLICTADA";
+                    TempData["SuccessMessage"] = "Complete la informacion solicitada";
                     return Json(new { success = true, url = Url.Action("Create","Reporte",tipofactura) }, JsonRequestBehavior.AllowGet);
                     //return RedirectToAction("Create");
                 }
@@ -131,7 +131,7 @@ namespace ProyectoPurasol.Controllers
             }
             catch (Exception ex)
             {
-                TempData["SuccessMessage"] = "COMPLETE LA INFROMACION SOLICTADA";
+                TempData["SuccessMessage"] = "Complete la informacion solicitada";
                 return Json(new { success = true, url = Url.Action("Create", "Reporte", tipofactura) }, JsonRequestBehavior.AllowGet);
                 
                 //return RedirectToAction("Create");
@@ -156,7 +156,7 @@ namespace ProyectoPurasol.Controllers
                 }
                 else
                 {
-                    TempData["SuccessMessage"] = "COMPLETE LA INFROMACION SOLICTADA";
+                    TempData["SuccessMessage"] = "Complete la informacion solicitada";
                     return RedirectToAction("MesesConsumo");
                     
                 }
@@ -164,7 +164,7 @@ namespace ProyectoPurasol.Controllers
             }
             catch(Exception ex)
             {
-                TempData["SuccessMessage"] = "HUBO UN ERROR";
+                TempData["SuccessMessage"] = "Hubo un error";
                 Console.WriteLine(ex);
             }
             return RedirectToAction("MesesConsumo");
@@ -196,7 +196,7 @@ namespace ProyectoPurasol.Controllers
                     }
                     else
                     {
-                        ModelState.AddModelError("File", "This file format is not supported");
+                        ModelState.AddModelError("File", "Este archivo no es soportado");
                         return View();
                     }
 
@@ -209,7 +209,7 @@ namespace ProyectoPurasol.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("File", "Please Upload Your file");
+                    ModelState.AddModelError("File", "Por favor suba su archivo");
                 }
             }
             return View();

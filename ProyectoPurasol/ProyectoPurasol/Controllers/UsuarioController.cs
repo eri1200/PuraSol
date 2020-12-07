@@ -92,13 +92,13 @@ namespace ProyectoPurasol.Controllers
                         }
                         else
                         {
-                            TempData["SuccessMessage"] = "HUBO UN ERROR";
+                            TempData["SuccessMessage"] = "Hubo un error";
                             return RedirectToAction("Create");
                         }
                     }
                     else
                     {
-                        TempData["SuccessMessage"] = "EL USUARIO O EL CORREO YA EXISTEN";
+                        TempData["SuccessMessage"] = "El usuario o el correo ya existe";
                         return RedirectToAction("Create");
                         //respuesta = clsUsuario.ActualizarUsuario(usuario.NombreUsuario, ContraseñaEncriptada);
                         //if (respuesta)
@@ -117,7 +117,7 @@ namespace ProyectoPurasol.Controllers
                 }
                 else
                 {
-                    TempData["SuccessMessage"] = "COMPLETE LA INFORMACION";
+                    TempData["SuccessMessage"] = "Complete la informacion";
                     return RedirectToAction("Create");
                 }
             }
@@ -180,19 +180,19 @@ namespace ProyectoPurasol.Controllers
                         }
                         else
                         {
-                            TempData["SuccessMessage"] = "HUBO UN ERROR";
+                            TempData["SuccessMessage"] = "Hubo un error";
                             return RedirectToAction("Edit");
                         }
                     }
                     else
                     {
-                        TempData["SuccessMessage"] = "COMPLETE LA INFORMACION";
+                        TempData["SuccessMessage"] = "Complete la informacion";
                         return RedirectToAction("Create");
                     }
                 }
                 catch (Exception ex)
                 {
-                    TempData["SuccessMessage"] = "HUBO UN ERROR";
+                    TempData["SuccessMessage"] = "Hubo un error";
                     return RedirectToAction("Create");
                 }
                 

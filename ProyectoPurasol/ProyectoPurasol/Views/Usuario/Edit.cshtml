@@ -1,7 +1,7 @@
 ﻿@model ProyectoPurasol.Models.Usuario
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
 
 }
 <style>
@@ -10,7 +10,7 @@
         position: relative;
     }
 </style>
-<h2>Edit</h2>
+
 @if (TempData["SuccessMessage"] != null)
 {
     <div class="alert alert-danger alert-dismissable">
@@ -26,7 +26,7 @@
         <div class="panel-body ">
             <div class="modal-body">
                 <div class="form-horizontal">
-                    <h4>Usuario</h4>
+                   
                     <hr />
                     <div class="form-group">
                         @Html.Label("Rol", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -91,5 +91,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Devolverse", "Index")
 </div>
