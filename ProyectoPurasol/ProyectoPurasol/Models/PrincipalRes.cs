@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -9,6 +10,7 @@ namespace ProyectoPurasol.Models
     {
         public string Nombrecliente { get; set; }
         public string Compania { get; set; }
+        [Required]
         public string Tarifa { get; set; }
         public double TechoDisponible { get; set; }
         public double HorasRespaldo { get; set; }

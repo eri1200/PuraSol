@@ -133,5 +133,45 @@ namespace BLL
 
 
         }
+        public List<ReporteHistResult> HistMes(int reporte)
+        {
+            try
+            {
+                DatosDataContext data = new DatosDataContext();
+                List<ReporteHistResult> info = data.ReporteHist(reporte).ToList();
+
+                // or
+                // var obj = JsonConvert.DeserializeObject<Array<T>>(result)
+
+                return info;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+
+        }
+        public List<ReporteProyResult> ProyMes(int reporte)
+        {
+            try
+            {
+                DatosDataContext data = new DatosDataContext();
+                List<ReporteProyResult> info = data.ReporteProy(reporte).ToList();
+
+                // or
+                // var obj = JsonConvert.DeserializeObject<Array<T>>(result)
+
+                return info;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                throw;
+            }
+
+
+        }
     }
 }

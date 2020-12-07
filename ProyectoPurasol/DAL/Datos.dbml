@@ -56,17 +56,6 @@
       <Column Name="Correo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.CrearActualizarCliente" Method="CrearActualizarCliente">
-    <Parameter Name="cedula" Type="System.Int32" DbType="Int" />
-    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="apellido" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="Telefono" Parameter="telefono" Type="System.Int32" DbType="Int" />
-    <Parameter Name="correo" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="Distrito" Parameter="distrito" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Provincia" Parameter="provincia" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Canton" Parameter="canton" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.CrearUsuario" Method="CrearUsuario">
     <Parameter Name="usuario" Type="System.String" DbType="VarChar(100)" />
     <Parameter Name="clave" Type="System.String" DbType="VarChar(100)" />
@@ -256,6 +245,40 @@
     <Parameter Name="ConsumoBajo" Parameter="consumoBajo" Type="System.Double" DbType="Float" />
     <Parameter Name="RetornoSimple" Parameter="retornoSimple" Type="System.Double" DbType="Float" />
     <Parameter Name="AhorroAnual" Parameter="ahorroAnual" Type="System.Double" DbType="Float" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ReporteProy" Method="ReporteProy">
+    <Parameter Name="IdReporte" Parameter="idReporte" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ReporteProyResult">
+      <Column Name="IdProyeccionMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdReporte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kWh_tarifa_regular" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="kWh_tarifa_acceso" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Carga" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Impuestos" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ReporteHist" Method="ReporteHist">
+    <Parameter Name="IdReporte" Parameter="idReporte" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ReporteHistResult">
+      <Column Name="IdHistorico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdReporte" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IdMes" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kWh_tarifa_regular" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Cargo" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="Impuestos" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.CrearActualizarCliente" Method="CrearActualizarCliente">
+    <Parameter Name="cedula" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nombre" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="apellido" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Telefono" Parameter="telefono" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="correo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Distrito" Parameter="distrito" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Provincia" Parameter="provincia" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Canton" Parameter="canton" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
 </Database>

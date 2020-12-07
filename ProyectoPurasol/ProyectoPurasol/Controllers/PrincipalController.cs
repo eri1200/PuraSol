@@ -112,9 +112,14 @@ namespace ProyectoPurasol.Controllers
 
         public ActionResult CotizarRes()
         {
-            List<string> ListaBool = new List<string>();
-            ListaBool.Add("Sí");
-            ListaBool.Add("No");
+            List<SelectListItem> ListaNombre = new List<SelectListItem>();
+            ListaNombre.AddRange(new[] { new SelectListItem() { Text = "Si", Value = "Si" }, new SelectListItem() { Text = "No", Value = "No" } });
+            ViewBag.Bool = ListaNombre;
+
+
+            //List<string> ListaBool = new List<string>();
+            //ListaBool.Add("Sí");
+            //ListaBool.Add("No");
             List<string> ListaCompania = new List<string>();
             ListaCompania.Add("ICE");
             ListaCompania.Add("CNFL");
@@ -141,7 +146,7 @@ namespace ProyectoPurasol.Controllers
             ListaTecnologia.Add("Acople DC");
             ListaTecnologia.Add("Acople AC");
 
-            ViewBag.Bool = ListaBool;
+            //ViewBag.Bool = ListaBool;
             ViewBag.Compania = ListaCompania;
             ViewBag.Tarifa = ListaTipoTarifa;
             ViewBag.Mant = ListaMantenimiento;
@@ -153,8 +158,43 @@ namespace ProyectoPurasol.Controllers
         [HttpPost]
         public ActionResult CotizarRes(Principal principal)
         {
+            List<SelectListItem> ListaNombre = new List<SelectListItem>();
+            ListaNombre.AddRange(new[] { new SelectListItem() { Text = "Si", Value = "Si" }, new SelectListItem() { Text = "No", Value = "No" } });
+            ViewBag.Bool = ListaNombre;
+            List<string> ListaCompania = new List<string>();
+            ListaCompania.Add("ICE");
+            ListaCompania.Add("CNFL");
+            ListaCompania.Add("JASEC");
+            ListaCompania.Add("ESPH");
+            ListaCompania.Add("COOPELESCA");
+            ListaCompania.Add("COOPEGUANACASTE");
+            ListaCompania.Add("COOPESANTOS");
+            ListaCompania.Add("COOPEALFARORUIZ");
+            List<string> ListaTipoTarifa = new List<string>();
+            ListaTipoTarifa.Add("T-RE");
+            ListaTipoTarifa.Add("T-CO/IN");
+            ListaTipoTarifa.Add("T-CS");
+            List<string> ListaMantenimiento = new List<string>();
+            ListaMantenimiento.Add("No");
+            ListaMantenimiento.Add("GAM");
+            ListaMantenimiento.Add("GAM+100km");
+            ListaMantenimiento.Add("GAM+250km");
+            ListaMantenimiento.Add("GAM+350km");
+            List<string> ListaTecnologia = new List<string>();
+            ListaTecnologia.Add("Microinversor");
+            ListaTecnologia.Add("Optimizadores");
+            ListaTecnologia.Add("Centralizado");
+            ListaTecnologia.Add("Acople DC");
+            ListaTecnologia.Add("Acople AC");
+
+            
+            ViewBag.Compania = ListaCompania;
+            ViewBag.Tarifa = ListaTipoTarifa;
+            ViewBag.Mant = ListaMantenimiento;
+            ViewBag.Tec = ListaTecnologia;
             try
             {
+
                 clsDatosPrincipalesRes principales = new clsDatosPrincipalesRes();
                 List<BLL.Models.Reporte> reporte=principales.asignarPrincipales(principal.Nombre, principal.Compania, principal.Tarifa, principal.TechoDisponible, principal.HorasRespaldo, principal.TipoCambio, principal.PotenciaPanel,
                     principal.CostoUnitarioFijo, principal.CostoUnitarioFijoValor, principal.TamanoFijo, principal.TamanoFijoValor, principal.CostoMantenimiento, principal.CrecimientoAnual, principal.Tecnologia,
@@ -169,47 +209,15 @@ namespace ProyectoPurasol.Controllers
                     Session["CORREOCLIENTE"] = obj.ID;
                 }
 
-                List<string> ListaBool = new List<string>();
-                ListaBool.Add("Sí");
-                ListaBool.Add("No");
-                List<string> ListaCompania = new List<string>();
-                ListaCompania.Add("ICE");
-                ListaCompania.Add("CNFL");
-                ListaCompania.Add("JASEC");
-                ListaCompania.Add("ESPH");
-                ListaCompania.Add("COOPELESCA");
-                ListaCompania.Add("COOPEGUANACASTE");
-                ListaCompania.Add("COOPESANTOS");
-                ListaCompania.Add("COOPEALFARORUIZ");
-                List<string> ListaTipoTarifa = new List<string>();
-                ListaTipoTarifa.Add("T-RE");
-                ListaTipoTarifa.Add("T-CO/IN");
-                ListaTipoTarifa.Add("T-CS");
-                List<string> ListaMantenimiento = new List<string>();
-                ListaMantenimiento.Add("No");
-                ListaMantenimiento.Add("GAM");
-                ListaMantenimiento.Add("GAM+100km");
-                ListaMantenimiento.Add("GAM+250km");
-                ListaMantenimiento.Add("GAM+350km");
-                List<string> ListaTecnologia = new List<string>();
-                ListaTecnologia.Add("Microinversor");
-                ListaTecnologia.Add("Optimizadores");
-                ListaTecnologia.Add("Centralizado");
-                ListaTecnologia.Add("Acople DC");
-                ListaTecnologia.Add("Acople AC");
-
-                ViewBag.Bool = ListaBool;
-                ViewBag.Compania = ListaCompania;
-                ViewBag.Tarifa = ListaTipoTarifa;
-                ViewBag.Mant = ListaMantenimiento;
-                ViewBag.Tec = ListaTecnologia;
+               
 
                 Session["DatosReporte"] = reporte;
 
                 return RedirectToAction("ReporteExtra","Reporte");
             }
-            catch
+            catch(Exception ex)
             {
+                System.Diagnostics.Debug.WriteLine(ex);
                 return View();
             }
         }

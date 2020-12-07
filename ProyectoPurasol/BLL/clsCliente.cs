@@ -39,7 +39,7 @@ namespace BLL
 
         }
         //Agregar Cliente y su información como nombre, identificación,apellidos, correo, telefono, distrito, canton, provincia
-        public bool AgregarCliente(string cedula, string Nombre, string Apellido1, string Correo, int Telefono,  int Distrito, int Canton, int Provincia) 
+        public bool AgregarCliente(string cedula, string Nombre, string Apellido1, string Correo, string Telefono,  int Distrito, int Canton, int Provincia) 
         {
             try
             {
@@ -65,7 +65,7 @@ namespace BLL
         }
         //Actualizar Cliente y su información como nombre, identificación,apellidos, correo, telefono, distrito, canton, provincia
 
-        public bool ActualizarCliente(string cedula, string Nombre, string Apellido1, string Correo, int Telefono, int Distrito, int Canton, int Provincia) 
+        public bool ActualizarCliente(string cedula, string Nombre, string Apellido1, string Correo, string Telefono, int Distrito, int Canton, int Provincia) 
         {
             try
             {

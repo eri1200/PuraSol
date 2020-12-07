@@ -104,7 +104,7 @@ namespace ProyectoPurasol.Controllers
                 {
                     TempData["SuccessMessage"] = null;
                     bool Resultado = Objcliente.AgregarCliente(cliente.Identificacion.ToString(),
-                        cliente.Nombre, cliente.Apellido, cliente.Correo, Convert.ToInt32(cliente.Telefono),
+                        cliente.Nombre, cliente.Apellido, cliente.Correo, cliente.Telefono,
                        Convert.ToInt32(cliente.Distrito), Convert.ToInt32(cliente.Canton), Convert.ToInt32(cliente.Provincia));
 
                     if (Resultado)
@@ -178,13 +178,14 @@ namespace ProyectoPurasol.Controllers
             [HttpPost]
         public ActionResult Editar(string id, Cliente cliente)
         {
+            ViewBag.ListaProvincias = CargaProvincias();
             try
             {
 
                 
                 clsCliente ObjCliente = new clsCliente();
                 bool Resultado = ObjCliente.ActualizarCliente(id,
-                        cliente.Nombre, cliente.Apellido, cliente.Correo, Convert.ToInt32(cliente.Telefono),
+                        cliente.Nombre, cliente.Apellido, cliente.Correo, cliente.Telefono,
                        Convert.ToInt32(cliente.Distrito), Convert.ToInt32(cliente.Canton), Convert.ToInt32(cliente.Provincia));
 
                 if (Resultado)
@@ -195,7 +196,7 @@ namespace ProyectoPurasol.Controllers
                 {
                     
                     
-                    ViewBag.ListaProvincias = CargaProvincias();
+                    
                     
                     return RedirectToAction("Editar");
                 }

@@ -118,13 +118,6 @@ namespace DAL
 			return ((ISingleResult<ConsultarUsuarioResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CrearActualizarCliente")]
-		public int CrearActualizarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cedula, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string apellido, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Telefono", DbType="Int")] System.Nullable<int> telefono, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Distrito", DbType="Int")] System.Nullable<int> distrito, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Provincia", DbType="Int")] System.Nullable<int> provincia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Canton", DbType="Int")] System.Nullable<int> canton)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula, nombre, apellido, telefono, correo, distrito, provincia, canton);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CrearUsuario")]
 		public ISingleResult<CrearUsuarioResult> CrearUsuario([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string usuario, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string clave, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> activo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(100)")] string rol)
 		{
@@ -285,6 +278,27 @@ namespace DAL
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="AhorroAnual", DbType="Float")] System.Nullable<double> ahorroAnual)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula, datosHist, datosProy, descripcion, potencia, paneles, area, compania, costo, produccion, almacenamiento, consumoAbierto, autoconsumo, consumoBajo, retornoSimple, ahorroAnual);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ReporteProy")]
+		public ISingleResult<ReporteProyResult> ReporteProy([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdReporte", DbType="Int")] System.Nullable<int> idReporte)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReporte);
+			return ((ISingleResult<ReporteProyResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ReporteHist")]
+		public ISingleResult<ReporteHistResult> ReporteHist([global::System.Data.Linq.Mapping.ParameterAttribute(Name="IdReporte", DbType="Int")] System.Nullable<int> idReporte)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idReporte);
+			return ((ISingleResult<ReporteHistResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.CrearActualizarCliente")]
+		public int CrearActualizarCliente([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> cedula, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string nombre, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string apellido, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Telefono", DbType="VarChar(50)")] string telefono, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(50)")] string correo, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Distrito", DbType="Int")] System.Nullable<int> distrito, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Provincia", DbType="Int")] System.Nullable<int> provincia, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Canton", DbType="Int")] System.Nullable<int> canton)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), cedula, nombre, apellido, telefono, correo, distrito, provincia, canton);
 			return ((int)(result.ReturnValue));
 		}
 	}
@@ -1966,6 +1980,256 @@ namespace DAL
 				if ((this._Correo != value))
 				{
 					this._Correo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ReporteProyResult
+	{
+		
+		private int _IdProyeccionMes;
+		
+		private int _IdReporte;
+		
+		private int _IdMes;
+		
+		private double _kWh_tarifa_regular;
+		
+		private double _kWh_tarifa_acceso;
+		
+		private double _Carga;
+		
+		private double _Impuestos;
+		
+		public ReporteProyResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdProyeccionMes", DbType="Int NOT NULL")]
+		public int IdProyeccionMes
+		{
+			get
+			{
+				return this._IdProyeccionMes;
+			}
+			set
+			{
+				if ((this._IdProyeccionMes != value))
+				{
+					this._IdProyeccionMes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdReporte", DbType="Int NOT NULL")]
+		public int IdReporte
+		{
+			get
+			{
+				return this._IdReporte;
+			}
+			set
+			{
+				if ((this._IdReporte != value))
+				{
+					this._IdReporte = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdMes", DbType="Int NOT NULL")]
+		public int IdMes
+		{
+			get
+			{
+				return this._IdMes;
+			}
+			set
+			{
+				if ((this._IdMes != value))
+				{
+					this._IdMes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_kWh_tarifa_regular", DbType="Float NOT NULL")]
+		public double kWh_tarifa_regular
+		{
+			get
+			{
+				return this._kWh_tarifa_regular;
+			}
+			set
+			{
+				if ((this._kWh_tarifa_regular != value))
+				{
+					this._kWh_tarifa_regular = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_kWh_tarifa_acceso", DbType="Float NOT NULL")]
+		public double kWh_tarifa_acceso
+		{
+			get
+			{
+				return this._kWh_tarifa_acceso;
+			}
+			set
+			{
+				if ((this._kWh_tarifa_acceso != value))
+				{
+					this._kWh_tarifa_acceso = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Carga", DbType="Float NOT NULL")]
+		public double Carga
+		{
+			get
+			{
+				return this._Carga;
+			}
+			set
+			{
+				if ((this._Carga != value))
+				{
+					this._Carga = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Impuestos", DbType="Float NOT NULL")]
+		public double Impuestos
+		{
+			get
+			{
+				return this._Impuestos;
+			}
+			set
+			{
+				if ((this._Impuestos != value))
+				{
+					this._Impuestos = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ReporteHistResult
+	{
+		
+		private int _IdHistorico;
+		
+		private int _IdReporte;
+		
+		private int _IdMes;
+		
+		private double _kWh_tarifa_regular;
+		
+		private double _Cargo;
+		
+		private double _Impuestos;
+		
+		public ReporteHistResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdHistorico", DbType="Int NOT NULL")]
+		public int IdHistorico
+		{
+			get
+			{
+				return this._IdHistorico;
+			}
+			set
+			{
+				if ((this._IdHistorico != value))
+				{
+					this._IdHistorico = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdReporte", DbType="Int NOT NULL")]
+		public int IdReporte
+		{
+			get
+			{
+				return this._IdReporte;
+			}
+			set
+			{
+				if ((this._IdReporte != value))
+				{
+					this._IdReporte = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IdMes", DbType="Int NOT NULL")]
+		public int IdMes
+		{
+			get
+			{
+				return this._IdMes;
+			}
+			set
+			{
+				if ((this._IdMes != value))
+				{
+					this._IdMes = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_kWh_tarifa_regular", DbType="Float NOT NULL")]
+		public double kWh_tarifa_regular
+		{
+			get
+			{
+				return this._kWh_tarifa_regular;
+			}
+			set
+			{
+				if ((this._kWh_tarifa_regular != value))
+				{
+					this._kWh_tarifa_regular = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cargo", DbType="Float NOT NULL")]
+		public double Cargo
+		{
+			get
+			{
+				return this._Cargo;
+			}
+			set
+			{
+				if ((this._Cargo != value))
+				{
+					this._Cargo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Impuestos", DbType="Float NOT NULL")]
+		public double Impuestos
+		{
+			get
+			{
+				return this._Impuestos;
+			}
+			set
+			{
+				if ((this._Impuestos != value))
+				{
+					this._Impuestos = value;
 				}
 			}
 		}
