@@ -325,15 +325,15 @@ namespace ProyectoPurasol.Controllers
                     Parametros.Add(new ReportParameter("RetornoSimple", item.retornoSimple, true));
                     Parametros.Add(new ReportParameter("AhorroAnualPromedio", item.ahorroaAnualesAvg, true));
 
-                    //ANUALES HIST
-                    Parametros.Add(new ReportParameter("TRHISTANUAL", (item.TRhistAnual).ToString(), true));
-                    Parametros.Add(new ReportParameter("CHISTANUAL", (item.ChistAnual).ToString(), true));
-                    Parametros.Add(new ReportParameter("IHISTANUAL", (item.IhistAnual).ToString(), true));
-                    //ANUALES PROY
-                    Parametros.Add(new ReportParameter("TRPROYANUAL", (item.TRproyAnual).ToString(), true));
-                    Parametros.Add(new ReportParameter("TAPROYANUAL", (item.TAproyAnual).ToString(), true));
-                    Parametros.Add(new ReportParameter("CPROYANUAL", (item.CproyAnual).ToString(), true));
-                    Parametros.Add(new ReportParameter("IPROYANUAL", (item.IproyAnual).ToString(), true));
+                    ////ANUALES HIST
+                    //Parametros.Add(new ReportParameter("TRHISTANUAL", (item.TRhistAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("CHISTANUAL", (item.ChistAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("IHISTANUAL", (item.IhistAnual).ToString(), true));
+                    ////ANUALES PROY
+                    //Parametros.Add(new ReportParameter("TRPROYANUAL", (item.TRproyAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("TAPROYANUAL", (item.TAproyAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("CPROYANUAL", (item.CproyAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("IPROYANUAL", (item.IproyAnual).ToString(), true));
 
                     //bool respuesta = reporte.CrearReporte(int.Parse(identificacion), tablaH, tablaP, "REPORTE PURASOL", Double.Parse(item.PotenciadePanel), int.Parse(item.CantidadPaneles), Double.Parse(item.Area), item.Compania, Double.Parse(item.CostoPorWatt), Double.Parse(item.ProduccionAnual), Double.Parse(item.Almacenamiento), Double.Parse(item.consumoCubiertoPct), Double.Parse(item.autoconsumo), double.Parse(item.consumoTA), double.Parse(item.retornoSimple), Double.Parse(item.ahorroaAnualesAvg));
                 }
