@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BLL.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -115,7 +116,7 @@ namespace BLL
         public double AlmacenamientoFijo;
 
 
-        public void asignarPrincipales(string PNombrecliente,string PCompania,string PTarifa,double PTechoDisponible,double PHorasRespaldo,double PTipoCambio,double PPotenciaPanel,string PCostoUnitarioFijo,string PCostoUnitarioFijoValor,string PTamanoFijo,double PTamanoFijoValor,string PCostoMantenimiento,double PCrecimientoAnual,string PTecnologia,double PTasaFinanciamiento,double PPrima,double PPlazo,
+        public List<Reporte> asignarPrincipales(string PNombrecliente,string PCompania,string PTarifa,double PTechoDisponible,double PHorasRespaldo,double PTipoCambio,double PPotenciaPanel,string PCostoUnitarioFijo,string PCostoUnitarioFijoValor,string PTamanoFijo,double PTamanoFijoValor,string PCostoMantenimiento,double PCrecimientoAnual,string PTecnologia,double PTasaFinanciamiento,double PPrima,double PPlazo,
             double PPREne,double PPRFeb,double PPRMar,double PPRAbr,double PPRMay,double PPRJun,double PPRJul,double PPRAgo,double PPRSep,double PPROct,double PPRNov,double PPRDic,double PVREne,double PVRFeb,double PVRMar,double PVRAbr,double PVRMay,double PVRJun,double PVRJul,double PVRAgo,double PVRSep,
             double PVROct,double PVRNov,double PVRDic,double PNREne,double PNRFeb,double PNRMar,double PNRAbr,double PNRMay,double PNRJun,double PNRJul,double PNRAgo,double PNRSep,double PNROct,double PNRNov,double PNRDic,double PPDEne,double PPDFeb,double PPDMar,double PPDAbr,double PPDMay,double PPDJun,double PPDJul,
             double PPDAgo,double PPDSep,double PPDOct,double PPDNov,double PPDDic,double PVDEne,double PVDFeb,double PVDMar,double PVDAbr,double PVDMay,double PVDJun,double PVDJul,double PVDAgo,double PVDSep,double PVDOct,double PVDNov,double PVDDic,double PNDEne,double PNDFeb,double PNDMar,double PNDAbr,double PNDMay,
@@ -136,6 +137,9 @@ namespace BLL
             CostoMantenimiento = PCostoMantenimiento;
             CrecimientoAnual = PCrecimientoAnual;
             Tecnologia = PTecnologia;
+            TasaFinanciamiento = PTasaFinanciamiento;
+            Prima= PPrima;
+            Plazo=PPlazo;
             PREne = PPREne;
             PRFeb = PPRFeb;
             PRMar = PPRMar;
@@ -227,14 +231,64 @@ namespace BLL
             double PromedioPDemanda = (PDEne + PDFeb + PDMar + PDAbr + PDMay + PDJun + PDJul + PDAgo + PDSep + PDOct + PDNov + PDDic) / 12;
             double PromedioVDemanda = (VDEne + VDFeb + VDMar + VDAbr + VDMay + VDJun + VDJul + VDAgo + VDSep + VDOct + VDNov + VDDic) / 12;
             double PromedioNDemanda = (NDEne + NDFeb + NDMar + NDAbr + NDMay + NDJun + NDJul + NDAgo + NDSep + NDOct + NDNov + NDDic) / 12;
+            double PromedioRecibos = (PREne + PRFeb + PRMar + PRAbr + PRMay + PRJun + PRJul + PRAgo + PRSep + PROct + PRNov + PRDic) / 12;
             double PromedioSGIS = (RSGISEne + RSGISFeb + RSGISMar + RSGISAbr + RSGISMay + RSGISJun + RSGISJul + RSGISAgo + RSGISSep + RSGISOct + RSGISNov + RSGISDic) / 12;
-            clsDatos cDatos = new clsDatos();
-            double PromedioRecibos = 0;
-            clsPreliminares cPrelim = new clsPreliminares();
-            List<clsCostosUnitarios> CostosUnitarios = cDatos.calculaCostosUnitarios(PotenciaPanel, PromedioRecibos, HorasRespaldo, Tarifa, AlmacenamientoFijo, Microred, cPrelim);
-            clsCostosMant cMant = cDatos.calculaCostosMant(CostoMantenimiento);
-
             
+
+            try
+            {
+                clsCConstruida cConstruida = new clsCConstruida();
+                bool prueba = cConstruida.calculoCCTMT(PREne, PRFeb, PRMar, PRAbr, PRMay, PRJun, PRJul, PRAgo, PRSep, PROct, PRNov, PRDic,
+              VREne, VRFeb, VRMar, VRAbr, VRMay, VRJun, VRJul, VRAgo, VRSep, VROct, VRNov, VRDic,
+              NREne, NRFeb, NRMar, NRAbr, NRMay, NRJun, NRJul, NRAgo, NRSep, NROct, NRNov, NRDic,
+              PDEne, PDFeb, PDMar, PDAbr, PDMay, PDJun, PDJul, PDAgo, PDSep, PDOct, PDNov, PDDic,
+              VDEne, VDFeb, VDMar, VDAbr, VDMay, VDJun, VDJul, VDAgo, VDSep, VDOct, VDNov, VDDic,
+              NDEne, NDFeb, NDMar, NDAbr, NDMay, NDJun, NDJul, NDAgo, NDSep, NDOct, NDNov, NDDic,
+              RSGISEne, RSGISFeb, RSGISMar, RSGISAbr, RSGISMay, RSGISJun, RSGISJul,RSGISAgo,RSGISSep, RSGISOct, RSGISNov, RSGISDic);
+
+                clsCurvasTMT curvas = new clsCurvasTMT();
+                curvas.calcularCurvas(cConstruida, Tecnologia, TamanoFijo, TamanoFijoValor, PotenciaPanel, TechoDisponible, RSGISEne, RSGISFeb, RSGISMar, RSGISAbr, RSGISMay,
+                 RSGISJun, RSGISJul, RSGISAgo, RSGISSep, RSGISOct, RSGISNov, RSGISDic, PromedioSGIS, Conversor, Microred, AlmacenamientoFijo);
+
+                clsPreliminares cPrelim = new clsPreliminares();
+                cPrelim.calculaTamano(curvas.potSolarRecomendada);
+
+                clsDatos cDatos = new clsDatos();
+                List<clsCostosUnitarios> CostosUnitarios = cDatos.calculaCostosUnitarios(PotenciaPanel, PromedioRecibos, HorasRespaldo, Tarifa, AlmacenamientoFijo, Microred, cPrelim);
+                clsCostosMant cMant = cDatos.calculaCostosMant(CostoMantenimiento);
+
+                clsCalculosTMT cTMT = new clsCalculosTMT();
+                cTMT.calculosTMT(PREne, PRFeb, PRMar, PRAbr, PRMay, PRJun, PRJul, PRAgo, PRSep, PROct, PRNov, PRDic,
+              VREne, VRFeb, VRMar, VRAbr, VRMay, VRJun, VRJul, VRAgo, VRSep, VROct, VRNov, VRDic,
+              NREne, NRFeb, NRMar, NRAbr, NRMay, NRJun, NRJul, NRAgo, NRSep, NROct, NRNov, NRDic,
+              PDEne, PDFeb, PDMar, PDAbr, PDMay, PDJun, PDJul, PDAgo, PDSep, PDOct, PDNov, PDDic,
+              VDEne, VDFeb, VDMar, VDAbr, VDMay, VDJun, VDJul, VDAgo, VDSep, VDOct, VDNov, VDDic,
+              NDEne, NDFeb, NDMar, NDAbr, NDMay, NDJun, NDJul, NDAgo, NDSep, NDOct, NDNov, NDDic,
+              RSGISEne, RSGISFeb, RSGISMar, RSGISAbr, RSGISMay, RSGISJun, RSGISJul, RSGISAgo, RSGISSep, RSGISOct, RSGISNov, RSGISDic,
+              PromedioRecibos, PromedioSGIS, CrecimientoAnual, Compania, Tarifa, curvas, cConstruida.pico);
+
+            clsFinanciamiento financiamiento = new clsFinanciamiento();
+            List<List<double>> listaFinanciamientos = financiamiento.calcFinanciamientoTMT(CostoUnitarioFijo, Convert.ToDouble(CostoUnitarioFijoValor), PromedioRecibos, HorasRespaldo, cPrelim.Tamano, TipoCambio, cTMT, CostosUnitarios, cMant);
+
+            cPrelim.calculaCostosTMT(cPrelim.Tamano, Tecnologia, TipoCambio, Microred, AlmacenamientoFijo, CostoUnitarioFijo, CostoUnitarioFijoValor, listaFinanciamientos, cTMT, CostosUnitarios);
+
+            cTMT.calculaResto(cPrelim.costoC, TipoCambio);
+
+            cPrelim.calculaRestoTMT(TipoCambio, CostoUnitarioFijo, CostoUnitarioFijoValor, CostoMantenimiento, cTMT, cMant);
+
+            clsReporteCurva reporte = new clsReporteCurva();
+             var datos=reporte.datosReporteTMT(curvas, cPrelim, cTMT, AlmacenamientoFijo, Compania, TipoCambio, PPotenciaPanel, PromedioRecibos, HorasRespaldo, financiamiento, cDatos);
+
+             return (List<Reporte>)datos; //Devuelve al reporte con los datos para que se impriman
+
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+
+
 
         }
 

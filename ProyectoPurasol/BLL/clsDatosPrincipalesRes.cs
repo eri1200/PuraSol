@@ -99,7 +99,7 @@ namespace BLL
             try
             {
                 clsCConstruida cConstruida = new clsCConstruida();
-                bool prueba = cConstruida.calculoCC(REne, RFeb, RMar, RAbr, RMay, RJun, RJul, RAgo, RSep, ROct, RNov, RDic, RSGISEne, RSGISFeb, RSGISMar, RSGISAbr, RSGISMay,
+                bool prueba = cConstruida.calculoCCRes(REne, RFeb, RMar, RAbr, RMay, RJun, RJul, RAgo, RSep, ROct, RNov, RDic, RSGISEne, RSGISFeb, RSGISMar, RSGISAbr, RSGISMay,
                  RSGISJun, RSGISJul, RSGISAgo, RSGISSep, RSGISOct, RSGISNov, RSGISDic);
 
                 clsCurvasRes curvas = new clsCurvasRes();

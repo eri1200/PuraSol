@@ -90,13 +90,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCalculosMTMT.cs" />
     <Compile Include="clsCalculosResi.cs" />
+    <Compile Include="clsCalculosTMT.cs" />
     <Compile Include="clsCConstruida.cs" />
     <Compile Include="clsCliente.cs" />
     <Compile Include="clsCorreo.cs" />
     <Compile Include="clsCostosMant.cs" />
     <Compile Include="clsCostosUnitarios.cs" />
+    <Compile Include="clsCurvasMTMT.cs" />
     <Compile Include="clsCurvasRes.cs" />
+    <Compile Include="clsCurvasTMT.cs" />
     <Compile Include="clsDatos.cs" />
     <Compile Include="clsDatosPrincipalesCom.cs" />
     <Compile Include="clsDatosPrincipalesmicroTMT.cs" />

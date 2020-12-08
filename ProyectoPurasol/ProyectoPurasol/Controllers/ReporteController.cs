@@ -216,128 +216,130 @@ namespace ProyectoPurasol.Controllers
         }
         public ActionResult ReporteExtra()
         {
-            clsReporte reporte = new clsReporte();
-            var Datos= Session["DatosReporte"] as List<BLL.Models.Reporte>;
-            Datos.RemoveAt(1);
-
-
-
-            DataTable tablaProy = new DataTable();
-            tablaProy.Clear();
-            tablaProy.Columns.Add("IdProyeccionMes");
-            tablaProy.Columns.Add("IdReporte");
-            tablaProy.Columns.Add("IdMes");
-            tablaProy.Columns.Add("kWh_tarifa_regular");
-            tablaProy.Columns.Add("kWh_tarifa_acceso");
-            tablaProy.Columns.Add("Carga");
-            tablaProy.Columns.Add("Impuestos");
-            foreach (var item in Datos)
+            try
             {
-                int contador = 1;
-                foreach (var item2 in item.proyFact)
+                clsReporte reporte = new clsReporte();
+                var Datos = Session["DatosReporte"] as List<BLL.Models.Reporte>;
+
+
+
+
+                DataTable tablaProy = new DataTable();
+                tablaProy.Clear();
+                tablaProy.Columns.Add("IdProyeccionMes");
+                tablaProy.Columns.Add("IdReporte");
+                tablaProy.Columns.Add("IdMes");
+                tablaProy.Columns.Add("kWh_tarifa_regular");
+                tablaProy.Columns.Add("kWh_tarifa_acceso");
+                tablaProy.Columns.Add("Carga");
+                tablaProy.Columns.Add("Impuestos");
+                foreach (var item in Datos)
                 {
+                    int contador = 1;
+                    foreach (var item2 in item.proyFact)
+                    {
 
-                    DataRow _ravi = tablaProy.NewRow();
-                    _ravi["IdProyeccionMes"] = 0;
-                    _ravi["IdReporte"] = 0;
-                    _ravi["IdMes"] = contador;
-                    _ravi["kWh_tarifa_regular"] = item2.costoPredichoEner1;
-                    _ravi["kWh_tarifa_acceso"] = item2.costoPredichoEner2;
-                    _ravi["Carga"] = item2.enerCoberturTarAcc;
-                    _ravi["Impuestos"] = item2.compraReg;
-                    tablaProy.Rows.Add(_ravi);
-                    contador++;
+                        DataRow _ravi = tablaProy.NewRow();
+                        _ravi["IdProyeccionMes"] = 0;
+                        _ravi["IdReporte"] = 0;
+                        _ravi["IdMes"] = contador;
+                        _ravi["kWh_tarifa_regular"] = item2.costoPredichoEner1;
+                        _ravi["kWh_tarifa_acceso"] = item2.costoPredichoEner2;
+                        _ravi["Carga"] = item2.enerCoberturTarAcc;
+                        _ravi["Impuestos"] = item2.compraReg;
+                        tablaProy.Rows.Add(_ravi);
+                        contador++;
+                    }
                 }
-            }
 
-            DataTable tablaHist = new DataTable();
-            tablaHist.Clear();
-            tablaHist.Columns.Add("IdHistorico");
-            tablaHist.Columns.Add("IdReporte");
-            tablaHist.Columns.Add("IdMes");
-            tablaHist.Columns.Add("kWh_tarifa_regular");
-            tablaHist.Columns.Add("Cargo");
-            tablaHist.Columns.Add("Impuestos");
+                DataTable tablaHist = new DataTable();
+                tablaHist.Clear();
+                tablaHist.Columns.Add("IdHistorico");
+                tablaHist.Columns.Add("IdReporte");
+                tablaHist.Columns.Add("IdMes");
+                tablaHist.Columns.Add("kWh_tarifa_regular");
+                tablaHist.Columns.Add("Cargo");
+                tablaHist.Columns.Add("Impuestos");
 
-            foreach (var item in Datos)
-            {
-                int contador = 1;
-                foreach (var item2 in item.histFact)
+                foreach (var item in Datos)
                 {
-                    DataRow _ravi = tablaHist.NewRow();
-                    _ravi["IdHistorico"] = 0;
-                    _ravi["IdReporte"] = 0;
-                    _ravi["IdMes"] = contador;
-                    _ravi["kWh_tarifa_regular"] = item2.consumoEnergia;
-                    _ravi["Cargo"] = item2.costoBaseEner1;
-                    _ravi["Impuestos"] = item2.costoBaseEner2;
-                    tablaHist.Rows.Add(_ravi);
-                    contador++;
+                    int contador = 1;
+                    foreach (var item2 in item.histFact)
+                    {
+                        DataRow _ravi = tablaHist.NewRow();
+                        _ravi["IdHistorico"] = 0;
+                        _ravi["IdReporte"] = 0;
+                        _ravi["IdMes"] = contador;
+                        _ravi["kWh_tarifa_regular"] = item2.consumoEnergia;
+                        _ravi["Cargo"] = item2.costoBaseEner1;
+                        _ravi["Impuestos"] = item2.costoBaseEner2;
+                        tablaHist.Rows.Add(_ravi);
+                        contador++;
+                    }
                 }
-            }
 
-            //DATATABLE Proy MESES 
-
-
-
-
-            var tablaP = ToJson(tablaProy).ToString();
-
-
-
-            //DATATABLE Hist MESES 
-
-            
-            var tablaH = ToJson(tablaHist).ToString();
+                //DATATABLE Proy MESES 
 
 
 
 
-            var principal = Session["PRINCIPAL"];
-            ReportViewer reportViewer = new ReportViewer();
-            reportViewer.ProcessingMode = ProcessingMode.Local;
-            reportViewer.SizeToReportContent = true;
-            reportViewer.Width = Unit.Percentage(100);
-            reportViewer.Height = Unit.Percentage(100);
-            reportViewer.ZoomMode = ZoomMode.Percent;
-            reportViewer.ZoomPercent = 200;
-            reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\ReporteConsultaREPORTE.rdlc";
-            List<ReportParameter> Parametros = new List<ReportParameter>();
-            foreach (var item in Datos)
-            {
-                Parametros.Add(new ReportParameter("Compania", item.Compania, true));
-                Parametros.Add(new ReportParameter("Potencia", item.PotenciadePanel, true));
-                Parametros.Add(new ReportParameter("ConsumoBajodeT", item.consumoTA, true));
-                Parametros.Add(new ReportParameter("Autoconsumo", item.autoconsumo, true));
-                Parametros.Add(new ReportParameter("PorcentajeConsumoCubierto", item.consumoCubiertoPct, true));
-                Parametros.Add(new ReportParameter("Almacenamiento", item.Almacenamiento, true));
-                Parametros.Add(new ReportParameter("ProduccionAnual", item.ProduccionAnual, true));
-                Parametros.Add(new ReportParameter("CostoWatt", item.CostoPorWatt, true));
-
-                Parametros.Add(new ReportParameter("Area", item.Area, true));
-                Parametros.Add(new ReportParameter("Paneles", item.CantidadPaneles, true));
-                Parametros.Add(new ReportParameter("RetornoSimple", item.retornoSimple, true));
-                Parametros.Add(new ReportParameter("AhorroAnualPromedio", item.ahorroaAnualesAvg, true));
-                //reporte.CrearReporte(1111, tablaH, tablaP, "", Double.Parse(item.PotenciadePanel), 0, 0.00, "", 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00);
-            }
-            reportViewer.LocalReport.DataSources.Clear();
-            reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", tablaHist));
-            reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", tablaProy));
-
-            
+                var tablaP = ToJson(tablaProy).ToString();
 
 
-            reportViewer.LocalReport.SetParameters(Parametros.ToArray());
-            reportViewer.LocalReport.Refresh();
-            reportViewer.LocalReport.Refresh();
-            
 
-            Warning[] warnings;
-            string[] streamIds;
-            string contentType;
-            string encoding;
-            string extension;
-            string deviceInfo = @"<DeviceInfo>
+                //DATATABLE Hist MESES 
+
+
+                var tablaH = ToJson(tablaHist).ToString();
+
+
+
+
+                var principal = Session["PRINCIPAL"];
+                ReportViewer reportViewer = new ReportViewer();
+                reportViewer.ProcessingMode = ProcessingMode.Local;
+                reportViewer.SizeToReportContent = true;
+                reportViewer.Width = Unit.Percentage(100);
+                reportViewer.Height = Unit.Percentage(100);
+                reportViewer.ZoomMode = ZoomMode.Percent;
+                reportViewer.ZoomPercent = 200;
+                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\ReporteConsultaREPORTE.rdlc";
+                List<ReportParameter> Parametros = new List<ReportParameter>();
+                foreach (var item in Datos)
+                {
+                    Parametros.Add(new ReportParameter("Compania", item.Compania, true));
+                    Parametros.Add(new ReportParameter("Potencia", item.PotenciadePanel, true));
+                    Parametros.Add(new ReportParameter("ConsumoBajodeT", item.consumoTA, true));
+                    Parametros.Add(new ReportParameter("Autoconsumo", item.autoconsumo, true));
+                    Parametros.Add(new ReportParameter("PorcentajeConsumoCubierto", item.consumoCubiertoPct, true));
+                    Parametros.Add(new ReportParameter("Almacenamiento", item.Almacenamiento, true));
+                    Parametros.Add(new ReportParameter("ProduccionAnual", item.ProduccionAnual, true));
+                    Parametros.Add(new ReportParameter("CostoWatt", item.CostoPorWatt, true));
+
+                    Parametros.Add(new ReportParameter("Area", item.Area, true));
+                    Parametros.Add(new ReportParameter("Paneles", item.CantidadPaneles, true));
+                    Parametros.Add(new ReportParameter("RetornoSimple", item.retornoSimple, true));
+                    Parametros.Add(new ReportParameter("AhorroAnualPromedio", item.ahorroaAnualesAvg, true));
+                   //reporte.CrearReporte(1111, tablaH, tablaP, "", Double.Parse(item.PotenciadePanel), 0, 0.00, "", 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, Double.Parse(item.ahorroaAnualesAvg));
+                }
+                reportViewer.LocalReport.DataSources.Clear();
+                reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", tablaHist));
+                reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet2", tablaProy));
+
+
+
+
+                reportViewer.LocalReport.SetParameters(Parametros.ToArray());
+                reportViewer.LocalReport.Refresh();
+                reportViewer.LocalReport.Refresh();
+
+
+                Warning[] warnings;
+                string[] streamIds;
+                string contentType;
+                string encoding;
+                string extension;
+                string deviceInfo = @"<DeviceInfo>
                       <OutputFormat>EMF</OutputFormat>
                       <PageWidth>8.5in</PageWidth>
                       <PageHeight>11in</PageHeight>
@@ -347,22 +349,29 @@ namespace ProyectoPurasol.Controllers
                       <MarginBottom>0.25in</MarginBottom>
                     </DeviceInfo>"; //DATOS PARA EXPORTACIÓN
 
-            //Export the RDLC Report to Byte Array.
+                //Export the RDLC Report to Byte Array.
 
+
+
+
+
+
+                //
+                clsCorreo clsCorreo = new clsCorreo();
+                byte[] reportePDF = reportViewer.LocalReport.Render("PDF", deviceInfo, out contentType, out encoding, out extension, out streamIds, out warnings);
+                //clsCorreo.EnviarPDF(Session["CORREOCLIENTE"].ToString(), reportePDF);
+
+                //return  File(reportePDF, "application/pdf");
+
+                ViewBag.ReportViewer = reportViewer;
+                return View();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex);
+                return View();
+            }
             
-            
-
-
-
-            //
-            clsCorreo clsCorreo = new clsCorreo();
-            byte[] reportePDF = reportViewer.LocalReport.Render("PDF", deviceInfo, out contentType, out encoding,out extension, out streamIds, out warnings);
-            //clsCorreo.EnviarPDF(Session["CORREOCLIENTE"].ToString(), reportePDF);
-
-            //return  File(reportePDF, "application/pdf");
-
-            ViewBag.ReportViewer = reportViewer;
-            return View();
         }
 
 
@@ -566,7 +575,8 @@ namespace ProyectoPurasol.Controllers
             }
             catch (Exception ex)
             {
-                throw;
+                System.Diagnostics.Debug.WriteLine(ex);
+                return View();
             }
             return View();
         }
