@@ -61,6 +61,7 @@ namespace ProyectoPurasol.Controllers
         }
 
         // GET: Cliente/Create
+        [CustomAuthorize]
         public ActionResult Crear()
         {
             try
@@ -87,6 +88,7 @@ namespace ProyectoPurasol.Controllers
         }
 
         // POST: Cliente/Crear
+        [CustomAuthorize]
         [HttpPost]
         public ActionResult Crear(Cliente cliente)
         {
@@ -95,7 +97,7 @@ namespace ProyectoPurasol.Controllers
                 
                     
                     clsCliente Objcliente = new clsCliente();
-                if (Objcliente.ConsultaCliente(cliente.Identificacion).Count() >=1||Objcliente.ConsultarClientes().Where(x =>x.Correo==cliente.Correo).Count() >= 1)
+                if (Objcliente.ConsultaCliente(cliente.Identificacion).Count() >=1||Objcliente.ConsultarClientes().Where(x =>x.Correo==cliente.Correo).Count() >= 1|| Objcliente.ConsultarClientes().Where(x => x.Cedula == cliente.Identificacion).Count() >= 1)
                 {
                     TempData["SuccessMessage"] = "LOS DATOS ADMINISTRADOS YA EXISTEN EN OTRO CLIENTE";
                     return RedirectToAction("Crear");
@@ -131,6 +133,7 @@ namespace ProyectoPurasol.Controllers
         }
 
         // GET: Cliente/Editar/5
+        [CustomAuthorize]
         public ActionResult Editar(int id)
         {
             try
@@ -175,7 +178,7 @@ namespace ProyectoPurasol.Controllers
 
         
             // POST: Cliente/Editar/5
-            [HttpPost]
+        [HttpPost]
         public ActionResult Editar(string id, Cliente cliente)
         {
             ViewBag.ListaProvincias = CargaProvincias();
@@ -194,16 +197,19 @@ namespace ProyectoPurasol.Controllers
                 }
                 else
                 {
-                    
-                    
-                    
-                    
+
+
+
+                    TempData["SuccessMessage"] = "HUBO UN ERROR INSERTANDO LA INFORMACION";
+                    ViewBag.ListaProvincias = CargaProvincias();
                     return RedirectToAction("Editar");
                 }
             }
             catch
             {
-                return View();
+                TempData["SuccessMessage"] = "HUBO UN ERROR INSERTANDO LA INFORMACION";
+                ViewBag.ListaProvincias = CargaProvincias();
+                return RedirectToAction("Editar");
             }
         }
         
