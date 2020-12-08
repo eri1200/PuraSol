@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,23 +9,57 @@ namespace ProyectoPurasol.Models
 {
     public class PrincipalTMT
     {
+        [Required]
+        [DisplayName("Nombre Cliente")]
         public string Nombrecliente { get; set; }
+        [Required]
+        [DisplayName("Compañia")]
         public string Compania { get; set; }
+        [Required]
+        [DisplayName("Tarifa")]
         public string Tarifa { get; set; }
+        [Required]
+        [DisplayName("Techo Disponible")]
         public double TechoDisponible { get; set; }
+        [Required]
+        [DisplayName("Tipo de Cambio")]
         public double TipoCambio { get; set; }
+        [Required]
+        [DisplayName("Potencia Panel")]
         public double PotenciaPanel { get; set; }
+        [Required]
+        [DisplayName("Costo Unitario Fijo")]
         public string CostoUnitarioFijo { get; set; }
+        [Required]
+        [DisplayName("Costo Fijo Valor")]
         public string CostoUnitarioFijoValor { get; set; }
+        [Required]
+        [DisplayName("Tamaño Fijo")]
         public string TamanoFijo { get; set; }
+        [Required]
+        [DisplayName("Tamaño Fijo")]
         public double TamanoFijoValor { get; set; }
+        [Required]
+        [DisplayName("Costo Mantenimiento")]
         public string CostoMantenimiento { get; set; }
+        [Required]
+        [DisplayName("Crecimiento Anual")]
         public double CrecimientoAnual { get; set; }
+        [Required]
+        [DisplayName("Tacnología")]
         public string Tecnologia { get; set; }
+        [Required]
+        [DisplayName("Tasa Financiamiento")]
         public double TasaFinanciamiento { get; set; }
+
+       
         public double Prima { get; set; }
         public double Plazo { get; set; }
+        [Required]
+        [DisplayName("Punta Recibo Enero")]
         public double PREne { get; set; }
+        [Required]
+        [DisplayName("Punta Recibo Febrero")]
         public double PRFeb { get; set; }
         public double PRMar { get; set; }
         public double PRAbr { get; set; }
