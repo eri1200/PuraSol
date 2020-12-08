@@ -73,6 +73,17 @@ namespace BLL.Models
         public string retornoSimple { get; set; }
         public string ahorroaAnualesAvg { get; set; }
 
+        public string TRhistAnual { get; set; }
+        public string ChistAnual { get; set; }
+
+        public string IhistAnual { get; set; }
+        public string TRproyAnual { get; set; }
+
+        public string TAproyAnual { get; set; }
+
+        public string CproyAnual { get; set; }
+        public string IproyAnual { get; set; }
+
         public List<HistFacturas> histFact = new List<HistFacturas>();
 
 

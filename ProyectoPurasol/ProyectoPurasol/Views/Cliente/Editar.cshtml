@@ -18,7 +18,12 @@
     }
 </style>
 <div class="modal-header">
-
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissable">
+            <strong>@TempData["SuccessMessage"]</strong>
+        </div>
+    }
 </div>
 @using (Html.BeginForm())
 {

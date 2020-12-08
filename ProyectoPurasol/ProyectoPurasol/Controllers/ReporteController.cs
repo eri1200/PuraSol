@@ -27,16 +27,19 @@ namespace ProyectoPurasol.Controllers
         clsCliente clscliente = new clsCliente();
         int tipofactura = 0;
         Reporte reporte = new Reporte();
+
         // GET: Reporte
+        [CustomAuthorize]
         public ActionResult Index()
         {
             return View();
         }
 
-        
-        
+
+
 
         // GET: Reporte/Create
+        [CustomAuthorize]
         public ActionResult Create(int id)
         {
             try
@@ -214,6 +217,7 @@ namespace ProyectoPurasol.Controllers
             }
             return View();
         }
+        [CustomAuthorize]
         public ActionResult ReporteExtra()
         {
             try
@@ -320,6 +324,17 @@ namespace ProyectoPurasol.Controllers
                     Parametros.Add(new ReportParameter("Paneles", item.CantidadPaneles, true));
                     Parametros.Add(new ReportParameter("RetornoSimple", item.retornoSimple, true));
                     Parametros.Add(new ReportParameter("AhorroAnualPromedio", item.ahorroaAnualesAvg, true));
+
+                    ////ANUALES HIST
+                    //Parametros.Add(new ReportParameter("TRHISTANUAL", (item.TRhistAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("CHISTANUAL", (item.ChistAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("IHISTANUAL", (item.IhistAnual).ToString(), true));
+                    ////ANUALES PROY
+                    //Parametros.Add(new ReportParameter("TRPROYANUAL", (item.TRproyAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("TAPROYANUAL", (item.TAproyAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("CPROYANUAL", (item.CproyAnual).ToString(), true));
+                    //Parametros.Add(new ReportParameter("IPROYANUAL", (item.IproyAnual).ToString(), true));
+
                     //bool respuesta = reporte.CrearReporte(int.Parse(identificacion), tablaH, tablaP, "REPORTE PURASOL", Double.Parse(item.PotenciadePanel), int.Parse(item.CantidadPaneles), Double.Parse(item.Area), item.Compania, Double.Parse(item.CostoPorWatt), Double.Parse(item.ProduccionAnual), Double.Parse(item.Almacenamiento), Double.Parse(item.consumoCubiertoPct), Double.Parse(item.autoconsumo), double.Parse(item.consumoTA), double.Parse(item.retornoSimple), Double.Parse(item.ahorroaAnualesAvg));
                 }
                 reportViewer.LocalReport.DataSources.Clear();
@@ -400,10 +415,12 @@ namespace ProyectoPurasol.Controllers
         {
             return View();
         }
+        [CustomAuthorize]
         public ActionResult BuscarCliente()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult BuscarCliente(string Id)
         {
@@ -431,6 +448,7 @@ namespace ProyectoPurasol.Controllers
             }
             return View();
         }
+        [CustomAuthorize]
         public ActionResult ListaReportes()
         {
             try
@@ -543,6 +561,7 @@ namespace ProyectoPurasol.Controllers
                     Parametros.Add(new ReportParameter("Paneles", (item.Paneles).ToString(), true));
                     Parametros.Add(new ReportParameter("RetornoSimple", (item.RetornoSimple).ToString(), true));
                     Parametros.Add(new ReportParameter("AhorroAnualPromedio", (item.AhorroAnual).ToString(), true));
+                    
                 }
 
                 //reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", data));

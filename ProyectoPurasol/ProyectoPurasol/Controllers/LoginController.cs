@@ -75,9 +75,11 @@ namespace ProyectoPurasol.Controllers
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("Login");
             }
         }
         public ActionResult Salir()

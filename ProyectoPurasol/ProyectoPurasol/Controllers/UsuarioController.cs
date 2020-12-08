@@ -121,9 +121,11 @@ namespace ProyectoPurasol.Controllers
                     return RedirectToAction("Create");
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("Create");
             }
         }
 
@@ -134,30 +136,39 @@ namespace ProyectoPurasol.Controllers
         // GET: Usuario/Edit/5
         public ActionResult Edit(string usuario)
         {
-            
-            clsRol rol = new clsRol();
-            ViewBag.ListaRol = rol.ConsultarRoles().Select(x => x.Nombre);
-            List<Usuario> listaCliente = new List<Usuario>();
-            clsUsuario User = new clsUsuario();
-            var data = User.ConsultarUsuario(usuario).ToList();
-            Usuario modelo = new Usuario();
-            foreach (var item in data)
+
+            try
             {
-                Session["NOMBREUSUARIO"] = item.usuario;
+                clsRol rol = new clsRol();
+                ViewBag.ListaRol = rol.ConsultarRoles().Select(x => x.Nombre);
+                List<Usuario> listaCliente = new List<Usuario>();
+                clsUsuario User = new clsUsuario();
+                var data = User.ConsultarUsuario(usuario).ToList();
+                Usuario modelo = new Usuario();
+                foreach (var item in data)
+                {
+                    Session["NOMBREUSUARIO"] = item.usuario;
 
-                modelo.NombreUsuario = item.usuario;
-                modelo.Activo = item.activo;
-                modelo.Descripcion = item.Descripcion;
-                modelo.Correo = item.Correo;
-                var contrasena = Security.Desencriptar(item.Clave);
-                modelo.Clave = contrasena;
-                
-                
+                    modelo.NombreUsuario = item.usuario;
+                    modelo.Activo = item.activo;
+                    modelo.Descripcion = item.Descripcion;
+                    modelo.Correo = item.Correo;
+                    var contrasena = Security.Desencriptar(item.Clave);
+                    modelo.Clave = contrasena;
 
+
+
+                }
+
+                return View(modelo);
+            }
+            catch (Exception ex)
+            {
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("Index");
             }
 
-            return View(modelo);
-            
         }
 
          
@@ -229,9 +240,11 @@ namespace ProyectoPurasol.Controllers
                     return RedirectToAction("Index");
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("Index");
             }
         }
         

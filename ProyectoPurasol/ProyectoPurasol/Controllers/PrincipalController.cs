@@ -104,12 +104,14 @@ namespace ProyectoPurasol.Controllers
 
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("Index", "Reporte");
             }
         }
-
+        [CustomAuthorize]
         public ActionResult CotizarRes()
         {
             List<SelectListItem> ListaNombre = new List<SelectListItem>();
@@ -215,13 +217,14 @@ namespace ProyectoPurasol.Controllers
 
                 return RedirectToAction("ReporteExtra","Reporte");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
+                TempData["SuccessMessage"] = "Hubo un error";
                 System.Diagnostics.Debug.WriteLine(ex);
-                return View();
+                return RedirectToAction("CotizarRes");
             }
         }
-
+        [CustomAuthorize]
         public ActionResult CotizarCom()
         {
             List<string> ListaBool = new List<string>();
@@ -301,7 +304,7 @@ namespace ProyectoPurasol.Controllers
             try
             {
                 clsDatosPrincipalesCom principales = new clsDatosPrincipalesCom();
-                /*List<BLL.Models.Reporte> reporte =*/ principales.asignarPrincipales(principal.Nombre, principal.Compania, principal.Tarifa, principal.TechoDisponible, principal.TipoCambio, principal.PotenciaPanel, principal.CostoUnitarioFijo, 
+                List<BLL.Models.Reporte> reporte = principales.asignarPrincipales(principal.Nombre, principal.Compania, principal.Tarifa, principal.TechoDisponible, principal.TipoCambio, principal.PotenciaPanel, principal.CostoUnitarioFijo, 
                     principal.CostoUnitarioFijoValor, principal.TamanoFijo, principal.TamanoFijoValor, principal.CostoMantenimiento, principal.CrecimientoAnual, principal.Tecnologia,
                     principal.PREne, principal.PRFeb, principal.PRMar, principal.PRAbr, principal.PRMay, principal.PRJun, principal.PRJul, principal.PRAgo, principal.PRSep, principal.PROct, principal.PRNov, principal.PRDic,
                     principal.PDEne, principal.PDFeb, principal.PDMar, principal.PDAbr, principal.PDMay, principal.PDJun, principal.PDJul, principal.PDAgo, principal.PDSep, principal.PDOct, principal.PDNov, principal.PDDic,
@@ -317,7 +320,7 @@ namespace ProyectoPurasol.Controllers
 
 
 
-                //Session["DatosReporte"] = reporte;
+                Session["DatosReporte"] = reporte;
 
                 return RedirectToAction("ReporteExtra", "Reporte");
                 
@@ -325,12 +328,14 @@ namespace ProyectoPurasol.Controllers
                 Session["PRINCIPAL"] = principal;
                 return RedirectToAction("ReporteExtra","Reporte");
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("CotizarCom");
             }
         }
-
+        [CustomAuthorize]
         public ActionResult CotizarTMT()
         {
             List<string> ListaBool = new List<string>();
@@ -430,12 +435,14 @@ namespace ProyectoPurasol.Controllers
 
                 return View();
             }
-            catch
+            catch (Exception ex)
             {
-                return View();
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("CotizarTMT");
             }
         }
-
+        [CustomAuthorize]
         public ActionResult CotizarMTMT()
         {
             List<string> ListaBool = new List<string>();
@@ -539,9 +546,11 @@ namespace ProyectoPurasol.Controllers
 
                 return View();
             }
-            catch
+            catch(Exception ex)
             {
-                return View();
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("CotizarMTMT");
             }
         }
     }
