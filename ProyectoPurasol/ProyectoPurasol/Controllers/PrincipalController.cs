@@ -203,7 +203,7 @@ namespace ProyectoPurasol.Controllers
                     principal.RSGISNov, principal.RSGISDic);
 
                 var cliente = clscliente.ConsultaCliente(int.Parse(principal.Identificacion)).Select(x => new { ID = x.Correo });
-
+                Session["Identificacion"] = principal.Identificacion;
                 foreach (var obj in cliente)
                 {
                     Session["CORREOCLIENTE"] = obj.ID;
@@ -309,7 +309,7 @@ namespace ProyectoPurasol.Controllers
                     principal.RSGISNov, principal.RSGISDic, principal.UnificacionMenor3000, principal.CeroInyeccion, principal.TasaFinanciamiento, principal.Prima, principal.Plazo);
 
                 var cliente = clscliente.ConsultaCliente(int.Parse(principal.Identificacion)).Select(x => new { ID = x.Correo });
-
+                Session["Identificacion"] = principal.Identificacion;
                 foreach (var obj in cliente)
                 {
                     Session["CORREOCLIENTE"] = obj.ID;
@@ -414,7 +414,7 @@ namespace ProyectoPurasol.Controllers
                     principal.NDAgo,principal.NDSep,principal.NDOct,principal.NDNov,principal.NDDic,principal.RSGISEne,principal.RSGISFeb,principal.RSGISMar,principal.RSGISAbr,principal.RSGISMay,principal.RSGISJun,principal.RSGISJul,principal.RSGISAgo,principal.RSGISSep,principal.RSGISOct,principal.RSGISNov,principal.RSGISDic);
 
                 var cliente = clscliente.ConsultaCliente(int.Parse(principal.Identificacion)).Select(x => new { ID = x.Correo });
-
+                Session["Identificacion"] = principal.Identificacion;
                 foreach (var obj in cliente)
                 {
                     Session["CORREOCLIENTE"] = obj.ID;
@@ -520,12 +520,13 @@ namespace ProyectoPurasol.Controllers
                      principal.VDAgo, principal.VDSep, principal.VDOct, principal.VDNov, principal.VDDic, principal.NDEne, principal.NDFeb, principal.NDMar, principal.NDAbr, principal.NDMay, principal.NDJun, principal.NDJul, principal.NDAgo, principal.NDSep, principal.NDOct, principal.NDNov, principal.NDDic,
                      principal.RSGISEne, principal.RSGISFeb, principal.RSGISMar, principal.RSGISAbr, principal.RSGISMay, principal.RSGISJun, principal.RSGISJul, principal.RSGISAgo, principal.RSGISSep, principal.RSGISOct, principal.RSGISNov, principal.RSGISDic);
 
-
+                Session["Identificacion"] = principal.Identificacion;
                 var cliente = clscliente.ConsultaCliente(int.Parse(principal.Identificacion)).Select(x => new { ID = x.Correo });
 
                 foreach (var obj in cliente)
                 {
                     Session["CORREOCLIENTE"] = obj.ID;
+                    
                 }
 
 

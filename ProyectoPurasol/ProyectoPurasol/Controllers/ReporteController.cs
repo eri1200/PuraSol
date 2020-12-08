@@ -86,7 +86,7 @@ namespace ProyectoPurasol.Controllers
             catch (System.Exception ex)
             {
 
-                throw;
+                System.Diagnostics.Debug.WriteLine(ex);
             }
 
             return View();
@@ -165,7 +165,7 @@ namespace ProyectoPurasol.Controllers
             catch(Exception ex)
             {
                 TempData["SuccessMessage"] = "Hubo un error";
-                Console.WriteLine(ex);
+                System.Diagnostics.Debug.WriteLine(ex);
             }
             return RedirectToAction("MesesConsumo");
         }
@@ -292,7 +292,7 @@ namespace ProyectoPurasol.Controllers
 
                 var tablaH = ToJson(tablaHist).ToString();
 
-
+                string identificacion = Session["Identificacion"].ToString();
 
 
                 var principal = Session["PRINCIPAL"];
@@ -320,7 +320,7 @@ namespace ProyectoPurasol.Controllers
                     Parametros.Add(new ReportParameter("Paneles", item.CantidadPaneles, true));
                     Parametros.Add(new ReportParameter("RetornoSimple", item.retornoSimple, true));
                     Parametros.Add(new ReportParameter("AhorroAnualPromedio", item.ahorroaAnualesAvg, true));
-                   //reporte.CrearReporte(1111, tablaH, tablaP, "", Double.Parse(item.PotenciadePanel), 0, 0.00, "", 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, Double.Parse(item.ahorroaAnualesAvg));
+                    //bool respuesta = reporte.CrearReporte(int.Parse(identificacion), tablaH, tablaP, "REPORTE PURASOL", Double.Parse(item.PotenciadePanel), int.Parse(item.CantidadPaneles), Double.Parse(item.Area), item.Compania, Double.Parse(item.CostoPorWatt), Double.Parse(item.ProduccionAnual), Double.Parse(item.Almacenamiento), Double.Parse(item.consumoCubiertoPct), Double.Parse(item.autoconsumo), double.Parse(item.consumoTA), double.Parse(item.retornoSimple), Double.Parse(item.ahorroaAnualesAvg));
                 }
                 reportViewer.LocalReport.DataSources.Clear();
                 reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", tablaHist));
@@ -368,8 +368,9 @@ namespace ProyectoPurasol.Controllers
             }
             catch (Exception ex)
             {
+                TempData["SuccessMessage"] = "Hubo un error";
                 System.Diagnostics.Debug.WriteLine(ex);
-                return View();
+                return RedirectToAction("Index");
             }
             
         }
@@ -426,7 +427,7 @@ namespace ProyectoPurasol.Controllers
             }
             catch (Exception ex)
             {
-                throw;
+                System.Diagnostics.Debug.WriteLine(ex);
             }
             return View();
         }
@@ -451,7 +452,9 @@ namespace ProyectoPurasol.Controllers
 
 
             }catch(Exception ex){
-                throw;
+                TempData["SuccessMessage"] = "Hubo un error";
+                System.Diagnostics.Debug.WriteLine(ex);
+                return RedirectToAction("BuscarCliente");
             }
             
         }
