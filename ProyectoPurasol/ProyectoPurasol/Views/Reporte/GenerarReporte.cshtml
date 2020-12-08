@@ -1,16 +1,17 @@
 ﻿@using ReportViewerForMvc
 @{
-    ViewBag.Title = "GenerarReporte";
+    ViewBag.Title = "Generar Reporte";
 }
 
 
 <style>
     .hfull {
-        height: 800px !important;
+        height: 520px !important;
     }
+    
 </style>
 
-<h2> GENERAR REPORTE</h2>
+
 <div class="col-md-8 col-md-offset-2">
     @Html.ReportViewer(ViewBag.ReportViewer as Microsoft.Reporting.WebForms.ReportViewer, htmlAttributes: new { @class = "hfull col-md-12", @style = "max-width:100%;height=800px; width:100%;" })
 </div>
