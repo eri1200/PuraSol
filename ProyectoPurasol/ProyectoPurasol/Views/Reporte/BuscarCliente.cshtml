@@ -14,6 +14,12 @@
         float: right;
     }
 </style>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
 
 @using (Html.BeginForm())
 {

@@ -17,5 +17,10 @@ namespace ProyectoPurasol.Controllers
         {
             return View("Index");
         }
+        [CustomAuthorize]
+        public ActionResult Blank()
+        {
+            return View("Index");
+        }
     }
 }

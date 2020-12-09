@@ -335,7 +335,7 @@ namespace ProyectoPurasol.Controllers
                     //Parametros.Add(new ReportParameter("CPROYANUAL", (item.CproyAnual).ToString(), true));
                     //Parametros.Add(new ReportParameter("IPROYANUAL", (item.IproyAnual).ToString(), true));
 
-                    //bool respuesta = reporte.CrearReporte(int.Parse(identificacion), tablaH, tablaP, "REPORTE PURASOL", Double.Parse(item.PotenciadePanel), int.Parse(item.CantidadPaneles), Double.Parse(item.Area), item.Compania, Double.Parse(item.CostoPorWatt), Double.Parse(item.ProduccionAnual), Double.Parse(item.Almacenamiento), Double.Parse(item.consumoCubiertoPct), Double.Parse(item.autoconsumo), double.Parse(item.consumoTA), double.Parse(item.retornoSimple), Double.Parse(item.ahorroaAnualesAvg));
+                    bool respuesta = reporte.CrearReporte(int.Parse(identificacion), tablaH, tablaP, "REPORTE PURASOL", Double.Parse(item.PotenciadePanel), int.Parse(item.CantidadPaneles), Double.Parse(item.Area), item.Compania, Double.Parse(item.CostoPorWatt), Double.Parse(item.ProduccionAnual), Double.Parse(item.Almacenamiento), Double.Parse(item.consumoCubiertoPct), Double.Parse(item.autoconsumo), double.Parse(item.consumoTA), double.Parse(item.retornoSimple), Double.Parse(item.ahorroaAnualesAvg));
                 }
                 reportViewer.LocalReport.DataSources.Clear();
                 reportViewer.LocalReport.DataSources.Add(new ReportDataSource("DataSet1", tablaHist));
@@ -374,7 +374,7 @@ namespace ProyectoPurasol.Controllers
                 //
                 clsCorreo clsCorreo = new clsCorreo();
                 byte[] reportePDF = reportViewer.LocalReport.Render("PDF", deviceInfo, out contentType, out encoding, out extension, out streamIds, out warnings);
-                //clsCorreo.EnviarPDF(Session["CORREOCLIENTE"].ToString(), reportePDF);
+                clsCorreo.EnviarPDF(Session["CORREOCLIENTE"].ToString(), reportePDF);
 
                 //return  File(reportePDF, "application/pdf");
 
@@ -455,18 +455,27 @@ namespace ProyectoPurasol.Controllers
             {
                 var reporteCliente = Session["list"] as List<ConsultarClienteReportesResult>;
                 List<ListaReporte> ListaReportes = new List<ListaReporte>();
-                foreach (var item in reporteCliente)
+                if (reporteCliente.Count==0)
                 {
-                    ListaReporte modelo = new ListaReporte();
-                    modelo.Nombre = item.Nombre;
-                    DateTime fecha=item.Fecha;
-
-                    modelo.Fecha = fecha.ToString("dd-MM-yyyy");
-                    modelo.IdReporte = item.IdReporte;
-                    modelo.Cedula = item.Cedula;
-                    ListaReportes.Add(modelo);
+                    TempData["SuccessMessage"] = "No Hay Reportes";
+                    return RedirectToAction("BuscarCliente");
                 }
-                return View(ListaReportes);
+                else
+                {
+                    foreach (var item in reporteCliente)
+                    {
+                        ListaReporte modelo = new ListaReporte();
+                        modelo.Nombre = item.Nombre;
+                        DateTime fecha = item.Fecha;
+
+                        modelo.Fecha = fecha.ToString("dd-MM-yyyy");
+                        modelo.IdReporte = item.IdReporte;
+                        modelo.Cedula = item.Cedula;
+                        ListaReportes.Add(modelo);
+                    }
+                    return View(ListaReportes);
+                }
+                
 
 
             }catch(Exception ex){

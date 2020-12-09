@@ -23,8 +23,10 @@
                 </a>
                 <ul class="treeview-menu">
                     <li><a href="@Url.Action("Index", "Cliente")">Clientes</a></li>
-                    <li><a href="@Url.Action("Index", "Usuario")">Usuarios</a></li>
-                </ul>
+                    
+                        <li><a href="@Url.Action("Index", "Usuario")">Usuarios</a></li>
+                    
+                    </ul>
             </li>
             <li class="@Url.IsLinkActive("AnotherLink", "Reporte")">
                 <a href="@Url.Action("BuscarCliente", "Reporte")"> <span>Buscar Reporte</span></a>
