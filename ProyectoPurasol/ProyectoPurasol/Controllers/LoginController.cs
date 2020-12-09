@@ -33,7 +33,7 @@ namespace ProyectoPurasol.Controllers
 
                 clsUsuario Objcliente = new clsUsuario();
 
-                
+                Session["ROLES"] = string.Empty;
                 var Encriptado2 = Security.Encriptar(model.Password);
 
                 var Resultado = Objcliente.ConsultarUsuario(model.Usuario, Encriptado2).Count();
@@ -47,9 +47,17 @@ namespace ProyectoPurasol.Controllers
                         {
                             Session["ROLES"] = item.Nombre;
                         }
-                        
+                        if(Session["ROLES"].ToString()== string.Empty)
+                        {
+                            if (item.Nombre=="Ingeniero")
+                            {
+                                Session["ROLES"] = item.Nombre;
+                            }
+                        }
                     }
-                    
+
+
+
                     Session["US"] = model.Usuario;
                     Session["PW"] = model.Password;
 

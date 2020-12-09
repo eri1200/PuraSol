@@ -32,7 +32,7 @@ namespace BLL
                 // Smtp client
                 var client = new SmtpClient()
                 {
-                    Port = 25,
+                    Port = 587,
                     DeliveryMethod = SmtpDeliveryMethod.Network,
                     UseDefaultCredentials = false,
                     Host = "smtp.live.com",
