@@ -1,0 +1,125 @@
+﻿@model IEnumerable<ProyectoPurasol.Models.ListaReporte>
+
+@{
+    ViewBag.Title = "Reportes por Cliente";
+}
+ 
+<style>
+    .btn-success {
+        background: #E1E65F;
+        border-color: #E1E65F;
+    }
+
+    .panel-primary {
+        border-color: white;
+    }
+
+    .btn-danger {
+        background: #E1E65F;
+        border-color: #E1E65F;
+    }
+</style>
+
+@*<div class="panel panel-primary">
+    <div class="panel-body ">
+        <div class="modal-footer">
+            @Html.ValidationMessage("Detalle")
+            <table class="display nowrap" id="dataTables-example" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdReporte)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fecha)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Cedula)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdReporte)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fecha)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cedula)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Generar Reporte", "Generar Reporte", new { /* id=item.PrimaryKey */ })
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>*@
+
+
+<div>
+    <div class="panel panel-primary">
+        <div class="panel-body ">
+            
+            @Html.ValidationMessage("Detalle")
+            <table class="display nowrap" id="dataTables-example" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdReporte)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Fecha)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Cedula)
+                        </th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IdReporte)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fecha)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Cedula)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Generar Reporte", "GenerarReporte", new {  id=item.IdReporte  }, new { @class = "btn btn-success btn-sm" })
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div class="panel-footer">Cantidad = @Model.Count()</div>
+        </div>
+    </div>
+</div>

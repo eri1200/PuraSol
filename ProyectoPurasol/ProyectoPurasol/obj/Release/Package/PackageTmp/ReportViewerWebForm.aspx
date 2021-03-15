@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="ReportViewerWebForm.aspx.cs" Inherits="ReportViewerForMvc.ReportViewerWebForm" %>
 
-<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
+<%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 
 <!DOCTYPE html>
 
@@ -16,7 +16,9 @@
                     <asp:ScriptReference Assembly="ReportViewerForMvc" Name="ReportViewerForMvc.Scripts.PostMessage.js" />
                 </Scripts>
             </asp:ScriptManager>
-            <rsweb:ReportViewer ID="ReportViewer1" runat="server"></rsweb:ReportViewer>
+            <div style="text-align:center;vertical-align:central;">
+            <rsweb:ReportViewer ID="ReportViewer1" runat="server" Height="800px" Width="100%" RightToLeft="YES"></rsweb:ReportViewer>
+            </div>
         </div>
     </form>
 </body>

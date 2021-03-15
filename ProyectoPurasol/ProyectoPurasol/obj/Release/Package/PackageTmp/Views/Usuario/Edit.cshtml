@@ -1,26 +1,32 @@
 ﻿@model ProyectoPurasol.Models.Usuario
 
 @{
-	ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
 
 }
 <style>
-	.CheckBox {
-		opacity: 1;
-		position: relative;
-	}
+    .CheckBox {
+        opacity: 1;
+        position: relative;
+    }
 </style>
-<h2>Edit</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
 
 @using (Html.BeginForm())
 {
-	@Html.AntiForgeryToken()
+    @Html.AntiForgeryToken()
 
-	<div class="panel panel-primary">
-		<div class="panel-body ">
-			<div class="modal-body">
+    <div class="panel panel-primary">
+        <div class="panel-body ">
+            <div class="modal-body">
                 <div class="form-horizontal">
-                    <h4>Usuario</h4>
+                   
                     <hr />
                     <div class="form-group">
                         @Html.Label("Rol", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -28,47 +34,62 @@
                             @Html.DropDownListFor(model => model.ListaRol, new SelectList(ViewBag.ListaRol, "NombreRol"), "--Rol--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;" })
                         </div>
                     </div>
-					@Html.ValidationSummary(true, "", new { @class = "text-danger" })
-					<div class="form-group">
-						@Html.LabelFor(model => model.NombreUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
-						<div class="col-md-10">
-							@Html.EditorFor(model => model.NombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
-							@Html.ValidationMessageFor(model => model.NombreUsuario, "", new { @class = "text-danger" })
-						</div>
-					</div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NombreUsuario, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NombreUsuario, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.NombreUsuario, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
 
-					<div class="form-group">
-						@Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
-						<div class="col-md-10">
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
 
-							@Html.CheckBoxFor(model => model.Activo, htmlAttributes: new { @class = "CheckBox", @style = "opacity:1" })
-							@Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
-						</div>
-					</div>
+                                @Html.CheckBoxFor(model => model.Activo, htmlAttributes: new { @class = "CheckBox", @style = "opacity:1" })
+                                @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>*@
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+
+                            @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
 
 
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Clave, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.PasswordFor(model => model.Clave, new { @class = "form-control", placeholder = "Contraseña", tabindex = 2 })
+                            @Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-					<div class="form-group">
-						@Html.LabelFor(model => model.Clave, htmlAttributes: new { @class = "control-label col-md-2" })
-						<div class="col-md-10">
-							@Html.PasswordFor(model => model.Clave, new { @class = "form-control", placeholder = "Contraseña", tabindex = 2 })
-							@Html.ValidationMessageFor(model => model.Clave, "", new { @class = "text-danger" })
-						</div>
-					</div>
-
-					<div class="form-group">
-						<div class="col-md-offset-2 col-md-10">
-							<input type="submit" value="Guardar" class="btn btn-primary" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Guardar" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 }
 
 <div>
-	@Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Devolverse", "Index")
 </div>

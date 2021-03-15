@@ -734,3 +734,8 @@ C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\BLL.dll.co
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\bin\xunit.abstractions.xml
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.cache
 C:\Users\Personal\Desktop\PuraSol\ProyectoPurasol\ProyectoPurasol\obj\Debug\RdlCompile.compiled
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.ReportViewer.WinForms.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\EntityFramework.xml
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\EntityFramework.SqlServer.xml
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\ProyectoPurasol\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml

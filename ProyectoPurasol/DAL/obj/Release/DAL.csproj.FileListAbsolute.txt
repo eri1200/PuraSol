@@ -18,3 +18,13 @@ D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csproj.CoreC
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csproj.CopyComplete
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.dll
 D:\PROYECTO\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.pdb
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\DAL.dll.config
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\DAL.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\DAL.pdb
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\reCAPTCHA.MVC.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\bin\Release\Newtonsoft.Json.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csprojAssemblyReference.cache
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.csproj.CopyComplete
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.dll
+D:\PROYECTO\UNIFICACIÓN\Sistema de Reportes\ProyectoPurasol\DAL\obj\Release\DAL.pdb

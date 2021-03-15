@@ -44,23 +44,23 @@ namespace BLL
             invPremium = cPrelim.costoD;
             
             potSistema = cPrelim.Tamano;
-            itemReporte.PotenciadePanel = potSistema.ToString();
+            itemReporte.PotenciadePanel = Math.Round(potSistema,2).ToString();
             cantPaneles = Math.Ceiling(potSistema / (potPanel / 1000));
             itemReporte.CantidadPaneles = cantPaneles.ToString();
-            itemReporte.Area = (cantPaneles * 2.1 / 0.8).ToString();
-            itemReporte.CostoPorWatt = (invPremium / potSistema / 1000).ToString();
-            itemReporte.ProduccionAnual = calculos.enerProducida[0,13].ToString();
-            itemReporte.Almacenamiento = datos.selecAlmacenamiento(avgRecibos, horasRespaldo)[1].ToString();
-            itemReporte.consumoCubiertoPct = curvas.coberturaTeorica.ToString();
-            itemReporte.autoconsumo = curvas.coberturaRealporConsumoAnual.ToString();
-            itemReporte.consumoTA = curvas.coberturaTAporConsumoAnual.ToString();
+            itemReporte.Area = Math.Round((cantPaneles * 2.1 / 0.8),2).ToString();
+            itemReporte.CostoPorWatt = Math.Round(invPremium / potSistema / 1000,2).ToString();
+            itemReporte.ProduccionAnual = Math.Round(calculos.enerProducida[0,13],2).ToString();
+            itemReporte.Almacenamiento = Math.Round(datos.selecAlmacenamiento(avgRecibos, horasRespaldo)[1],2).ToString();
+            itemReporte.consumoCubiertoPct = Math.Round(curvas.coberturaTeorica,2).ToString();
+            itemReporte.autoconsumo = Math.Round(curvas.coberturaRealporConsumoAnual,2).ToString();
+            itemReporte.consumoTA = Math.Round(curvas.coberturaTAporConsumoAnual,2).ToString();
 
             for (int i = 0; i < 26; i++)
             {
                 retornoSimple += calculos.calculos[i, 18];
             }
 
-            itemReporte.retornoSimple = retornoSimple.ToString();
+            itemReporte.retornoSimple = Math.Round(retornoSimple,2).ToString();
 
             for (int i = 0; i < 11; i++)
             {
@@ -68,9 +68,9 @@ namespace BLL
             }
 
             ahorroaAnualesAvg = ahorroaAnualesAvg / 11;
-            ahorroaAnualesAvg = ahorroaAnualesAvg / tipoCambio;
+            ahorroaAnualesAvg = Math.Round(ahorroaAnualesAvg / tipoCambio,2);
 
-            itemReporte.ahorroaAnualesAvg = ahorroaAnualesAvg.ToString();
+            itemReporte.ahorroaAnualesAvg = Math.Truncate(ahorroaAnualesAvg).ToString();
 
             itemReporte.Compania = Compania;
 

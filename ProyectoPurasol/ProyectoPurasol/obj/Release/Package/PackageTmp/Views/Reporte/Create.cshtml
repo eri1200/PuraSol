@@ -8,41 +8,53 @@
     WebGrid grid = new WebGrid(objeto, rowsPerPage: 5);
 }
 
+<style>
+    .btn-primary {
+        background: #E1E65F;
+        border-color: #E1E65F;
+        color: white;
+    }
 
-
-
-@using (Html.BeginForm())
+    .panel-primary {
+        border-color: white;
+    }
+</style>
+@if (TempData["SuccessMessage"] != null)
 {
-    @Html.AntiForgeryToken()
-    <div class="panel panel-primary">
-        <div class="panel-body ">
-            <div class="modal-footer">
-                <div class="form-group">
-                    <div class="form-horizontal">
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="margin: auto;">
-                            Seleccionar Cliente
-                        </button>
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            @Html.Label("Identificacion", htmlAttributes: new { @class = "control-label col-md-2", @id = "Identificacion" })
-                                            <div class="col-md-6">
-                                                <input class="form-control" type="text" name="IdCliente" id="IdCliente" />
-                                                <input class="btn btn-primary" type="button" name="Buscar" id="Buscar" value="Buscar Cliente" />
-                                            </div>
+<div class="panel panel-primary">
+    <div class="panel-body ">
+        <div class="modal-footer">
+            <div class="form-group">
+                <div class="form-horizontal">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                        Seleccionar Cliente
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        @Html.Label("Identificacion", htmlAttributes: new { @class = "control-label col-md-2", @id = "Identificacion" })
+                                        <div class="col-md-6">
+                                            <input class="form-control" type="text" name="IdCliente" id="IdCliente" />
+                                            <input class="btn btn-primary" type="button" name="Buscar" id="Buscar" value="Buscar Cliente" />
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>
-                                    <script>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                                <script>
                                         $(document).ready(function () {
                                             try {
                                                 $("#Buscar").click(function () {
@@ -64,14 +76,15 @@
                                                         data: JSON.stringify({ id: document.getElementById("IdCliente").value }),
                                                         success: function (resultado) {
                                                             if (resultado.success) {
-                                                                
+
                                                                 $("#Cliente").val(resultado.resul[0].Nombre);
+                                                                $("#ID").val(document.getElementById("IdCliente").value);
                                                                 alert("SE AGREGÓ CORRECTAMENTE");
                                                             } else {
                                                                 $("#Cliente").val("");
                                                                 alert("ERROR BUSCANDO EL CLIENTE");
                                                             }
-                                                            
+
                                                         },
                                                         error: function (ex) {
                                                             $("#Cliente").val("");
@@ -91,247 +104,249 @@
                                             });
 
 
-                                    </script>
-                                </div>
+                                </script>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="form-horizontal" id="FormularioReporte">
-                        
-                        <hr />
-                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @id = "Cliente" } })
-                                @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
-                            </div>
+            </div>
+            <div class="form-group">
+                <div class="form-horizontal" id="FormularioReporte">
+
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @id = "Cliente" } })
+                            @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Compania, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.DropDownListFor(model => model.Compania, new SelectList(ViewBag.listaCompania, "IdCompania", "Nombre"), "--Compañía--", new { @class = "form-control", @id = "Compania", style = "font-size: 1.3em; font-weight:700;" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Identificacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Identificacion, new { htmlAttributes = new { @class = "form-control", @type = "number", @readonly = "readonly", @id = "ID" } })
+                            @Html.ValidationMessageFor(model => model.Identificacion, "", new { @class = "text-danger" })
                         </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control", @id = "Descripcion" } })
-                                @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
-                            </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Compania, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Compania, new SelectList(ViewBag.listaCompania, "IdCompania", "Nombre"), "--Compañía--", new { @class = "form-control", @id = "Compania", style = "font-size: 1.3em; font-weight:700;" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Tarifa, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.DropDownListFor(model => model.Tarifa, new SelectList(ViewBag.listaTarifas, "IdTarifa", "Nombre"), "--Tarifa--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tarifa" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control", @id = "Descripcion" } })
+                            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.TechoDisponible, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.TechoDisponible, new { htmlAttributes = new { @class = "form-control", @id = "TechoDisponible" } })
-                                @Html.ValidationMessageFor(model => model.TechoDisponible, "", new { @class = "text-danger" })
-                            </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TechoDisponible, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TechoDisponible, new { htmlAttributes = new { @type = "number", @class = "form-control", @id = "TechoDisponible" } })
+                            @Html.ValidationMessageFor(model => model.TechoDisponible, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.HorasRespaldo, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.HorasRespaldo, new { htmlAttributes = new { @class = "form-control", @id = "HoraRespaldo" } })
-                                @Html.ValidationMessageFor(model => model.HorasRespaldo, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.HorasRespaldo, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.HorasRespaldo, new { @type = "number", htmlAttributes = new { @class = "form-control", @id = "HoraRespaldo" } })
+                            @Html.ValidationMessageFor(model => model.HorasRespaldo, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.TipoCambio, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.TipoCambio, new { htmlAttributes = new { @class = "form-control", @id = "TipoCambio" } })
-                                @Html.ValidationMessageFor(model => model.TipoCambio, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TipoCambio, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TipoCambio, new { htmlAttributes = new { @type = "number", @class = "form-control", @id = "TipoCambio" } })
+                            @Html.ValidationMessageFor(model => model.TipoCambio, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.PotenciadePanel, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.PotenciadePanel, new { htmlAttributes = new { @class = "form-control", @id = "PotenciaPanel" } })
-                                @Html.ValidationMessageFor(model => model.PotenciadePanel, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PotenciadePanel, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.PotenciadePanel, new { htmlAttributes = new { @type = "number", @class = "form-control", @id = "PotenciaPanel" } })
+                            @Html.ValidationMessageFor(model => model.PotenciadePanel, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.CostoUnitarioFijo, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.CostoUnitarioFijo, new { htmlAttributes = new { @class = "form-control", @id = "CostoUnitarioFijo" } })
-                                @Html.ValidationMessageFor(model => model.CostoUnitarioFijo, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CostoUnitarioFijo, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CostoUnitarioFijo, new { htmlAttributes = new { @type = "number", @class = "form-control", @id = "CostoUnitarioFijo" } })
+                            @Html.ValidationMessageFor(model => model.CostoUnitarioFijo, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.TamanoFijo, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.TamanoFijo, new { htmlAttributes = new { @class = "form-control", @id = "TamanoFijo" } })
-                                @Html.ValidationMessageFor(model => model.TamanoFijo, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TamanoFijo, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TamanoFijo, new { htmlAttributes = new { @type = "number", @class = "form-control", @id = "TamanoFijo" } })
+                            @Html.ValidationMessageFor(model => model.TamanoFijo, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.CostosdeMantenimiento, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.CostosdeMantenimiento, new { htmlAttributes = new { @class = "form-control", @id = "CostoMantenimiento" } })
-                                @Html.ValidationMessageFor(model => model.CostosdeMantenimiento, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CostosdeMantenimiento, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CostosdeMantenimiento, new { htmlAttributes = new { @type = "number", @class = "form-control", @id = "CostoMantenimiento" } })
+                            @Html.ValidationMessageFor(model => model.CostosdeMantenimiento, "", new { @class = "text-danger" })
 
 
-                            </div>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.CrecimientoAnual, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.CrecimientoAnual, new { htmlAttributes = new { @class = "form-control", @id = "CrecimientoAnual" } })
-                                @Html.ValidationMessageFor(model => model.CrecimientoAnual, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.CrecimientoAnual, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.CrecimientoAnual, new {  htmlAttributes = new { @type = "number", @class = "form-control", @id = "CrecimientoAnual" } })
+                            @Html.ValidationMessageFor(model => model.CrecimientoAnual, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.NumCotizacion, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.NumCotizacion, new { htmlAttributes = new { @class = "form-control", @id = "NumCotizacion" } })
-                                @Html.ValidationMessageFor(model => model.NumCotizacion, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.NumCotizacion, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.NumCotizacion, new {  htmlAttributes = new { @type = "number", @class = "form-control", @id = "NumCotizacion" } })
+                            @Html.ValidationMessageFor(model => model.NumCotizacion, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Tecnologia, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.DropDownListFor(model => model.Tarifa, new SelectList(ViewBag.listaTecnologia, "Value", "Text"), "--Tecnología--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tecnologia" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Tecnologia, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Tecnologia, new SelectList(ViewBag.listaTecnologia, "Value", "Text"), "--Tecnología--", new { @class = "form-control", style = "font-size: 1.3em; font-weight:700;", @id = "Tecnologia" })
 
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="panel panel-primary">
-        <div class="panel-body ">
-            <div class="modal-footer">
-                <div class="form-group">
-                    <div class="form-horizontal">
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.electro, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.electro, new { htmlAttributes = new { @class = "form-control", @id = "Electro" } })
-                                @Html.ValidationMessageFor(model => model.electro, "", new { @class = "text-danger" })
-                            </div>
+</div>
+@*<div class="panel panel-primary">
+    <div class="panel-body ">
+        <div class="modal-footer">
+            <div class="form-group">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.electro, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.electro, new { htmlAttributes = new { @class = "form-control", @id = "Electro" } })
+                            @Html.ValidationMessageFor(model => model.electro, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Cantidad, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "form-control", @id = "Cantidad" } })
-                                @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Cantidad, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Cantidad, new { htmlAttributes = new { @class = "form-control", @id = "Cantidad" } })
+                            @Html.ValidationMessageFor(model => model.Cantidad, "", new { @class = "text-danger" })
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.uso, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                <div>
-                                    <select name="uso" id="uso" class="form-control">
-                                        <option value="True">True</option>
-                                        <option value="False">False</option>
-
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.HoraInicio, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.HoraInicio, new { @type = "time", htmlAttributes = new { @class = "form-control", @id = "HoraInicio" } })
-                                @Html.ValidationMessageFor(model => model.HoraInicio, "", new { @class = "text-danger" })
-
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.HoraFinal, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                @Html.EditorFor(model => model.HoraFinal,  new { @type = "time", htmlAttributes = new { @class = "form-control", @id = "HoraFinal" } })
-                                @Html.ValidationMessageFor(model => model.HoraFinal, "", new { @class = "text-danger" })
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            @Html.LabelFor(model => model.Dia, htmlAttributes: new { @class = "control-label col-md-2" })
-                            <div class="col-md-10">
-                                <select name="Dia" id="Dia" class="form-control">
-                                    <option value="Lunes a Viernes">Lunes a Viernes</option>
-                                    <option value="Fines de Semana">Fines de Semana</option>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.uso, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <div>
+                                <select name="uso" id="uso" class="form-control">
+                                    <option value="True">True</option>
+                                    <option value="False">False</option>
 
                                 </select>
                             </div>
                         </div>
-                        <style type="text/css">
-                            .table {
-                                margin: 4px;
-                                border-collapse: collapse;
-                                width: 300px;
-                                margin: 0 auto;
-                            }
-
-                            .header {
-                                background-color: black;
-                                font-weight: bold;
-                                color: white;
-                            }
-
-                            .table th, .table td {
-                                border: 1px solid black;
-                                padding: 5px;
-                                background-color: gray;
-                                color: white;
-                                text-align: center;
-                            }
-                        </style>
-                        @grid.GetHtml(
-                       htmlAttributes: new { id = "grid" },
-                            tableStyle: "table", // applying style on grid
-                            fillEmptyRows: false,
-                            //show empty row when there is only one record on page to it will display all empty rows there.
-                            headerStyle: "header", //applying style.
-                            footerStyle: "grid-footer", //applying style.
-                            mode: WebGridPagerModes.All, //paging to grid
-                            firstText: "<< First",
-                            previousText: "< Prev",
-                            nextText: "Next >",
-                            lastText: "Last >>",
-                            columns: new[]  // colums in grid
-                            {
-                                grid.Column("Electro"), //the model fields to display
-                                grid.Column("Cantidad"  ),
-                                grid.Column("Uso"),
-                                grid.Column("HoraInicio"),
-                                grid.Column("HoraFinal"),
-                                grid.Column("Dia"),
-                           })
-                        <input class="btn btn-primary" type="button" value="Agregar" id="Agregar" name="Agregar" />
-                        <input class="btn btn-primary" type="button" value="Quitar" id="Quitar" name="Quitar" />
                     </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.HoraInicio, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.HoraInicio, new { @type = "time", htmlAttributes = new { @class = "form-control", @id = "HoraInicio" } })
+                            @Html.ValidationMessageFor(model => model.HoraInicio, "", new { @class = "text-danger" })
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.HoraFinal, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.HoraFinal, new { @type = "time", htmlAttributes = new { @class = "form-control", @id = "HoraFinal" } })
+                            @Html.ValidationMessageFor(model => model.HoraFinal, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Dia, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <select name="Dia" id="Dia" class="form-control">
+                                <option value="Lunes a Viernes">Lunes a Viernes</option>
+                                <option value="Fines de Semana">Fines de Semana</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <style type="text/css">
+                        .table {
+                            margin: 4px;
+                            border-collapse: collapse;
+                            width: 300px;
+                            margin: 0 auto;
+                        }
+
+                        .header {
+                            background-color: black;
+                            font-weight: bold;
+                            color: white;
+                        }
+
+                        .table th, .table td {
+                            border: 1px solid black;
+                            padding: 5px;
+                            background-color: gray;
+                            color: white;
+                            text-align: center;
+                        }
+                    </style>
+                    @grid.GetHtml(
+                   htmlAttributes: new { id = "grid" },
+                        tableStyle: "table", // applying style on grid
+                        fillEmptyRows: false,
+                        //show empty row when there is only one record on page to it will display all empty rows there.
+                        headerStyle: "header", //applying style.
+                        footerStyle: "grid-footer", //applying style.
+                        mode: WebGridPagerModes.All, //paging to grid
+                        firstText: "<< First",
+                        previousText: "< Prev",
+                        nextText: "Next >",
+                        lastText: "Last >>",
+                        columns: new[]  // colums in grid
+                        {
+                            grid.Column("Electro"), //the model fields to display
+                            grid.Column("Cantidad"  ),
+                            grid.Column("Uso"),
+                            grid.Column("HoraInicio"),
+                            grid.Column("HoraFinal"),
+                            grid.Column("Dia"),
+                       })
+                    <input class="btn btn-primary" type="button" value="Agregar" id="Agregar" name="Agregar" />
+                    <input class="btn btn-primary" type="button" value="Quitar" id="Quitar" name="Quitar" />
                 </div>
             </div>
         </div>
     </div>
-    <div class="modal-footer justify-content-start">
-        <input class="btn btn btn-primary btn-block" type="button" value="Guardar" id="Guardar" name="Guardar" />
-    </div>
+</div>*@
+<div class="modal-footer justify-content-start">
+    <input class="btn btn btn-primary btn-block" type="submit" value="Guardar" id="Guardar" name="Guardar" />
+    
+</div>
 
 }
 <script type="text/javascript">
@@ -444,24 +459,24 @@
             dataType: "json",
             data: JSON.stringify({
                 Nombre: document.getElementById("Cliente").value,
+                Identificacion: document.getElementById("ID").value,
                 Compania: document.getElementById("Compania").value,
-                Tarifa: document.getElementById("Tarifa").value,
-                Descripcion: document.getElementById("Compania").value,
+                Descripcion: document.getElementById("Descripcion").value,
                 TechoDisponible: document.getElementById("TechoDisponible").value,
                 HorasRespaldo: document.getElementById("HoraRespaldo").value,
                 TipoCambio: document.getElementById("TipoCambio").value,
-                PotenciaPanel: document.getElementById("PotenciaPanel").value,
+                PotenciadePanel: document.getElementById("PotenciaPanel").value,
                 CostoUnitarioFijo: document.getElementById("CostoUnitarioFijo").value,
                 TamanoFijo: document.getElementById("TamanoFijo").value,
-                CostoUnitarioFijo: document.getElementById("CostoMantenimiento").value,
-                CostoUnitarioFijo: document.getElementById("CrecimientoAnual").value,
-                CostoUnitarioFijo: document.getElementById("NumCotizacion").value,
-                CostoUnitarioFijo: document.getElementById("Tecnologia").value,
-                table}),
+                CostosdeMantenimiento: document.getElementById("CostoMantenimiento").value,
+                CrecimientoAnual: document.getElementById("CrecimientoAnual").value,
+                NumCotizacion: document.getElementById("NumCotizacion").value,
+                Tecnologia: document.getElementById("Tecnologia").value}),
+                //table}),
             success: function (resultado) {
             if (resultado.success) {
 
-                alert(resultado.url);
+                //alert(resultado.url);
                 window.location.replace(resultado.url);
              } else {
                 alert("Hubo un error");

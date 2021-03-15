@@ -1,5 +1,26 @@
-﻿@model ProyectoPurasol.Models.UsuarioCrear
+﻿
+@{
+    ViewBag.Title = "Crear Usuario";
+}
+@model ProyectoPurasol.Models.UsuarioCrear
 <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+<style>
+    .btn {
+        color: white;
+        background-color: #00210D;
+    }
+
+    .captcha {
+        display: inline-block;
+    }
+</style>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-danger alert-dismissable">
+        <strong>@TempData["SuccessMessage"]</strong>
+    </div>
+}
+<script src="https://www.google.com/recaptcha/api.js"></script>
 @using reCAPTCHA.MVC
 
 @using (Html.BeginForm())
@@ -10,7 +31,7 @@
         <div class="panel-body ">
             <div class="modal-body">
                 <div class="form-horizontal">
-                    <h4>CREAR USUARIO</h4>
+                    
                     <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
@@ -28,28 +49,42 @@
                         </div>
                     </div>
 
+
                     <div class="form-group">
-                        @Html.LabelFor(model => model.Contrasena, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @Html.LabelFor(model => model.Descripcion, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
 
-                            @Html.PasswordFor(model => model.Contrasena, new { @class = "form-control" })
+                            @Html.EditorFor(model => model.Descripcion, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Descripcion, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Correo, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+
+                            @Html.EditorFor(model => model.Correo, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Correo, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            <div class="checkbox">
-                                @Html.EditorFor(model => model.Activo)
-                                @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+                    @*<div class="form-group">
+                            @Html.LabelFor(model => model.Activo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div class="checkbox">
+                                    @Html.EditorFor(model => model.Activo)
+                                    @Html.ValidationMessageFor(model => model.Activo, "", new { @class = "text-danger" })
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </div>*@
 
                     <div class="modal-footer">
-                        @Html.Recaptcha()
-                        @Html.ValidationMessage("ReCaptcha")
-                        <input type="submit" value="Create" class="btn btn btn-lg btn-success btn-block" />
+                        <div class="captcha">
+                            @Html.Recaptcha()
+                            @Html.ValidationMessage("ReCaptcha")
+                        </div>
+                        <br />
+
+                        <input type="submit" value="Crear" class="btn" />
                     </div>
 
                 </div>

@@ -1,4 +1,5 @@
-﻿$(function () {
+﻿
+$(function () {
     $(".datepicker").datepicker({
         autoclose: true
     });
