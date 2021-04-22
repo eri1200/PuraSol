@@ -159,7 +159,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.TechoDisponible, "Techo Disponible", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.TechoDisponible, new { htmlAttributes = new { @class = "form-control", @type = "number" } })
+                            @Html.EditorFor(model => model.TechoDisponible, new { htmlAttributes = new { @class = "form-control", @type = "number", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.TechoDisponible, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -167,7 +167,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.HorasRespaldo, "Horas Respaldo", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.HorasRespaldo, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.HorasRespaldo, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.HorasRespaldo, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.TipoCambio, "Cambio", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.TipoCambio, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.TipoCambio, new { htmlAttributes = new { @type = "number", @class = "form-control" , @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.TipoCambio, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -183,7 +183,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PotenciaPanel, "Potencia Panel", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PotenciaPanel, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PotenciaPanel, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PotenciaPanel, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -204,7 +204,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.CostoUnitarioFijoValor, "Costo Unitario Valor", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.CostoUnitarioFijoValor, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.CostoUnitarioFijoValor, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.CostoUnitarioFijoValor, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -220,7 +220,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.TamanoFijoValor, "Tamaño Fijo Valor", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.TamanoFijoValor, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.TamanoFijoValor, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.TamanoFijoValor, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -241,7 +241,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.CrecimientoAnual, "Crecimiento Anual", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.CrecimientoAnual, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.CrecimientoAnual, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.CrecimientoAnual, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -275,7 +275,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PREne, "Punta Recibo Enero", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PREne, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PREne, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PREne, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -283,7 +283,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRFeb, "Punta Recibo Febrero", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRFeb, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRFeb, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRFeb, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -291,7 +291,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRMar, "Punta Recibo Marzo", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRMar, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRMar, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRMar, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -299,7 +299,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRAbr, "Punta Recibo Abril", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRAbr, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRAbr, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRAbr, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -307,7 +307,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRMay, "Punta Recibo Mayo", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRMay, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRMay, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRMay, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -315,7 +315,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRJun, "Punta Recibo Junio", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRJun, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRJun, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRJun, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -323,7 +323,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRJul, "Punta Recibo Julio", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRJul, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRJul, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRJul, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -331,7 +331,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRAgo, "Punta Recibo Agosto", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRAgo, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRAgo, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRAgo, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -339,7 +339,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRSep, "Punta Recibo Septiembre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRSep, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRSep, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRSep, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -347,7 +347,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PROct, "Punta Recibo Octubre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PROct, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PROct, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PROct, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -355,7 +355,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRNov, "Punta Recibo Noviembre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRNov, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRNov, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRNov, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -363,7 +363,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.PRDic, "Punta Recibo Diciembre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.PRDic, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.PRDic, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.PRDic, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -383,7 +383,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISEne, "Solargis Enero", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISEne, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISEne, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISEne, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -391,7 +391,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISFeb, "Solargis Febrero", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISFeb, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISFeb, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISFeb, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -399,7 +399,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISMar, "Solargis Marzo", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISMar, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISMar, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISMar, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -407,7 +407,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISAbr, "Solargis Abril", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISAbr, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISAbr, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISAbr, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -415,7 +415,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISMay, "Solargis Mayo", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISMay, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISMay, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISMay, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -423,7 +423,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISJun, "Solargis Junio", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISJun, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISJun, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISJun, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -431,7 +431,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISJul, "Solargis Julio",htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISJul, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISJul, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISJul, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -439,7 +439,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISAgo, "Solargis Agosto", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISAgo, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISAgo, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISAgo, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -447,7 +447,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISSep, "Solargis Septeimbre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISSep, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISSep, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISSep, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -455,7 +455,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISOct, "Solargis Octubre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISOct, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISOct, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISOct, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -463,7 +463,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISNov, "Solargis Noviembre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISNov, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISNov, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISNov, "", new { @class = "text-danger" })
                         </div>
                     </div>
@@ -471,7 +471,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.RSGISDic, "Solargis Diciembre", htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.RSGISDic, new { htmlAttributes = new { @type = "number", @class = "form-control" } })
+                            @Html.EditorFor(model => model.RSGISDic, new { htmlAttributes = new { @type = "number", @class = "form-control", @min = "0", @step = "0.1", @value = "0" } })
                             @Html.ValidationMessageFor(model => model.RSGISDic, "", new { @class = "text-danger" })
                         </div>
                     </div>

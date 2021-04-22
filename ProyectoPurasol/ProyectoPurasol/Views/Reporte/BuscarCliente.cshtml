@@ -46,7 +46,7 @@ $(document).ready(function () {
         if ((document.getElementById("IdCliente").value != "")) {
             $.post('@Url.Action("BuscarCliente","Reporte")', { id: document.getElementById("IdCliente").value })
                 .done(function (data) {
-                    $(location).attr('href','http://localhost:51104/Reporte/ListaReportes')
+                    $(location).attr('href','https://purasol.azurewebsites.net/Reporte/ListaReportes')
                 });
         } else {
             alert("Complete la información");
