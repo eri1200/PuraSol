@@ -307,7 +307,7 @@ namespace ProyectoPurasol.Controllers
                 reportViewer.Height = Unit.Percentage(100);
                 reportViewer.ZoomMode = ZoomMode.Percent;
                 reportViewer.ZoomPercent = 200;
-                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\ReporteConsultaREPORTE.rdlc";
+                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"bin\ReporteConsultaREPORTE.rdlc";
                 List<ReportParameter> Parametros = new List<ReportParameter>();
                 foreach (var item in Datos)
                 {
@@ -557,7 +557,7 @@ namespace ProyectoPurasol.Controllers
                 reportViewer.Height = Unit.Percentage(100);
                 reportViewer.ZoomMode = ZoomMode.Percent;
                 reportViewer.ZoomPercent = 150;
-                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"Reports\ReporteConsultaREPORTE.rdlc";
+                reportViewer.LocalReport.ReportPath = Request.MapPath(Request.ApplicationPath) + @"bin\ReporteConsultaREPORTE.rdlc";
                 List<ReportParameter> Parametros = new List<ReportParameter>();
                 foreach (var item in info)
                 {
